@@ -1,0 +1,500 @@
+<html>
+<head>
+<title>C S R C - Systems Administration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<table width="660" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><img src="images/csrc_header.jpg" width="660" height="95" usemap="#Map" border="0"> 
+      <map name="Map"> 
+        <area shape="rect" coords="11,31,473,57" href="http://csrc.nist.gov"><area shape="rect" coords="9,8,266,29" href="http://www.itl.nist.gov"><area shape="rect" coords="275,8,474,29" href="http://csrc.nist.gov/mission.html"><area shape="rect" coords="512,3,648,60" href="http://www.nist.gov">
+        <area shape="rect" coords="4,71,160,92" href="http://csrc.nist.gov/groups/index.html">
+        <area shape="rect" coords="168,72,327,93" href="http://csrc.nist.gov/publications/">
+        <area shape="rect" coords="333,70,494,91" href="http://csrc.nist.gov/sitemap.html"><area shape="rect" coords="499,70,653,91" href="http://externalsearch.nist.gov/search?q=&btnG=GO&site=itl_csrc_collection&output=xml_no_dtd&client=default_frontend&sort=date%3AD%3AL%3Ad1&proxystylesheet=default_frontend&oe=UTF-8"></map></td>
+  </tr>
+</table><br>
+<table width="660" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="149" align="center" valign="top"> 
+      <div align="left"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#E8E8E8">
+          <tr> 
+            <td> 
+              
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bordercolor="#999999">
+  <tr bordercolor="#CCCCCC" bgcolor="#CCCCCC"> 
+            
+    <td align="center" valign="middle" bgcolor="#6666FF"><b><font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">CSRC 
+      System Administration</font></b></td>
+          </tr>
+          <tr bordercolor="#CCCCCC" bgcolor="#FFFFFF"> 
+            
+    <td bgcolor="#E8E8E8"> 
+      <ul>
+        <font face="Arial, Helvetica, sans-serif" size="1"> 
+        <li><b><a href="http://csrc.nist.gov/itsec">Home</a></b></li>
+        <li><b><a href="#Disclaimer">Disclaimer</a></b></li>
+        <li><b><a href="mailto:itsec@nist.gov">Contact</a></b><br>
+          <br>
+        </li>
+        </font> 
+      </ul>
+            </td>
+          </tr>
+          <tr bordercolor="#CCCCCC" bgcolor="#CCCCCC"> 
+            
+    <td align="center" valign="middle" bgcolor="#6666FF"> 
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#FFFFFF">MS 
+        Windows</font></b></font></p>
+            </td>
+          </tr>
+          <tr bordercolor="#CCCCCC" bgcolor="#FFFFFF"> 
+            
+    <td bgcolor="#E8E8E8"> 
+      <ul>
+        <font face="Arial, Helvetica, sans-serif" size="1"> 
+        <li><b><font size="1"><a href="http://csrc.nist.gov/itsec/guidance_vista.html">Guidance 
+          for Securing Microsoft Windows Vista<br>
+          <br>
+          </a></font></b> </li>
+        <li><b><font size="1"><a href="http://csrc.nist.gov/itsec/guidance_WinXP_Home.html">Guidance 
+          for Securing Microsoft Windows XP Home Editions: A NIST Security Configuration 
+          Checklist<br>
+          <br>
+          </a></font></b> </li>
+        <li><b><font size="1"><a href="http://csrc.nist.gov/itsec/guidance_WinXP.html">Guidance 
+          for Securing Microsoft Windows XP Systems for IT Professionals: A NIST 
+          Security Configuration Checklist</a><br>
+          <br>
+          </font></b></li>
+        <li><b><font size="1"><a href="http://csrc.nist.gov/itsec/guidance_W2Kpro.html">NIST 
+          Systems Administration Guidance for Windows 2000 Professional</a></font></b><font size="2"><a href="http://csrc.nist.gov/itsec/index.html#NSA_W2K"><br>
+          <br>
+          </a></font></li>
+        </font> 
+      </ul>
+            </td>
+          </tr>
+		  
+    <td align="center" valign="middle" bgcolor="#6666FF"><b><font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">Other 
+      Resources </font></b></td>
+          </tr>
+          <tr bordercolor="#CCCCCC" bgcolor="#FFFFFF"> 
+            
+    <td bgcolor="#E8E8E8"> 
+      <ul>
+        <li><b><font size="1" face="Arial, Helvetica, sans-serif"><a href="http://checklists.nist.gov/">NIST 
+          Security Configuration Checklist for IT Products Program</a></font></b></li>
+        <li><b><font size="1" face="Arial, Helvetica, sans-serif"><a href="http://checklists.nist.gov/ncp.cfm?repository">NIST 
+          Security Configuration Checklist Repository</a></font></b><font face="Arial, Helvetica, sans-serif" size="1"><b><br>
+          </b></font></li>
+        <li><font face="Arial, Helvetica, sans-serif" size="1"><b><a href="http://csrc.nist.gov/fasp/">Federal 
+          Agency Security Practices (FASP)</a></b></font><br>
+          <br>
+        </li>
+      </ul>
+            </td>
+          </tr>
+<tr bordercolor="#CCCCCC" bgcolor="#CCCCCC"> 
+            
+    <td align="center" valign="middle" bgcolor="#6666FF"><b><font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">Our 
+      Sponsor</font></b></td>
+          </tr>
+          <tr bordercolor="#CCCCCC" bgcolor="#FFFFFF"> 
+            
+    <td bgcolor="#E8E8E8"><a href="http://www.dhs.gov/dhspublic/"><img src="./images/dhs-header-title.jpg" width="153" height="45" border="0"></a><br>
+      <br>
+    </td>
+          </tr>
+        </table>
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+        </table>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="1"> </font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"> 
+          </font></p>
+      </div>
+    </td>
+    <td width="1"><img src="images/spacer.gif" width="1" height="5" alt="white space" border="0"></td>
+    <td width="15"><img src="images/spacer.gif" width="5" height="5" alt="white space"></td>
+    <td width="495" valign="top"> 
+      <p align="right"><img src="images/WinXP_Home_header.gif" width="400" height="96"></p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="7" bordercolor="#FFFFFF">
+        <tr bgcolor="#DADAB6"> 
+          <td> 
+            <div align="left"> 
+              <ul>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="#NIST_WinXP">Description 
+                  of the Guidance for Securing Microsoft Windows XP Home Edition: 
+                  A NIST Security Configuration Checklist</a> </font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="download_WinXP_Home.html">Download 
+                  the document</a></font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="#FAQ">Frequently 
+                  Asked Questions - FAQ</a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="#email">E-mail 
+                  Notification of updates</a> </font></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="7" bordercolor="#FFFFFF">
+        <tr bgcolor="#CCCCCC"> 
+          <td bgcolor="#6666FF"> 
+            <div align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">Description 
+              of the Guidance for Securing Microsoft Windows XP Home Edition: 
+              A NIST Security Configuration Checklist - Special Publication 800-69</font><font color="#FFFFFF"><a name="NIST_WinXP"></a></font></b></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#E8E8E8"> 
+            <p><font face="Times New Roman, Times, serif">NIST is pleased to announce 
+              the release of <b>Special Publication 800-69</b>, Guidance for Securing 
+              Microsoft Windows XP Home Edition: A NIST Security Configuration 
+              Checklist. SP 800-69 provides guidance to home users, such as telecommuting 
+              Federal employees, on improving the security of their home computers 
+              that run Windows XP Home Edition. Home computers face many threats 
+              from people wanting to cause mischief and disruption, commit fraud, 
+              and perform identity theft. The publication explains the need to 
+              use a combination of security protections, such as antivirus software, 
+              antispyware software, a personal firewall, limited user accounts, 
+              and automatic software updates, to secure a computer against threats 
+              and maintain its security. It also emphasizes the importance of 
+              performing regular backups to ensure that user data is available 
+              after an adverse event such as an attack against the computer, a 
+              hardware failure, or human error. The publication contains detailed 
+              step-by-step directions for securing Windows XP Home Edition computers 
+              that can be performed by experienced Windows XP Home Edition users.<br>
+              <br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">Comments 
+              and questions may be addressed to to <a href="mailto:itsec@nist.gov">itsec@nist.gov</a>.</font><font face="Times New Roman, Times, serif"> 
+              </font></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="7" bordercolor="#FFFFFF">
+        <tr bgcolor="#CCCCCC"> 
+          <td bgcolor="#6666FF"> 
+            <div align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">Frequently 
+              Asked Questions - FAQ</font><font color="#FFFFFF"><a name="FAQ"></a></font></b></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#E8E8E8"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>1.</b> 
+                  </font></td>
+                <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font face="Arial, Helvetica, sans-serif">Why 
+                  did NIST develop this publication?</font></b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>It is a complicated and time-consuming task for home users 
+                    and even experienced system administrators to know what a 
+                    reasonable set of security settings is for a complex operating 
+                    system such as Windows XP Home Edition. NIST sought to make 
+                    this task simpler, easier, and more secure by developing this 
+                    publication. NIST maintains that the settings make a substantial 
+                    improvement in the security posture of Windows XP Home Edition 
+                    computers.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>2.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>How 
+                  does the SP 800-69 relate to the NIST Security Configuration 
+                  Checklist For IT Products program?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>The guide represents a typical security configuration checklist 
+                    that is included in the NIST program's checklist repository. 
+                    It is consistent with the criteria outlined in the Special 
+                    Publication 800-70, The NIST Security Configuration Checklist 
+                    for IT Products Program. It was produced using the guidelines 
+                    and security principles referenced in SP 800-70.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>3.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>How 
+                  was the publication developed?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>The publication was developed by NIST. It is partially based 
+                    on SP 800-68, Guidance for Securing Microsoft Windows XP Systems 
+                    for IT Professionals, which in turn is based on excellent 
+                    material developed by the National Security Agency (NSA), 
+                    DISA (Defense Information Systems Agency), U.S. Air Force 
+                    (USAF), Microsoft, and other members of the security community.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>4.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>Who 
+                  is the intended audience?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>The intended audience is Windows XP Home Edition users and 
+                    IT professionals, particularly Windows XP system administrators 
+                    and information security personnel who are responsible for 
+                    securing Windows XP Home Edition computers used by telecommuters.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>5.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>I have 
+                  a Windows XP Professional, Windows 95, Windows 98, Windows NT, 
+                  Windows Millennium Edition, or Windows 2000 computer. Should 
+                  I apply the recommendations in the publication to my computer?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>No. These recommendations may break your system. The recommendations 
+                    should be applied only to Windows XP Home Edition computers.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>6.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>Should 
+                  I perform a full backup before applying the recommendations?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>Yes. perform a full system backup before applying the recommendations. 
+                    Although the recommendations have been tested, it is likely 
+                    that the recommendations may cause conflict between settings 
+                    and particular applications.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>7.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>Is NIST 
+                  going to keep this up-to-date?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>Yes. It will be updated periodically as needed to reflect 
+                    the most current recommended settings.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>8.</b> 
+                  </font></td>
+                <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  <b>Should I make changes to the recommended settings?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>Given the wide variation in operational and technical considerations, 
+                    some local changes might need to be made to the settings (with 
+                    the number of settings, a myriad of applications, and the 
+                    variety of business functions supported by Windows XP systems, 
+                    this should be expected). Of course, use caution and good 
+                    judgment in making changes to the security settings. Always 
+                    test the settings, document the implemented settings, and 
+                    perform a full system backup before applying the settings.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>9.</b> 
+                  </font></td>
+                <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                  <b>Are there other protective measures that should be taken 
+                  besides applying the recommended settings?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>Yes. In addition to changing Windows XP Home Edition settings 
+                    to strengthen the operating system's security, protective 
+                    measures such as antimalware software and file encryption 
+                    software may also need to be added to reduce the likelihood 
+                    of compromises of the computers and any sensitive data they 
+                    may contain. Users of Windows XP Home Edition computers should 
+                    also safeguard their physical security, such as keeping laptops 
+                    in a secure location when unattended. Federal agencies should 
+                    also ensure that Windows XP Home Edition computers used as 
+                    mobile<br>
+                    devices or for remote access comply with the additional protective 
+                    measures described in Office of Management and Budget (OMB) 
+                    Memorandum M-06-16, Protection of Sensitive Agency Information, 
+                    which is available at http://www.whitehouse.gov/omb/memoranda/.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>10.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif">Is 
+                  NIST endorsing or mandating the use of the Windows XP Systems 
+                  or requiring each setting be applied as stated?</font></b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>No. NIST does not endorse the use of any particular product 
+                    or system. NIST is not mandating the use of the Windows XP 
+                    systems nor is NIST establishing conditions or prerequisites 
+                    for Federal agency procurement or deployment of any system. 
+                    NIST is not precluding any Federal agency from procuring or 
+                    deploying other computer hardware or software systems for 
+                    which NIST has not developed a publication or a security configuration 
+                    checklist.</p>
+                  <p>For agencies that want to deploy Windows XP computers for 
+                    their telecommuters, NIST recommends the use of Windows XP 
+                    Professional over Windows XP Home Edition because of the management 
+                    features that Windows XP Professional offers. These features 
+                    allow agencies to control the configuration and patching of 
+                    Windows XP Professional computers more easily than Windows 
+                    XP Home Edition computers.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+              <tr> 
+                <td width="15" align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" ><b>11.</b> 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>I am 
+                  a federal employee and use my personal Windows XP Home Edition 
+                  system occasionally to process organizational information. How 
+                  do I protect sensitive information on my Windows XP Home Edition?</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF6666"></font></td>
+                <td> 
+                  <p>Windows XP Home Edition computers may need to protect the 
+                    confidentiality or integrity of Federal information in storage 
+                    (e.g., file encryption) or in transit (e.g., virtual private 
+                    networks [VPN], secure access to Web pages). Such computers 
+                    must use Federal Information Processing Standards (FIPS) approved 
+                    cryptographic algorithms specified in FIPS or in NIST Recommendations 
+                    and contained in validated cryptographic modules. The Cryptographic 
+                    Module Validation Program (CMVP) at NIST coordinates FIPS 
+                    testing. Users should install third-party products onto Windows 
+                    XP Home Edition computers to provide<br>
+                    file encryption capabilities. Windows XP Professional systems 
+                    include the<br>
+                    Encrypting File System (EFS), a file encryption feature. However, 
+                    EFS can only encrypt files that are stored on the local Windows 
+                    XP Professional system. If there is a need to protect files 
+                    no matter where they are located, such as stored on CDs or 
+                    e-mailed to others, then third-party encryption software would 
+                    need to be used instead of EFS. Third-party encryption software 
+                    is also needed if the user wants to decrypt files that were 
+                    encrypted on another computer and provided to the user through 
+                    e-mail, removable media, or other means.</p>
+                </td>
+              </tr>
+            </table>
+            <br>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="7" bordercolor="#FFFFFF">
+        <tr bgcolor="#6666FF"> 
+          <td bgcolor="#6666FF"> 
+            <div align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">E-mail 
+              Notification of Updates</font></b></font><a name="email"></a></div>
+          </td>
+        </tr>
+        <tr bgcolor="#E8E8E8"> 
+          <td bgcolor="#E8E8E8"> 
+            <p><font face="Arial, Helvetica, sans-serif" size="2">If you would 
+              like to be notified of updates to the Special Publication 800-69, 
+              send an e-mail message to <a href="mailto:itsec@nist.gov">itsec@nist.gov</a> 
+              with the words <b>subscribe SP 800-69</b> in the subject line.</font></p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp; </p>
+    </td>
+  </tr>
+</table>
+<table width="660" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="164" bgcolor="#FFFFFF"> 
+      <table width="149" border="1" cellspacing="0" cellpadding="1">
+        <tr align="center" valign="middle"> 
+          <td width="149"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b>Disclaimer<a name="Disclaimer"></a></b><br>
+            <i>Any mention of commercial products or reference to commercial organizations 
+            is for information only; it does not imply recommendation or endorsement 
+            by NIST nor does it imply that the products mentioned are necessarily 
+            the best available for the purpose.</i> </font></td>
+        </tr>
+      </table>
+    </td>
+    <td width="507"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>Last updated: 
+        <!-- #BeginDate format:Am1 -->October 10, 2006<!-- #EndDate -->
+        <br>
+        Page created: January10, 2001</i></font><font color="#FFFFFF"></font><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">Disclaimer 
+        Notice</font></a><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"> 
+        & </font> <a href="http://www.nist.gov/public_affairs/privacy.htm"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Send comments 
+        or suggestions to</font> <a href="mailto:itsec@nist.gov"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">itsec@nist.gov</font></a> 
+        <br>
+        <font size="1" face="Verdana, Arial, Helvetica, sans-serif"> </font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a href="http://www.nist.gov"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#000000">NIST</font></a> 
+        is an Agency of the</font> <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#000000">U.S. 
+        Commerce Department's</font></a> <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#000000">Technology 
+        Administration</font></a></div>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>
