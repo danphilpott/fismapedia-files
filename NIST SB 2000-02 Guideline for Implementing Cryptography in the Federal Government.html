@@ -1,0 +1,737 @@
+
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: February 2000</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="February 2000, February 2000 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, Guideline For Implementing Cryptography In The Federal Government">
+ <meta name="description" content="This is the February 2000 ITL Security Bulletin called Guideline For Implementing Cryptography In The Federal Government.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+    <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+      &nbsp;<br>
+      <CENTER>
+        <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>FEBRUARY 2000</b></font> 
+      </CENTER>
+    <table width="85%" border="1" cellspacing="1" cellpadding="2" align="center">
+      <tr> 
+        <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>Guideline For 
+              Implementing Cryptography In The Federal Government</B></FONT></div>
+          </td>
+      </tr>
+    </table>
+    <P><i>By Annabelle Lee,<br>
+      Computer Security Division,<br>
+      Information Technology Laboratory,<br>
+      National Institute of Standards and Technology</i></P>
+    <P><font face="Arial, Helvetica, sans-serif">This bulletin summarizes a new 
+      ITL document, NIST Special Publication (SP) 800-21, <I>Guideline for Implementing 
+      Cryptography in the Federal Government.</I></font><I> </I></P>
+    <P><font face="Arial, Helvetica, sans-serif">In today's world, both private 
+      and public sectors depend upon information technology systems to perform 
+      essential and mission-critical functions. In the current environment of 
+      increasingly open and interconnected systems and networks, network and data 
+      security are essential for the optimum use of information technology. For 
+      example, systems that carry out electronic financial transactions and electronic 
+      commerce must be protected against unauthorized access to confidential records 
+      and unauthorized modification of data<I>.</I></font></P>
+    <P><font face="Arial, Helvetica, sans-serif">Cryptography should be considered 
+      for data that is sensitive or has a high value if it is vulnerable to unauthorized 
+      disclosure or undetected modification during transmission or while in storage. 
+      Cryptographic methods provide important functionality to protect against 
+      intentional and accidental compromise and alteration of data. These methods 
+      support communications security by encrypting the communication prior to 
+      transmission and decrypting it at receipt. These methods also provide file 
+      and data security by encrypting the data prior to placement on a storage 
+      medium and decrypting it after retrieval from the storage medium.</font></P>
+    <P><font face="Arial, Helvetica, sans-serif">NIST SP 800-21, <I>Guideline 
+      for Implementing Cryptography in the Federal Government</I>, provides guidance 
+      to federal agencies on selecting cryptographic controls to protect sensitive 
+      unclassified information. The guideline focuses on federal standards documented 
+      in Federal Information Processing Standards (FIPS) and the cryptographic 
+      modules and algorithms that are validated against these standards. However, 
+      to provide additional information, other standards organizations (e.g., 
+      American National Standards Institute [ANSI] and International Organization 
+      for Standardization [ISO]) are briefly discussed.</font> </P>
+    <H3><font face="Arial, Helvetica, sans-serif">AUDIENCE</font></H3>
+    <P><font face="Arial, Helvetica, sans-serif">The guideline is intended for 
+      federal employees who are responsible for designing systems and procuring, 
+      installing, and operating security products to meet identified security 
+      requirements. The document may be used by:</font></P>
+    <UL>
+      <LI><font face="Arial, Helvetica, sans-serif">A manager responsible for 
+        evaluating an existing system and determining whether cryptographic methods 
+        are necessary,<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">A technical specialist requested 
+        to select one or more cryptographic methods to meet a specified requirement, 
+        or<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">A procurement specialist developing 
+        a solicitation for a system or network that will require cryptographic 
+        methods to perform security functionality.</font></li>
+    </UL>
+    <P><font face="Arial, Helvetica, sans-serif">The goal is to provide these 
+      individuals with sufficient information to allow them to make informed decisions 
+      about the cryptographic methods that will meet their specific needs to protect 
+      the confidentiality, authentication, and integrity of data that is transmitted 
+      and/or stored in a system or network.</font></P>
+    <P><font face="Arial, Helvetica, sans-serif">The guideline is <B>not</B> intended 
+      to provide information on the federal procurement process or provide a technical 
+      discussion on the mathematics of cryptography and cryptographic algorithms. 
+      </font></P>
+    <H3><font face="Arial, Helvetica, sans-serif">SCOPE</font></H3>
+    <P><font face="Arial, Helvetica, sans-serif">The guideline limits its discussion 
+      of cryptographic methods to those that meet federal standards. The majority 
+      of the information in the document<I> </I>may be useful to both federal 
+      and commercial personnel and applicable to all computer networks and environments. 
+      Both the federal government and industry use products that meet federal 
+      standards, and standards bodies such as ANSI have also adopted federal standards.</font></P>
+    <P><font face="Arial, Helvetica, sans-serif">The guideline provides information 
+      on selecting cryptographic services and methods and implementing the methods 
+      in new or existing systems. Specifically, the document discusses the cryptographic 
+      products selection process, which may include one or more of the following:</font></P>
+    <oL>
+      <LI><font face="Arial, Helvetica, sans-serif">Performing a <I>risk assessment</I> 
+        (or other process) to identify: <br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">assets that must be protected,<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">vulnerabilities of the system, 
+        and<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">threats that might exploit 
+        the vulnerabilities.</font></li>
+    </ol>
+    <ul>
+      <LI><font face="Arial, Helvetica, sans-serif">Identifying the <I>security 
+        regulations and policies</I> that are applicable to the system.<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">Specifying the <I>cryptographic 
+        security requirements</I>.<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">Specifying the <I>security 
+        services</I> that will address the needs identified in items 1-3.</font></li>
+    </ul>
+    <H3><font face="Arial, Helvetica, sans-serif">CONTENT</font></H3>
+    <P><font face="Arial, Helvetica, sans-serif">The guideline is organized into 
+      three parts. Part one provides an overview of selecting cryptographic services 
+      and products:</font></P>
+    <UL>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 1 includes background 
+        information (purpose, audience, and scope) and the advantages of using 
+        cryptography.</font><br>
+        &nbsp;</li>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 2 defines the role 
+        and use of standards, describes standards organizations that are outside 
+        the federal government, and discusses the new international security standard, 
+        ISO 15408, the Common Criteria (CC).</font><br>
+        &nbsp;</li>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 3 describes some implementation 
+        issues (e.g., key management, authentication, and recommendations)</font>.</li>
+    </UL>
+    <P><font face="Arial, Helvetica, sans-serif">Part two focuses on specific 
+      methods:</font></P>
+    <UL>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 4 describes the methods 
+        that are available for symmetric and asymmetric key cryptography.<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 5 discusses the Public 
+        Key Infrastructure (PKI).<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 6 discusses testing, 
+        including the Cryptographic Module Validation Program (CMVP)</font>.</li>
+    </UL>
+    <P><font face="Arial, Helvetica, sans-serif">Part three ties together all 
+      of the information:</font></P>
+    <UL>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 7 describes the process 
+        of choosing types of cryptography and selecting a cryptographic method(s) 
+        to fulfill a specific requirement.<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 8 includes some examples 
+        of federal projects that use cryptography.<br>
+        &nbsp;</font></li>
+      <LI><font face="Arial, Helvetica, sans-serif">Chapter 9 describes future 
+        activities.</font></li>
+    </UL>
+    <P><font face="Arial, Helvetica, sans-serif">Three appendices supplement the 
+      guideline:</font></P>
+    <ul>
+      <li><font face="Arial, Helvetica, sans-serif">Appendix A contains an acronym 
+        list.<br>
+        &nbsp;</font></li>
+      <li><font face="Arial, Helvetica, sans-serif">Appendix B presents terms 
+        and definitions.<br>
+        &nbsp;</font></li>
+      <li><font face="Arial, Helvetica, sans-serif">Appendix C includes a bibliography 
+        of cryptographic standards and guidelines and cryptography texts. </font></li>
+    </ul>
+    <H3><font face="Arial, Helvetica, sans-serif">USES OF CRYPTOGRAPHY</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Cryptography is a branch of mathematics 
+        based on the transformation of data. Cryptography deals with the transformation 
+        of ordinary text (plaintext) into coded form (ciphertext) by encryption 
+        and the transformation of ciphertext into plaintext by decryption. Cryptography 
+        relies upon two basic components: an <I>algorithm</I> (or cryptographic 
+        methodology) and a <I>key</I>. The algorithm is the mathematical function 
+        used for encryption or decryption, and the key is the parameter used in 
+        the transformation. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">There are two basic types of 
+        cryptography: <I>secret-key </I>systems (also called symmetric systems) 
+        and <I>public-key </I>systems (also called asymmetric systems). In secret-key 
+        systems, the same key is used for both encryption and decryption. That 
+        is, all parties participating in the communication share a single key. 
+        In public-key systems, there are two keys: a <I>public</I> key and a <I>private</I> 
+        key. The public key used for encryption is different from the private 
+        key used for decryption. The two keys are mathematically related, but 
+        the private key cannot be determined from the public key.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">In general, cryptography is 
+        used to meet the following security objectives: </font> </P>
+    <ul>
+        <li><I><font face="Arial, Helvetica, sans-serif">Confidentiality</font></I><font face="Arial, Helvetica, sans-serif"> 
+          services restrict access to sensitive data to only those individuals 
+          who are authorized to view the data. Confidentiality measures prevent 
+          the <I>unauthorized</I> disclosure of information to unauthorized individuals 
+          or processes.<br>
+          &nbsp;</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Data integrity</I> services 
+          address the unauthorized or accidental modification of data. This includes 
+          data insertion, deletion, and modification. To ensure data integrity, 
+          a system must be able to detect <I>unauthorized</I> data modification. 
+          The goal is for the receiver of the data to verify that the data has 
+          not been altered.<br>
+          &nbsp;</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Authentication</I> services 
+          establish the validity of a transmission, message, or an originator. 
+          (Authentication services also verify an individual's authorization to 
+          receive specific categories of information. These services are not specific 
+          to cryptography.) Therefore, this service applies to both individuals 
+          and the information itself. The goal is for the receiver of the data 
+          to determine its origin.<br>
+          &nbsp;</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Non-repudiation</I> services 
+          prevent an individual from denying that previous actions had been performed. 
+          The goal is to ensure that the recipient of the data is assured of the 
+          sender's identity</font>. </li> 
+    </ul>
+      <H3><font face="Arial, Helvetica, sans-serif">STANDARDS AND CRITERIA</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Standards contain consistent 
+        technical specifications or other criteria to be used as rules or guidelines 
+        to ensure that products, processes, and services are appropriate for their 
+        stated purpose. Under the Information Technology Management Reform Act 
+        of 1996 and the Computer Security Act of 1987 (Public Law 100-235), the 
+        National Institute of Standards and Technology (NIST) is responsible for 
+        developing technical standards and guidelines for the security and privacy 
+        of federal information resources. Some of the standards and guidelines 
+        used to protect sensitive information are issued by NIST as Federal Information 
+        Processing Standards (FIPS). Federal agencies must comply with all standards 
+        made mandatory and binding by the Secretary of Commerce.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Technically, the Secretary 
+        of Commerce has authority to establish standards only for the federal 
+        government. However, since FIPS are established through a public process, 
+        the public is aware of their existence, and industry often uses conformance 
+        to applicable NIST standards as a factor when purchasing products. Also, 
+        NIST has a long history of participation in industry standards groups, 
+        including ANSI, ISO, the Institute of Electrical and Electronics Engineers 
+        (IEEE), the Internet Engineering Task Force (IETF), and others. In some 
+        cases, the federal government adopts industry standards (ANSI X9.17, <I>Key 
+        Management,</I> was adopted with restrictions as FIPS 171), and industry 
+        has adopted FIPS (e.g., Data Encryption Standard (DES) and DES Modes were 
+        adopted by ANSI).</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Benefits of Standards</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Standards are important because 
+        they define common practices, methods, and measures/metrics. Therefore, 
+        standards increase the reliability and effectiveness of products and ensure 
+        that the products are produced with a degree of quality. Standards provide 
+        solutions that have been accepted by a wide community and evaluated by 
+        experts in relevant areas. By using standards, organizations can reduce 
+        costs and protect their investments in technology.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Standards provide for information 
+        technology (IT) interoperability, security, and integrity, and other benefits:</font></P>
+    <ul>
+        <li><B><font face="Arial, Helvetica, sans-serif">Interoperability.</font></B><font face="Arial, Helvetica, sans-serif"> 
+          Products developed to a specific standard may be used to help support 
+          interoperability with other products that conform to the same standard. 
+          By using the same cryptographic algorithm, data that was encrypted using 
+          vendor A's product may be decrypted using vendor B's product. The use 
+          of a common standards-based cryptographic algorithm is necessary, but 
+          may not be sufficient to ensure product interoperability. Other common 
+          standards, such as communications protocol standards, may also be necessary. 
+          By ensuring interoperability among different vendors' equipment, standards 
+          permit an organization to select from various available products to 
+          find the most cost-effective solution.</font><br>
+          &nbsp;</li> 
+        <li><B><font face="Arial, Helvetica, sans-serif">Security.</font></B><font face="Arial, Helvetica, sans-serif"> 
+          Standards may be used to establish a common approved level of security. 
+          Most agency managers are not cryptographic security experts. By using 
+          a FIPS-approved cryptographic algorithm, a manager knows that a standard 
+          has been developed, the algorithm has been tested against this standard, 
+          and the results validated by NIST. NIST validation means the algorithm 
+          has been found to be adequate for the protection of sensitive government 
+          data. In addition, most FIPS-approved algorithms have gone through a 
+          significant period of public analysis and comment.</font><br>
+          &nbsp;</li> 
+        <li><B><font face="Arial, Helvetica, sans-serif">Integrity.</font></B><font face="Arial, Helvetica, sans-serif"> 
+          Standards may be used to assure the integrity of a product. Standards 
+          may: </font></li> 
+        <ul>
+          <li> <font face="Arial, Helvetica, sans-serif">Specify how a feature 
+            is to be implemented, e.g., the feature must be implemented in hardware.<br>
+            &nbsp;</font></li>
+          <li><font face="Arial, Helvetica, sans-serif"> Require a test or alarm 
+            to detect a malfunction.<br>
+            &nbsp;</font></li>
+          <li><font face="Arial, Helvetica, sans-serif"> Require specific documentation 
+            to assure proper implementation and product change management.</font></li> 
+        </ul>
+		</ul>
+		
+        
+      <P><font face="Arial, Helvetica, sans-serif">Many FIPS contain associated 
+        conformance tests and specify the conformance requirements. The conformance 
+        tests may be administered by NIST-accredited laboratories and provide 
+        validation that the standard was correctly implemented in the product.</font></P>
+      <ul>
+	  <li><B><font face="Arial, Helvetica, sans-serif">Common Form of Reference.</font></B><font face="Arial, Helvetica, sans-serif"> 
+        A standard may become a common form of reference to be used in evaluating 
+        vendors' products. FIPS 140-1, <I>Security Requirements for Cryptographic 
+        Modules</I>, contains security and integrity requirements for <I>any</I> 
+        cryptographic module implementing cryptographic operations. FIPS 140-1 
+        establishes a common form of reference by defining four levels of security 
+        for each of eleven security attributes.</font><br>&nbsp;</li> 
+      <li><B><font face="Arial, Helvetica, sans-serif">Cost Savings.</font></B><font face="Arial, Helvetica, sans-serif"> 
+        A standard can save a great deal of money by providing a single commonly 
+        accepted specification. Without standards, users may be required to become 
+        <I>experts</I> in every IT product that is being considered for purchase. 
+        Also, without standards, products may not interoperate with products purchased 
+        by other users. This results in a significant waste of money or the delayed 
+        implementation of IT</font>.</li>
+		</ul> 
+        
+      <H3><font face="Arial, Helvetica, sans-serif">Common Criteria</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">The <I>Common Criteria</I> (CC) 
+        is referenced throughout the guideline. The CC represents the outcome 
+        of efforts to develop criteria for evaluation of IT security. These criteria 
+        will be used throughout the international community. The CC defines a 
+        set of IT requirements of known validity that can be used in establishing 
+        security requirements for prospective products and systems. The CC also 
+        defines the Protection Profile (PP) construct that allows prospective 
+        consumers or developers to create standardized sets of security requirements 
+        that will meet their needs. The CC presents requirements for the IT security 
+        of a product under the distinct categories of functional requirements 
+        and assurance requirements.</font> </P>
+      <P><font face="Arial, Helvetica, sans-serif">The CC is a <I>voluntary</I> 
+        standard used to describe the security properties (functional and assurance) 
+        of IT products (or classes of products) and systems. In essence, the CC 
+        is a standard security specification &quot;language.&quot; Products whose 
+        security properties have been specified using the CC may then be validated 
+        (tested) for conformance to their CC specifications. Such a validation, 
+        when performed by an accredited testing laboratory, confirms that the 
+        product meets its security specification(s).</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">In general, FIPS referenced in 
+        the guideline<I> </I>are standards made mandatory and binding by the Secretary 
+        of Commerce. For example, FIPS 46-3, <I>Data Encryption Standard</I>, 
+        is a specific set of technical security requirements for the Triple Data 
+        Encryption Standard algorithm.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">When developing a specification 
+        or criteria for selection of a cryptographic module/product, both the 
+        CC and FIPS may be used. The CC may be used to specify the <I>functions</I> 
+        the algorithm will perform. The FIPS designate the specific type of algorithm 
+        (3DES, DSA) and the level of independent testing required (FIPS 140-1).</font> 
+      </P>
+      <H3><font face="Arial, Helvetica, sans-serif">SOME IMPLEMENTATION ISSUES</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">There are many issues that are 
+        applicable to the implementation of security methods/products. These are 
+        extensively discussed in other documents such as NIST SP 800-12, <I>An 
+        Introduction to Computer Security: The NIST Handbook</I>; NIST SP 800-14, 
+        <I>Generally Accepted Principles and Practices for Security Information 
+        Technology System</I>; and OMB Circular A-130, <I>Security of Federal 
+        Automated Information Resources</I>, Appendix III. Of particular relevance 
+        are the sections on training, contingency planning, assignment of roles 
+        and responsibilities, and security violation reporting and response.</font> 
+      </P>
+      <H3><font face="Arial, Helvetica, sans-serif">Hardware vs. Software Solutions</font> 
+      </H3>
+      <P><font face="Arial, Helvetica, sans-serif">The tradeoffs among security, 
+        cost, simplicity, efficiency, and ease of implementation need to be evaluated. 
+        Cryptography can be implemented in hardware, software, and/or firmware; 
+        each has its related costs and benefits. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Historically, software has 
+        been less expensive and slower than hardware, although for large applications, 
+        hardware may be less expensive. In addition, software is easier to modify 
+        or bypass than equivalent hardware products. The advantages of software 
+        solutions are flexibility and portability, ease of use, and ease of upgrade.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">In many cases, cryptography 
+        is implemented in a hardware device but is controlled by software; therefore, 
+        a hybrid solution is provided. Again, the user must evaluate the solutions 
+        against requirements to determine the best solution.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Public- vs. Secret-Key Cryptography</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">The primary advantage of public-key 
+        cryptography is increased security and convenience; private keys never 
+        need to be transmitted or revealed to anyone. In a secret-key system, 
+        the secret keys must be transmitted, either manually or through a communication 
+        channel. There may be a chance that an unauthorized individual can access 
+        the secret keys during their transmission.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The primary advantage of secret-key 
+        cryptography is speed. There are popular secret-key encryption methods 
+        that are significantly faster than any currently available public-key 
+        encryption method. Alternatively, public-key cryptography can be used 
+        with secret-key cryptography to get the best of both worlds, the security 
+        advantages of public-key systems and the speed advantages of secret-key 
+        systems. The public-key system can be used to encrypt a secret key that 
+        is used to encrypt the bulk of a file or message. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">In some situations, public-key 
+        cryptography is not necessary and secret-key cryptography alone is sufficient. 
+        This includes environments where secure secret-key agreement can take 
+        place, environments where a single authority knows and manages all the 
+        keys, and a single-user environment. In general, public-key cryptography 
+        is best suited for an open multi-user environment.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Key Management</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">The proper management of cryptographic 
+        keys is essential to the effective use of cryptography for security. Ultimately, 
+        the security of information protected by cryptography depends directly 
+        on the protection afforded the keys. All keys need to be protected against 
+        modification, and secret and private keys need to be protected against 
+        unauthorized disclosure. Listed below are recommendations for effective 
+        key management.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">- <I>Ensure that users are 
+        aware of their liabilities and responsibilities, and that they understand 
+        the importance of keeping their keys secure.</I></font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The security of cryptographic 
+        keys in an electronic or digital signature system is the foundation of 
+        a secure system; therefore, users must maintain control of their keys! 
+        Users must be provided with a list of responsibilities and liabilities, 
+        and each user should sign a statement acknowledging these concerns before 
+        receiving a key (if it is a long-term, user-controlled key). If different 
+        user roles (e.g., security officer, regular user) are implemented in a 
+        system, users should be aware of their unique responsibilities, especially 
+        regarding the significance of a key compromise or loss.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif"><I>- Prepare for the possibility 
+        of compromise.</I></font></P>
+      <P><font face="Arial, Helvetica, sans-serif">It is imperative to have a 
+        plan for handling the compromise or suspected compromise of central/root 
+        keys or key components at a central site; this should be established before 
+        the system goes &quot;live.&quot; The contingency plan should address 
+        what actions should be taken with system software and hardware, central/root 
+        keys, user keys, previously generated signatures, encrypted data, etc.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">If someone's private key is 
+        lost or compromised, others must be made aware of this, so that they will 
+        no longer encrypt messages using the invalid public key nor accept messages 
+        signed with the invalid private key. Users must be able to store their 
+        private keys securely, so that no intruder can find them, yet the keys 
+        must be readily accessible for legitimate use. Keys need to be valid only 
+        until a specified expiration date.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif"><I>- Sign and verify the code 
+        that implements the cryptographic functions.</I></font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Software at the central key 
+        management site should be electronically signed and periodically verified 
+        to check the integrity of the code. This provides a means of detecting 
+        the unauthorized modification of system software. Within a cryptomodule, 
+        this feature of generating and verifying a cryptographic checksum is required 
+        by FIPS 140-1.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif"><I>- Ensure that a system implemented 
+        for a federal government agency has its centrally stored keys and system 
+        software controlled by federal employees.</I></font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Proper control of central/root 
+        keys and key management software and hardware is critical to the security 
+        of the system. In the situation where a federal agency operates a system 
+        that was developed by a contractor, federal employees should be in control 
+        of this material. This also applies to configuring the key management 
+        hardware and software. Once the system goes live, unlimited access to 
+        central data, code, and cryptomodules should not be given to nonfederal 
+        employees, including those who were contracted to develop and/or maintain 
+        the system. </font></P>
+      <p><font face="Arial, Helvetica, sans-serif"><i>- Secure Key Management.</i></font></p>
+      <P><font face="Arial, Helvetica, sans-serif">Key management provides the 
+        foundation for the secure generation, storage, distribution, and translation 
+        of keys. Another role of key management is key maintenance, specifically 
+        the update/replacement of keys at the completion of a cryptoperiod. The 
+        cryptoperiod is determined based on the sensitivity of the information 
+        and the risk of key compromise.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Key Generation</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">The generation of keys is the 
+        most sensitive of all cryptographic functions. Any inadequacies in the 
+        implementation of the key-generation function or in the physical security 
+        safeguards of that function will seriously undermine the integrity of 
+        other cryptographic mechanisms. The physical security measures are necessary 
+        to prevent unauthorized disclosure, insertion, and deletion of the system 
+        or keys produced by the system. Specifically, all automated resources 
+        which generate keys and initialization vectors (IVs) should be physically 
+        protected to prevent:</font></P>
+    <ul>
+        <li><font face="Arial, Helvetica, sans-serif">disclosure, modification, 
+          and replacement of the keys,<br>
+          &nbsp;</font></li>
+        <li><font face="Arial, Helvetica, sans-serif">modification or replacement 
+          of the IVs, or<br>
+          &nbsp;</font></li>
+        <li><font face="Arial, Helvetica, sans-serif">modification or replacement 
+          of the generation algorithm or device.</font></li> 
+    </ul>
+      <P><font face="Arial, Helvetica, sans-serif">Depending on the desired management 
+        structure, there are some applications where the generation of keys is 
+        desirable and other applications where the distribution of keys from another 
+        source, such as a central authority, may be more desirable.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Key Use</font></H3>
+      <P><I><font face="Arial, Helvetica, sans-serif">- Cryptographic keys may need 
+        special physical protection.</font></I></P>
+      <P><font face="Arial, Helvetica, sans-serif">If keys or key components are 
+        stored on a token (e.g., floppy disk, personal computer (PC) card, smartcard, 
+        etc.), this token may have to be stored in a special manner to prevent 
+        unauthorized individuals from accessing the key or key component. For 
+        example, if key components for starting a Certification Authority (CA) 
+        or Key Management Facility are stored on tokens which are secured in a 
+        safe, multiple people might have access to this token. Therefore, additional 
+        protection is needed for each token, possibly by using a tamper-evident 
+        envelope, to enable the token's owner to determine if another person used 
+        a token.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif"><I>- Authentication timeout 
+        features are important for protecting keys from compromise or misuse.</I></font></P>
+      <P><font face="Arial, Helvetica, sans-serif">An authentication timeout feature 
+        for a cryptographic module or token is important to minimize the possibility 
+        of an unauthorized individual accessing an &quot;active&quot; cryptomodule 
+        and using its cryptographic keys. This could happen if a cryptomodule 
+        is left unattended by a user who has authenticated to it and loaded their 
+        cryptographic keys. One alternative is to force a user to periodically 
+        reauthenticate oneself to a cryptomodule, rather than allow them to stay 
+        logged in for an indefinite amount of time. For sensitive applications, 
+        it may be necessary to restrict the hours during which this can take place. 
+        </font></P>
+      <P><font face="Arial, Helvetica, sans-serif"><I>- Key recovery capabilities 
+        are important.</I></font></P>
+      <P><font face="Arial, Helvetica, sans-serif">IT systems must protect the 
+        confidentiality of information. There must be safeguards to ensure that 
+        sensitive records are neither irretrievably lost by the rightful owners 
+        nor accessed by unauthorized individuals. Key recovery capabilities provide 
+        these controls. All key components should be available to an organization 
+        regardless of whether the associated user is currently working in the 
+        organization. Employees leave organizations voluntarily and some are removed; 
+        in either situation, the organization may need to access the key components 
+        to recover encrypted data. Key recovery capabilities allow organizations 
+        to restore key components.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">It is very important to have 
+        backup copies of central/root keys, since the compromise or loss of those 
+        components could prevent access to keys in the central database, and possibly 
+        deny system users the ability to decrypt data or perform signature verifications.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Key Archiving</font></H3>
+      <P><I><font face="Arial, Helvetica, sans-serif">- Archive user keys for a 
+        sufficiently long cryptoperiod.</font></I></P>
+      <P><font face="Arial, Helvetica, sans-serif">A cryptoperiod is the time 
+        during which a key can be used for signature verification or decryption; 
+        it should extend well beyond the lifetime of a key (where the lifetime 
+        is the time during which a key can be used to generate a signature and/or 
+        perform encryption). Keys should be archived for a lengthy cryptoperiod 
+        (on the order of decades), so that they can be used to verify signatures 
+        and decrypt ciphertext during the cryptoperiod.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Key Destruction</font></H3>
+      <P><I><font face="Arial, Helvetica, sans-serif">- Determine reasonable lifetimes 
+        for keys associated with different types of users.</font></I></P>
+      <P><font face="Arial, Helvetica, sans-serif">Users with different roles 
+        in the system should have keys with lifetimes that take into account the 
+        users' roles and responsibilities, the applications for which the keys 
+        are used, and the security services which are provided by the keys (user/data 
+        authentication, confidentiality, data integrity, etc.). Reissuing keys 
+        should not be done so often that it becomes burdensome; however, it should 
+        be performed often enough to minimize the loss caused by a possible key 
+        compromise.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif"><I>- Handle the deactivation/revocation 
+        of keys so that data signed prior to a compromise date (or date of loss) 
+        can be verified.</I></font></P>
+      <P><font face="Arial, Helvetica, sans-serif">It should be possible to designate 
+        a signing key as &quot;lost&quot; or &quot;compromised,&quot; so signatures 
+        generated prior to a specified date can be verified. Otherwise, all data 
+        previously signed with a lost or compromised key would have to be reviewed 
+        and resigned. </font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">For More Information</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">NIST SP 800-21, <I>Guideline 
+        for Implementing Cryptography in the Federal Government, </I>is available 
+        at <a href="http://csrc.nist.gov/publications/nistpubs">http://csrc.nist.gov/publications/nistpubs</a>.</font></P>
+    <P><font face="Arial, Helvetica, sans-serif">NOTE: Any mention of commercial 
+      products is for information only; it does not imply recommendation or endorsement 
+      by the National Institute of Standards and Technology nor does it imply 
+      that the products mentioned are necessarily the best available for the purpose.</font></P>
+  </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: <!-- #BeginDate format:Am1 -->February 21, 2003<!-- #EndDate --> <br>
+        Page created: February 15, 2000</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>

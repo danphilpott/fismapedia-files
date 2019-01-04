@@ -1,0 +1,769 @@
+
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: August 2000</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="August 2000, August 2000 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, Security for Private Branch Exchange Systems">
+ <meta name="description" content="This is the August 2000 ITL Security Bulletin called Security for Private Branch Exchange Systems.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+      <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+        &nbsp;<br>
+      <CENTER>
+          <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>AUGUST 2000</b></font> 
+        </CENTER>
+      <table width="85%" border="1" cellspacing="1" cellpadding="2" align="center">
+        <tr> 
+          <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>Security for 
+              Private Branch Exchange Systems</B></FONT></div>
+          </td>
+        </tr>
+      </table>
+
+      <p><i><font face="Arial, Helvetica, sans-serif">By Richard Kuhn<br>
+        Computer Security Division<br>
+        Information Technology Laboratory<br>
+        National Institute of Standards and Technology</font></i></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Hacker attacks on computer networks 
+        are well known, but Private Branch Exchange (PBX) systems are also vulnerable. 
+        In one case, a hacker penetrated the Private Branch Exchange (PBX) system 
+        operated by a hospital in Escondido, California. For nearly two years, 
+        on various occasions, he blocked calls to and from the hospital, connected 
+        hospital operators to spurious numbers (including the county jail), and 
+        placed bogus emergency calls that appeared to be coming from inside the 
+        hospital.</font> </p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Unfortunately, the hospital’s 
+        experience is not unique. Failure to secure a PBX system can result in 
+        exposing an organization to toll fraud, theft of proprietary, personal, 
+        and confidential information, loss of revenue, or legal entanglements. 
+        Depending on how the organization’s network is configured and administered, 
+        information leading to intrusions of data networks may be compromised 
+        as well. A PBX is a sophisticated computer-based switch that can be thought 
+        of as essentially a small, in-house phone company for the organization 
+        that operates it. Protection of the PBX is thus a high priority. This 
+        bulletin introduces some of the vulnerabilities of PBX switches and describes 
+        some countermeasures that can be used to increase the security of your 
+        PBX. For a more detailed treatment of these issues, see NIST Special Publication 
+        (SP) 800-24, <i>PBX Vulnerability Analysis</i> (see <a href="http://csrc.nist.gov/publications/nistpubs">http://csrc.nist.gov/publications/nistpubs</a>).</font></p>
+
+      <h3><b><font face="Arial, Helvetica, sans-serif">Introduction</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Digital PBXs are widespread throughout 
+        government and industry, having replaced their analog predecessors. Today, 
+        even the most basic PBX systems have a wide range of capabilities that 
+        were previously only available only in large-scale switches. These new 
+        features have opened up many new opportunities for an adversary to attempt 
+        to exploit the PBX, particular mostly by using the features for a purpose 
+        that was never intended. The threats to PBX telephone systems are many, 
+        depending on the goals of attackers. Threats include:</font><br>
+
+      <UL>
+        <li><i><font face="Arial, Helvetica, sans-serif">Theft of service</font></i><font face="Arial, Helvetica, sans-serif">–i.e., 
+          toll fraud, probably the most common of motives for attackers.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Disclosure of information</i>- 
+          data disclosed without authorization, either by deliberate action or 
+          by accident. Examples include both eavesdropping on conversations and 
+          unauthorized access to routing and address data.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Data modification</i>- 
+          data altered in some meaningful way by reordering, deleting, or modifying 
+          it. For example, an intruder may change billing information or modify 
+          system tables to gain additional services.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Unauthorized access</i>- 
+          actions that permit an unauthorized user to gain access to system resources 
+          or privileges.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Denial of service</i>- 
+          actions that prevent the system from functioning in accordance with 
+          its intended purpose. A piece of equipment or entity may be rendered 
+          inoperable or forced to operate in a degraded state; time-dependent 
+          operations may be delayed.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Traffic analysis</i>- 
+          a form of passive attack in which an intruder observes information about 
+          calls (although not necessarily the contents of the messages) and makes 
+          inferences, e.g., from the source and destination numbers or frequency 
+          and length of the messages. For example, an intruder observes a high 
+          volume of calls between a company’s legal department and the Patent 
+          Office and concludes that a patent is being filed.</font> 
+      </ul>
+      <h3><b><font face="Arial, Helvetica, sans-serif">PBX Characteristics</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">PBXs are sophisticated computer systems, 
+        and many of the threats and vulnerabilities associated with operating 
+        systems are shared by PBXs. There are two important ways, however, in 
+        which PBX security is different from conventional operating system security:</font></p>
+      <UL>
+        <li><i><font face="Arial, Helvetica, sans-serif">External access/control</font></i><font face="Arial, Helvetica, sans-serif">. 
+          Like larger telephone switches, PBXs typically require remote maintenance 
+          by the vendor. Instead of relying on local administrators to make operating 
+          system updates and patches, organizations normally have updates installed 
+          remotely by the switch manufacturer. This of course requires remote 
+          maintenance ports and access to the switch by a potentially large pool 
+          of outside parties.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Feature richness</i>. 
+          The wide variety of features available on PBXs, particularly administrative 
+          features and conference functions, provides the possibility of unexpected 
+          attacks. An attacker may use a feature in a manner that was not intended 
+          by its designers. Features may also interact in unpredictable ways, 
+          even when implemented correctly, leading to system compromise even if 
+          each component of the system conforms to its security requirements and 
+          the system is operated and administrated correctly.</font>
+      </ul>
+      <h3><b><font face="Arial, Helvetica, sans-serif">Maintenance</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Maintenance procedures are among 
+        the most commonly exploited functions in networked systems. The problem 
+        is even more acute with PBXs because PBX maintenance frequently requires 
+        the involvement of outside personnel. Ways in which an adversary could 
+        exploit vulnerabilities in maintenance features to gain unwanted access 
+        to the switch follow.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Special Manufacturers Features</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">There may be features that the manufacturer 
+        will rely on in the event a customer’s PBX becomes disabled to such a 
+        point that on-site maintenance personnel cannot resolve the problems. 
+        The manufacturer could instruct the maintenance personnel to configure 
+        and connect a modem to the maintenance port. The manufacturer may then 
+        be able to dial in and use certain special features to resolve the problems 
+        without sending a representative to the customer’s location. The potential 
+        cost savings is a primary reason for adding such special features. A switch 
+        manufacturer would not want the special features to be well known because 
+        of their potential for misuse. These types of features may be accessible 
+        via login IDs and passwords held privately by the manufacturer. Some possible 
+        special features are listed below:</font></p>
+      <ul>
+        <li><i><font face="Arial, Helvetica, sans-serif">Database upload/download 
+          utility:</font></i><font face="Arial, Helvetica, sans-serif"> Such a 
+          utility allows the manufacturer to download the database from a system 
+          that is malfunctioning and examine it at their location to try to determine 
+          the cause of the malfunction. It would also allow the manufacturer to 
+          upload a new database to a PBX in the event that the database became 
+          so corrupted that the system became inoperable. Compromise of such a 
+          utility could allow an adversary to download a system’s database, insert 
+          a Trojan horse, or otherwise modify it to allow special features to 
+          be made available to the adversary, and upload the modified database 
+          back into the system.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Database examine/modify 
+          utility:</i> Such a utility allows the manufacturer to remotely examine 
+          and modify a system’s database to repair damage caused by incorrect 
+          configuration, design bugs, or tampering. This utility could also provide 
+          an adversary with the ability to modify the database to gain access 
+          to special features.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif"><i>Software debugger/update 
+          utility</i>: This type of utility gives the manufacturer the ability 
+          to remotely debug a malfunctioning system. It also allows the manufacturer 
+          to remotely update systems with bug fixes and software upgrades. Such 
+          a utility could grant an adversary the same abilities. This is perhaps 
+          the most dangerous vulnerability because access to the software would 
+          give an adversary virtually unlimited access to the PBX and its associated 
+          instruments.</font>
+      </ul>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Dial-Back Modem Vulnerabilities</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Unattended remote access to a switch 
+        clearly represents a vulnerability. Many organizations have employed dial-back 
+        modems to control access to remote maintenance facilities. This access 
+        control method works by identifying the incoming call, disconnecting the 
+        circuit, and dialing the identified person or computer at a predetermined 
+        telephone number. Although helpful, this form of access control is weak 
+        because methods of defeating many dial-back modems are well known.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Countermeasures</font></i></b></h3>
+      <ul>
+        <li><font face="Arial, Helvetica, sans-serif">Ensure that remote maintenance 
+          access is normally blocked unless unattended access is required. Whenever 
+          possible, require some involvement of local personnel in opening remote 
+          maintenance ports.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">Install two-factor (i.e., 
+          two different mechanisms) strong authentication on remote maintenance 
+          ports. Smart card-based systems or one-time password tokens, in addition 
+          to conventional login/password functions, make it much more difficult 
+          for attackers to breach your system’s security.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">Keep maintenance terminals 
+          in a locked, restricted area.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">Turn off maintenance features 
+          when not needed, if possible.</font>
+      </ul>
+      <h3><b><font face="Arial, Helvetica, sans-serif">Administrative Databases</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Administrative databases represent 
+        “the keys to the kingdom” for a PBX. Among the most critical security 
+        tasks for PBX owners are administration of the PBX, the creation and modification 
+        of its user databases, and the operating software controlling the switch.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Passwords</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Most PBXs grant administrative access 
+        to the system database through an Attendant Console or a generic dumb 
+        terminal. Username/password combinations are often used to protect the 
+        system from unwanted changes to the database. If remote access to the 
+        maintenance features is available, some form of password protection usually 
+        restricts it. There may be a single fixed maintenance account, multiple 
+        fixed maintenance accounts, or general user-defined maintenance accounts. 
+        The documentation provided with the PBX should state what type of maintenance 
+        access is available.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Passwords may also be set to factory 
+        default values that can be changed by the user. Default values are typically 
+        published in the documentation provided with the PBX. If there are multiple 
+        maintenance accounts and maintenance personnel use only one, the others 
+        may remain at their published factory settings. Anyone who knew the factory 
+        default settings could then gain access to the switch.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Physical Security</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Physical access to the PBX hardware 
+        grants access to the software, the configuration database, and all calls 
+        going in and out of the PBX. With access to the PBX, an adversary could 
+        exploit practically any conceivable vulnerability.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">The type of media on which the software 
+        and databases are stored is important to a PBX’s physical security. If 
+        these are stored on ROM-type devices or on an internal hard disk, it is 
+        more difficult to gain access to them than if they are stored on floppy 
+        disks or CD-ROM. ROM devices are mounted on circuit boards and may be 
+        soldered rather than socketed, making removal and replacement difficult. 
+        Likewise, an internal hard disk is probably mounted internally and bolted 
+        to the chassis, making removal and replacement difficult. However, floppy 
+        disks are easily removable and replaceable. An adversary with access to 
+        the floppy disks could easily conceal a disk containing modified software/databases, 
+        gain access to the PBX, and replace the original disk with the modified 
+        disk. Similarly, CD-ROMs can be easily removed and replaced. Since equipment 
+        for creating CD-ROMs is readily available, an adversary may find it equally 
+        easy to copy and modify a CD-ROM-based system.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">If the PBX supports configuration 
+        and maintenance via a dumb terminal, the terminal may be located near 
+        the PBX. If the terminal is not at the same location as the PBX, the terminal 
+        port is still available and could be used by an adversary with a PC acting 
+        as a terminal.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Some PBXs may be configured as a 
+        central system unit with peripheral units at remote locations. The remote 
+        peripheral units may also support configuration/maintenance via a dumb 
+        terminal and therefore have the same vulnerabilities as the system unit’s 
+        terminal. Also, all calls routed through a particular peripheral unit 
+        are accessible to someone with physical access to the peripheral unit.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Attendant Consoles may offer access 
+        to PBX maintenance and configuration software. Special features may also 
+        be available to Attendant Consoles such as Override, Forwarding, and Conferencing. 
+        If any of these features are available to the user of an Attendant Console, 
+        physical access to it should be restricted to prevent giving an adversary 
+        access to these features.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Most PBXs have an attached system 
+        printer. Various information may be output to the printer including source 
+        and destination of calls that are made or received (possibly every call), 
+        access codes used to access certain features, account or authorization 
+        codes used for making special calls, etc. Access to these printouts could 
+        provide information enabling toll fraud or other compromises.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Remote Access</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">A very useful but potentially vulnerable 
+        feature of many PBXs is remote administrative access. The PBX may allow 
+        an administrator to make changes to the system configuration database 
+        through an Attendant Console or from a terminal that is not physically 
+        located near the PBX, perhaps over a dial-in line with a modem.</font></p>
+
+      <i><font face="Arial, Helvetica, sans-serif">Remote Access via an Attendant Console</font></i><br>
+
+      <p><font face="Arial, Helvetica, sans-serif">The degree of the vulnerability created 
+        by remote access via an Attendant Console is determined by several factors: 
+        password access, physical connection of the Attendant Console to the PBX, 
+        and availability of administrative features through the Attendant Console.</font></p>
+
+      <i><font face="Arial, Helvetica, sans-serif">Remote Access via a Terminal</font></i> 
+      <p><font face="Arial, Helvetica, sans-serif">If a standard dumb terminal 
+        can be used for access to the administrative features, more opportunities 
+        become available for an adversary to gain unwanted access. A modem could 
+        be connected to a terminal port and an outside dial-in line allowing easy 
+        access for the PBX administrator to do remote configuration and maintenance. 
+        Unfortunately, it also gives easy remote access to an adversary. By setting 
+        up remote access in this manner, a poor password protection system, the 
+        existence of “backdoors” (e.g., a special key sequence that would bypass 
+        required authorization levels), or the use of easy-to-guess passwords 
+        would seriously undermine the security of the system.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Software Loading and 
+        Update Tampering</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">When software is initially loaded 
+        onto a PBX and when any software updates/patches are loaded, the PBX is 
+        particularly vulnerable to software tampering. An adversary could intercept 
+        a software update sent to a PBX administrator. The update could be modified 
+        to allow special access or special features to the adversary. The modified 
+        update would then be sent to the PBX administrator who would install the 
+        update and unknowingly give the adversary unwanted access to the PBX.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Countermeasures</font></i></b></h3>
+      <ul>
+        <li><font face="Arial, Helvetica, sans-serif">Perhaps the most important 
+          task for password security is to make passwords resistant to cracking 
+          by automated tools. A password generator that creates random passwords 
+          can go a long way in defeating password crackers. Both free and commercial 
+          random password generation tools are available. Commercial products 
+          are available that can generate passwords of user-selectable length 
+          that are very resistant to cracking.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">Many software packages use 
+          error detection codes to protect against transmission or disk copying 
+          errors. Conventional error detection codes such as checksums or cyclical 
+          redundancy checks (CRC) are not sufficient to ensure tamper detection. 
+          Strong error detection based on cryptography must be used. These methods 
+          use cryptographic algorithms that guarantee detection of even a single 
+          bit modification.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">Because of the potential 
+          for exploitation by intruders, PBX boot disks and utilities must be 
+          given more protection than usually afforded typical office software 
+          such as word processing packages. Strong physical security should be 
+          provided for PBX software. Audit reports from the PBX should be shredded 
+          or destroyed in the same way as sensitive memos or financial information.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">To ensure the security of 
+          printouts, they must be shredded when discarded.</font>
+      </ul>
+      <h3><b><font face="Arial, Helvetica, sans-serif">User Features</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">An adversary may be able to exploit 
+        vulnerabilities in a system's features and the way in which features can 
+        interact. As with many aspects of information technology, the proliferation 
+        of features that make PBXs easy to configure and use has led to an expansion 
+        of vulnerabilities. Many of these are inherent in the features themselves 
+        or arise out of feature interactions, making them difficult to avoid. 
+        This discussion illustrates some of these vulnerabilities so that administrators 
+        will be able to weigh the risks of features against their benefits.</font></p>
+
+      <i><font face="Arial, Helvetica, sans-serif">Attendant Console</font></i><br>
+
+      <p><font face="Arial, Helvetica, sans-serif">Attendant Consoles typically have 
+        more function keys and a larger alphanumeric display than standard instruments 
+        to support the extra features available to the Attendant Console. The 
+        Attendant Console may be used for access to maintenance and administrative 
+        functions, but there are potential vulnerabilities of the Attendant Console 
+        with respect to maintenance and administration. Some typical features 
+        available with an Attendant Console are Override, Forwarding, and Conferencing.</font></p>
+
+      <i><font face="Arial, Helvetica, sans-serif">Attendant Override</font></i><br>
+
+      <p><font face="Arial, Helvetica, sans-serif">Attendant Override is intended to 
+        allow the Attendant to break into a busy line to inform a user of an important 
+        incoming call. An adversary with access to an Attendant Console could 
+        use this feature to eavesdrop on conversations. The PBX should provide 
+        for some protection against such uses of Override by providing visual 
+        and/or audible warnings that an Override is in progress.</font></p>
+
+      <i><font face="Arial, Helvetica, sans-serif">Attendant Forwarding</font></i><br>
+
+      <p><font face="Arial, Helvetica, sans-serif">A common feature granted to the Attendant 
+        is the ability to control forwarding of other instruments. An adversary 
+        with access to the Attendant Console could use this feature to forward 
+        any instrument's incoming calls to a long-distance number. The adversary 
+        could then call the target instrument and be forwarded to the long-distance 
+        number, thereby gaining free long-distance access.</font></p>
+
+      <i><font face="Arial, Helvetica, sans-serif">Attendant Conferencing</font></i><font face="Arial, Helvetica, sans-serif"><br>
+      </font>
+      <p><font face="Arial, Helvetica, sans-serif">Attendants may also have the 
+        ability to initiate a conference or join into an existing conference. 
+        If this feature is available, the potential exists for an adversary logged 
+        in as an attendant to eavesdrop on a conversation or add an additional 
+        party to a conference without the knowledge of the other parties.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Automatic Call Distribution 
+        (ACD)</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">ACD allows a PBX to be configured 
+        so that incoming calls are distributed to the next available agent (e.g., 
+        reservation clerk) or placed on hold until an agent becomes available. 
+        Agents may be grouped together with each group having a supervisor. The 
+        group of supervisors may then even have a higher-level supervisor. The 
+        number of supervisors and number of levels of supervisors is dependent 
+        on the type of PBX being used.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Most ACD systems grant a supervisor 
+        the ability to monitor the calls of the group they are supervising. Because 
+        of this feature, ACD systems are a potential vulnerability to the users 
+        of PBX. If an adversary could gain access to the configuration tools or 
+        the system database, they could become an ACD supervisor and set up an 
+        ACD group. The supervisor could then monitor the calls of any of the users 
+        in the group.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Account Codes/Authorization 
+        Codes</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Account Codes are normally used for 
+        tracking calls made by certain people or projects so that bills can be 
+        charged appropriately. For example, a user may be required to enter an 
+        Account Code prior to placing a long-distance call. Depending on the configuration 
+        of the PBX, the Account Code may have to be on a list of approved codes 
+        for the call to be successful. If this is the case, the Account Code may 
+        be considered an Authorization Code because the user must dial a specific 
+        Account Code that is authorized for making long-distance calls.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Another important use for Access 
+        Codes is for Dial In System Access (DISA). DISA typically allows a user 
+        to dial in to the PBX system from an outside line and gain access to the 
+        normal features of the PBX, almost as if they were a subscriber on the 
+        PBX instead of an outside caller. This feature is typically used to allow 
+        employees to make long-distance calls from the corporate PBX while out 
+        of the office by dialing in to the switch, then entering a code to make 
+        long-distance calls. It is easily abused by anyone with the authorization 
+        code, possibly leading to large fraudulent long-distance charges.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Certain Account Codes may also be 
+        allocated for changing a user’s Class of Service (COS). When the COS is 
+        changed, the user may have access to a different set of features. For 
+        example, most instruments may be assigned a COS that does not permit the 
+        use of an Override feature, but a special COS that is only accessible 
+        by using an Account Code may be created that does permit the use of Override. 
+        By using the Account Code, an adversary could then gain access to the 
+        Override feature.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Since the Account Codes are used 
+        for billing, there are records kept of the calls that are made for the 
+        various Account Codes. These records generally include the source, destination, 
+        Account Code, and time/date of the call. The records may be stored as 
+        files on one of the system’s disks or they may be printed out on a system 
+        printer. If the records are printed, an adversary who is able to gain 
+        access to the printer will have access not only to traffic information, 
+        but also to the printed Account Codes. Once the codes are known, the adversary 
+        will be able to use the codes for toll fraud, additional feature access, 
+        etc.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Override (Intrude)</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">An Override or Intrude feature is 
+        common to many PBXs. Due to its potential vulnerability, it is commonly 
+        selectable as a feature that can be allowed/disallowed on a single instrument 
+        or a group of instruments. Override is intended to allow one user (perhaps 
+        a supervisor) to break into a busy line to inform another user (perhaps 
+        a subordinate) of an important message. This feature could be used by 
+        an adversary with access to any instrument permitted to use the Override 
+        feature to eavesdrop on conversations. The PBX should provide for some 
+        protection against such uses of Override by providing visual and/or audible 
+        warnings that an Override is in progress.</font></p>
+      <h3><font face="Arial, Helvetica, sans-serif"><b><i>Diagnostics</i></b></font></h3>
+      <p><font face="Arial, Helvetica, sans-serif">In addition to the major diagnostic 
+        features available at a maintenance terminal or Attendant Console, many 
+        PBXs provide diagnostics that can be initiated from any instrument. These 
+        diagnostic features may permit a user to make connections through the 
+        PBX by bypassing normal call processing restrictions. An adversary with 
+        access to these diagnostic features may be able to deny service or make 
+        undetected connections allowing for the monitoring of other calls.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Feature Interaction</font></i></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">With the advent of the digital PBX 
+        and its wealth of features, the interaction between features presents 
+        a significant possibility for vulnerabilities. For example, in some systems 
+        the return-call and camp-on features can be manipulated to defeat caller-ID 
+        blocking. With the large number of features available in modern PBXs, 
+        it becomes difficult for the manufacturer to consider all of the ways 
+        in which different features may interact. Because of this, vulnerabilities 
+        may exist that were undetected by the manufacturer that allow an adversary 
+        unwanted access to the PBX and its instruments.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Since the actual Feature Interaction 
+        vulnerabilities found on a specific system depend heavily on the particular 
+        implementation of the features, it would be nearly impossible to describe 
+        every possibility for a generic system. NIST SP 800-24 includes detailed 
+        examples of some feature interactions.</font></p>
+
+      <h3><b><i><font face="Arial, Helvetica, sans-serif">Countermeasures</font></i></b></h3>
+      <ul>
+        <li><font face="Arial, Helvetica, sans-serif">Vulnerabilities can be minimized 
+          if the Attendant Console connects to the PBX with a different physical 
+          connection than that of the telephone instruments.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">If the Attendant console 
+          connects to the PBX in the same manner as the telephone instruments, 
+          vulnerabilities can be reduced by having some sort of line configuration 
+          feature. Such a feature could reduce vulnerabilities by requiring that 
+          a line be specifically configured for use with an Attendant Console. 
+          With such a configuration requirement, a telephone instrument could 
+          not be easily replaced with an Attendant Console to gain access to the 
+          administrative features.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">When implementing a Class 
+          of Service, feature interaction should be given much thought. Many of 
+          the feature vulnerabilities discussed involve Feature Interaction since 
+          several COS items or system options may have to be enabled/disabled 
+          to allow them to occur.<br>
+          &nbsp; </font>
+        <li><font face="Arial, Helvetica, sans-serif">Because the vulnerabilities 
+          described in this section are inherent in feature implementation, they 
+          are difficult to defend against. The most effective strategy is to ensure 
+          that only essential features are activated.</font> 
+      </ul>
+      <h3><b><font face="Arial, Helvetica, sans-serif">Computer Telephony</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">One of the biggest new developments 
+        in telecommunications is the advent of computer-based telephony systems 
+        (CT). As microprocessor speeds have increased and memory prices dropped, 
+        it has become possible to implement a PBX on little more than a high-end 
+        PC. A CT system typically requires only the addition of specialized voice 
+        processing boards to an ordinary office PC with 64 MB of memory, a 3 GB 
+        disk, and a 300 MHz processor. Some CT systems use specialized real-time 
+        operating systems, but the trend is toward commercial off-the-shelf systems 
+        such as Windows, Linux, or other versions of UNIX. This development has 
+        brought great reductions in the cost of PBX systems, but means the possibility 
+        of enormously increased security risks. Two factors in particular can 
+        increase exposure: greatly expanded integration of telephony with the 
+        computer network and implementation of PBX functions over operating systems 
+        with widely known vulnerabilities. Some of the features appearing in new 
+        CT systems include:</font></p>
+<ul>
+        <li><font face="Arial, Helvetica, sans-serif">Voice over IP,<br>
+          </font>
+        <li><font face="Arial, Helvetica, sans-serif">Browser-based call handling 
+          and administration,<br>
+          </font>
+        <li><font face="Arial, Helvetica, sans-serif">Integration of IP PBX with 
+          legacy PBXs and voicemail systems,<br>
+          </font>
+        <li><font face="Arial, Helvetica, sans-serif">Integration of wireless 
+          networks with office network systems, and<br>
+          </font>
+        <li><font face="Arial, Helvetica, sans-serif">Virtual private networks.</font><br>
+</ul>
+      <p><font face="Arial, Helvetica, sans-serif">A complete exposition of the risks 
+        of CT systems is beyond the scope of this document. The safest course 
+        of action is to assume that most or all of the vulnerabilities described 
+        here apply to CT systems as well as traditional PBXs. CT systems may also 
+        have added vulnerabilities resulting from well-known weaknesses of PC 
+        operating systems. Future NIST publications may address CT security issues 
+        in more depth.</font></p>
+
+      <h3><b><font face="Arial, Helvetica, sans-serif">Recommendations</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">Not all of the security measures 
+        described in this bulletin will be applicable to every organization. The 
+        first step in improving PBX security is to assess the organization’s current 
+        telephony applications. This bulletin describes important areas to consider. 
+        Following this assessment, NIST SP 800-24 can be used in conducting a 
+        detailed evaluation. SP 800-24 also includes a set of baseline security 
+        considerations for PBXs and a more complete set of countermeasures for 
+        common vulnerabilities.</font></p>
+
+      <h3><b><font face="Arial, Helvetica, sans-serif">References</font></b></h3>
+
+      <p><font face="Arial, Helvetica, sans-serif">NIST SP 800-24, <i>PBX Vulnerability 
+        Analysis</i>, National Institute of Standards and Technology, 2000.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">Online resources:</font></p>
+      <ul>
+        <li><font face="Arial, Helvetica, sans-serif">NIST Computer Security Resource 
+          Clearinghouse: <a
+href="http://csrc.nist.gov/">http://csrc.nist.gov</a><br>
+          &nbsp; </font> 
+        <li><font face="Arial, Helvetica, sans-serif">DISA Information Assurance:<br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.disa.mil/infosec/iaweb/default.html">http://www.disa.mil/infosec/iaweb/default.html</a></font> 
+      </ul>
+      <p><font face="Arial, Helvetica, sans-serif">Disclaimer: Any mention of commercial 
+        products or reference to commercial organizations is for information only; 
+        it does not imply recommendation or endorsement by the National Institute 
+        of Standards and Technology nor does it imply that the products mentioned 
+        are necessarily the best available for the purpose.</font></p>
+	  
+    </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: <!-- #BeginDate format:Am1 -->February 21, 2003<!-- #EndDate --> <br>
+        Page created: August 26, 2000</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>

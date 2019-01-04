@@ -1,0 +1,743 @@
+
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: March 2000</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="March 2000, March 2000 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, Security Implications Of Active Content">
+ <meta name="description" content="This is the March 2000 ITL Security Bulletin called SECURITY Implications Of Active Content.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+    <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+      &nbsp;<br>
+      <CENTER>
+        <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>MARCH 2000</b></font> 
+      </CENTER>
+    <table width="85%" border="1" cellspacing="1" cellpadding="2" align="center">
+      <tr> 
+        <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>Security Implications 
+              Of Active Content</B></FONT></div>
+          </td>
+      </tr>
+    </table>
+    <p><i><font face="Arial, Helvetica, sans-serif">By Wayne Jansen and Tom Karygiannis,<br>
+      Computer Security Division,<br>
+      Information Technology Laboratory,<br>
+      National Institute of Standards and Technology</font></i></p>
+    <H3><font face="Arial, Helvetica, sans-serif">Introduction</font></H3>
+    <P><font face="Arial, Helvetica, sans-serif">In today&#146;s world, both private 
+      and public sectors depend upon information technology (IT) systems to perform 
+      essential and mission-critical functions. Often, as technology improves 
+      to provide new capabilities and features, new vulnerabilities are introduced 
+      along with these functional improvements. Organizations implementing and 
+      using these advanced technologies must, therefore, be increasingly on guard.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">One such emerging technology 
+        is <I>active content</I>. Although the term has different connotations 
+        among individuals, it is used here in its broadest sense to refer to electronic 
+        documents that, unlike ASCII character documents of the past, are able 
+        to automatically carry out or trigger actions without the intervention 
+        of a user. Examples of active content include PostScript&reg; documents, 
+        Java<font size="-4"><sup>TM</sup></font> applets, JavaScript<font size="-4"><sup>TM</sup>,</font> 
+        word processing and spreadsheet macros, and executable electronic mail 
+        attachments. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The purpose of this bulletin 
+        is to provide an overview of this technology so that the reader is better 
+        informed about the associated security risks and can make more informed 
+        IT security decisions. The bulletin provides real-world examples involving 
+        commonly available products and development tools as a way of increasing 
+        the understanding and awareness of the potential risks involved. A glossary 
+        of relevant terms and links to useful online references are also included 
+        at the end of this publication.</font> </P>
+      <H3><font face="Arial, Helvetica, sans-serif">Background</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Having the ability to download 
+        files and electronic documents off the Internet is a useful function and 
+        a common practice for many people today. While there are risks involved 
+        if one visits an unknown site, it appears at first glance that there should 
+        be no harm in downloading information as long as the files are non-executables. 
+        Even if a browser plug-in or utility is downloaded, it is recognized as 
+        such and must be explicitly installed in order to function, so careful 
+        judgment and appropriate preparation can be taken in advance. This view 
+        on risks, however, is incorrect. Today, electronic documents are themselves 
+        programs or contain programs that can be self-triggered. Loading a document 
+        into a word processor can produce the same effect as executing a program, 
+        requiring appropriate caution to be taken. After all, if you would not 
+        knowingly execute a program from an unknown source, why would you indirectly 
+        execute one embedded in an electronic document?</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">In striving to offer greater 
+        functionality and flexibility, software developers will continue to blur 
+        the distinctions between program and data. While the developer&#146;s 
+        intentions are presumably good, they can often have a negative impact 
+        when the need for security is not fully taken into account. Such documents 
+        are said to have active content, which involves new technology such as 
+        built-in macros, scripting languages, and virtual machines. The trend 
+        towards active content has been spurred by the popularity of the Web. 
+        A dynamic weather map, a stock ticker, and live camera views or programmed 
+        broadcasts appearing on a Web page are common examples of how this technology 
+        is being applied. Like any technology, active content can provide a useful 
+        capability, but can also become a source of vulnerability for an attacker 
+        to exploit. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Active content can be considered 
+        to be a form of mobile code, whereby the code in the form of a script, 
+        macro, or other portable representation can move either indirectly (e.g., 
+        via an electronic mail attachment) or directly (e.g., via a Web page) 
+        from one platform to another where it eventually executes. Because the 
+        technology is designed to be seamless, a user is often unaware of what 
+        is happening. The problem with mobile code in general, and active content 
+        in particular, is that it can embed a Trojan horse or other form of malicious 
+        code into a system.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The prevalence of unintentional 
+        implementation errors in software applications that process electronic 
+        documents plagues active content technology. Even if a design is correct 
+        and secure, the implementation may unintentionally contain a serious vulnerability 
+        that can be exploited by malicious code conveyed in the active content 
+        portion of a document. Together, active content and implementation errors 
+        can damage or subvert an IT system. An attacker needs only to learn what 
+        software their target is using, find an appropriate exploit, and send 
+        the document to the target.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The trend in application software 
+        development is to add more features and greater complexity to products. 
+        Complexity begets more code, more code interacts with other code and, 
+        hence, more implementation errors occur. This trend, combined with the 
+        competitive pressures facing manufacturers to be first to the market, 
+        the technical and cost barriers to extensive testing, and a marketplace 
+        that chooses functionality over security, ensures attackers continual 
+        opportunities in the future.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Technology-Related Risks</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Some popular active-content technologies 
+        are described below. They are provided as present-day examples and do 
+        not imply an endorsement of the technology or product by NIST. A number 
+        of them share the characteristic of providing a useful capability when 
+        used in a Web browser environment. However, an attacker can exploit them. 
+        The motivation for these technologies is to improve functionality and 
+        gain flexibility for the user. In a Web application, this involves moving 
+        code processing away from the Web server onto the client&#146;s Web browser. 
+        Allowing remote systems to run arbitrary code on a local system, however, 
+        poses serious security risks. Traditional client-server systems do not 
+        involve such risks since they rely on static code on both the server and 
+        client sides.</font> </P>
+      <H3><font face="Arial, Helvetica, sans-serif">PostScript&reg;</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">One of the earliest examples 
+        of active content is PostScript&reg; document representation, still in 
+        wide use today. PostScript&reg; is a page description language that is 
+        widely used on most computer platforms. It is the de facto standard in 
+        commercial typesetting and printing houses. PostScript&reg; commands are 
+        language statements in ASCII text that are translated into the printer's 
+        machine language by a PostScript&reg; interpreter built into the printer. 
+        The interpreter uses scalable fonts, eliminating the need to store a variety 
+        of font sizes. A PostScript&reg; file contains a document description, 
+        which is specified in the PostScript&reg; page description language. The 
+        language is a powerful interpreted language, comparable to many programming 
+        languages, and, therefore, PostScript&reg; documents inherently convey 
+        active content. For example, the language defines primitives for file 
+        manipulation, which can be used in a PostScript&reg; document to modify 
+        arbitrary files when the document is displayed or printed. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">An early exploit of PostScript&reg; 
+        technology involved the language's ability to set a password held by the 
+        interpreter. In some hardware implementations of the language interpreter, 
+        if the password was set, it remained in non-volatile memory and prevented 
+        subsequent documents from being printed unless they contained the same 
+        password. An attacker sending a password-setting document could disable 
+        the printer in this way, requiring hardware replacement to rectify the 
+        situation. Some PostScript&reg; interpreters can be set to disable potentially 
+        harmful primitives, but such actions can also inhibit useful functions. 
+        This dilemma is a recurring theme with active content.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Java<font size="-4"><sup>TM</sup></font></font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Java is a full-featured programming 
+        language compiled into platform-independent byte code that is executed 
+        by an interpreter called the Java<font size="-4"><sup>TM</sup></font> 
+        Virtual Machine. The resulting byte code can be executed where compiled 
+        or transferred to another Java-enabled platform (e.g., conveyed via an 
+        HTML Web page as an applet). Java is useful for adding functionality to 
+        Web sites and many services offered by various popular Web sites require 
+        the user to have a Java-enabled browser. The developers of Java tried 
+        to address the problem of security and were successful to a large extent. 
+        Java code is confined to a <I>sandbox</I> that restricts the access of 
+        the code to computational resources based on its permissions. Permissions 
+        are assigned primarily based on the source of the code (where it came 
+        from) and the author of the code (who developed it).</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The Java sandbox is designed 
+        to prevent Web applets from inspecting or changing files on a client file 
+        system and using network connections to circumvent file protections or 
+        people's expectations of privacy. Hostile applets, however, still pose 
+        security threats even while executing within the sandbox. A hostile applet 
+        can consume or exploit system resources in an inappropriate manner or 
+        cause a user to perform an undesired or unwanted action. Examples of hostile 
+        applets exploits include denial-of-service, mail forging, invasion of 
+        privacy (e.g., exporting of identity, electronic mail address, and platform 
+        information) and installing backdoors to the system. The Java security 
+        model is fairly complex and can be difficult for a user to understand 
+        and manage, which can increase risk. Moreover, many implementation bugs 
+        have also been found, which allow one to bypass security mechanisms.</font></P>
+      <h3><font face="Arial, Helvetica, sans-serif">JavaScript<font size="-4"><sup>TM</sup></font>and 
+        Visual Basic&reg; Script</font></h3>
+      <P><font face="Arial, Helvetica, sans-serif">JavaScript is a general-purpose, 
+        cross-platform scripting language whose code can be embedded within standard 
+        Web pages to create interactive documents. JavaScript, which is similar 
+        to Microsoft&reg; Jscript&reg;, was developed by Netscape. Both are founded 
+        on the same standard, the ECMAScript Language Specification, ECMA-262. 
+        The scripting language is extremely powerful and able to perform anything 
+        a user can do within the context of the browser. Design and implementation 
+        bugs have been discovered in both commercial scripting products. JavaScript 
+        does not have methods for directly accessing a client file system or for 
+        directly opening connections to other computers besides the host that 
+        provided the content source.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Visual Basic&reg; Script (VBScript) 
+        is a programming language developed by Microsoft&reg; for creating scripts 
+        that can be embedded in Web pages for viewing with the Internet Explorer 
+        browser. VBScript is a subset of the widely used Microsoft&reg; Visual 
+        Basic&reg; programming language and also works with Microsoft&reg; ActiveX&reg; 
+        Controls. The language is similar to JavaScript and poses similar risks.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">In theory, confining a scripting 
+        language to boundaries of a Web browser should provide a relatively secure 
+        environment. In practice, this has not been the case. The main sources 
+        of problems have been twofold: the prevalence of implementation flaws 
+        and the close binding of the browser to related functionality such as 
+        an electronic mail facility or the underlying operating system. Past exploits 
+        include sending a user's URL history list to a remote site, and stealing 
+        the mail address of the user and forging electronic mail.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">ActiveX&reg;</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">ActiveX&reg; is a set of technologies 
+        from Microsoft&reg; that provide tools for linking desktop applications 
+        to the Web. ActiveX&reg; controls are reusable component program objects 
+        that can be attached to electronic mail or downloaded from a Web site. 
+        ActiveX&reg; controls also come preinstalled on Windows&reg; platforms. 
+        Unlike Java, which is a platform-independent programming language, ActiveX&reg; 
+        controls are distributed as executable binaries and must be separately 
+        compiled for each target machine and operating system.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The ActiveX&reg; security model 
+        is considerably different from the Java sandbox model. The Java model 
+        restricts the permissions of applets to a set of safe actions. ActiveX&reg;, 
+        on the other hand, places no restrictions on what a control can do. Instead, 
+        ActiveX&reg; controls are digitally signed by their author under a technology 
+        scheme called Authenticode. The digital signatures are verified using 
+        identity certificates issued by a trusted certificate authority to an 
+        ActiveX&reg; software publisher. For an ActiveX&reg; publisher's certificate 
+        to be granted, the software publisher must pledge that no harmful code 
+        will be knowingly distributed under this scheme. The Authenticode process 
+        ensures that ActiveX&reg; controls cannot be distributed anonymously and 
+        that tampering with the controls can be detected. This certification process, 
+        however, does not ensure that a control will be well behaved. The ActiveX&reg; 
+        security model assigns the responsibility for the computer system's security 
+        to the user. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Before the browser downloads 
+        an unsigned ActiveX&reg; control or a control whose corresponding publisher's 
+        certificate was issued by an unknown certifying authority, the browser 
+        presents a dialog box warning the user that this action may not be safe. 
+        Users can choose to abort the transfer or may continue the transfer if 
+        they assume the source is trustworthy or they are willing to assume the 
+        risk. Users may not be aware of the security implications of this decision, 
+        which may result in poor decisions. Even when the user is well informed, 
+        attackers may trick the user into approving the transfer. In the past, 
+        attackers have exploited implementation flaws to cover the user dialogue 
+        window with another that displays an unobtrusive message such as &quot;Do 
+        you want to continue?&quot; while exposing the positive indication button 
+        needed to launch active content. Recent versions of Internet Explorer 
+        allow the user to customize the behavior of ActiveX&reg; controls depending 
+        on whether they are downloaded from a site on the Internet, a site on 
+        the local area network, or a site belonging to sets of identified trusted 
+        and untrusted sites.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Desktop Application Macros</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Developers of popular spreadsheet, 
+        word processing, and other desktop applications created macros to allow 
+        users to automate and customize repetitive tasks. A macro is a series 
+        of menu selections, keystrokes, and commands that have been recorded and 
+        assigned a name or key combination. When the macro name is called or the 
+        macro key combination is pressed, the steps in the macro are executed 
+        from beginning to end. Macros are used to shorten long menu sequences 
+        as well as to create miniature programs within an application. Macro languages 
+        often include programming controls (IF, THEN, GOTO, WHILE, etc.) that 
+        automate sequences like any programming language. A virus can be written 
+        into a macro that is stored in a spreadsheet or word processing document. 
+        When the document is opened, the macro is executed and the virus is activated. 
+        It can also attach itself to subsequent documents that are saved with 
+        the same macro. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">The recent Melissa virus is 
+        an example of the potential risk involved. A Microsoft&reg; Word document 
+        containing a malicious Visual Basic&reg; for Applications macro propagated 
+        itself through the Internet by sending the host document as an electronic 
+        mail attachment addressed to contacts found in the victim&#146;s address 
+        book. The newer generation of electronic mail applications, including 
+        the ones built into Web browsers, allows mail attachments to contain active 
+        content such as document macros or JavaScript programs. Since active content 
+        provides a number of avenues for exploits, such enclosures should be opened 
+        only after due consideration of the inherent risks.</font></P>
+      <H3><font face="Arial, Helvetica, sans-serif">Plug-Ins</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Plug-ins are programs that work 
+        in conjunction with software applications to enhance their capabilities. 
+        Plug-ins are often added to Web browsers to enable them to support new 
+        types of content (audio, video, etc.). Such plug-ins can be downloaded 
+        from either the browser vendor&#146;s site or from a third-party site. 
+        Browsers typically prompt the user to download a new plug-in when a document 
+        that requires functionality beyond the browser&#146;s current capabilities. 
+        Although plug-ins allow browsers to support new types of content, they 
+        are not active content in and of themselves, but simply an active-content-enabling 
+        technology. Windows&reg; Media Player, RealPlayer, ThingViewer, QuickTime, 
+        Shockwave, and Flash are all examples of plug-ins that allow browsers 
+        to support new content types ranging from audio, video, interactive animation, 
+        and other forms of &#147;new media.&#148;</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">From a security standpoint, 
+        plug-ins contain executable code and, therefore, precautions should be 
+        exercised in obtaining and installing them, as with any other software 
+        application. Downloading free software code and authorizing its installation 
+        by simply clicking an &#147;Install now&#148; or equivalent button is 
+        risky. Downloading plug-ins from reputable manufacturers can mitigate 
+        the risk, but even in this case, it is difficult for the user to always 
+        be aware of the security implications. In the past, unwanted side effects 
+        such as changes to browser security settings and tracking of a user&#146;s 
+        content preferences, however well intentioned, have occurred. Plug-ins 
+        designed to animate cursors or hyperlinks have also been designed to better 
+        track user preferences and viewing habits across a particular Web site. 
+        Although these additional capabilities may improve the user's experience 
+        with a particular Web site, the privacy and security implications are 
+        often not readily disclosed. Even if the site has a valid identity certificate 
+        associated with the signed downloaded code, this only tells the user that 
+        the manufacturer of the code has been verified by a certificate authority, 
+        but not whether the code obtained from them will behave non-maliciously 
+        or correctly. Users of plug-ins should be cautioned to read the fine print 
+        before agreeing to download executables and to take adequate measures 
+        to back up their system in case there are problems.</font> </P>
+      <H3><font face="Arial, Helvetica, sans-serif">Countermeasures</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">A number of steps can be taken 
+        to mitigate the risks in using active content. The following sections 
+        highlight some of the more useful countermeasures one can apply.</font></P>
+      <P><b><font face="Arial, Helvetica, sans-serif">Security Policy</font></b></p>
+      <P><font face="Arial, Helvetica, sans-serif">Having or establishing an organizational 
+        security policy is an important first step in applying countermeasures 
+        for active content. For example, an Internet security policy can address 
+        enabling Java, JavaScript, or ActiveX&reg; on individual user's Web browsers 
+        in various ways:</font></P>
+    <UL>
+        <LI> <font face="Arial, Helvetica, sans-serif">Functionality must be disallowed 
+          completely; </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Functionality is allowed, 
+          but only from internal organizational servers; </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Functionality is allowed, 
+          but only from trusted external servers; and </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Functionality is allowed 
+          from any server.</font> </LI>
+    </UL>
+      <P><font face="Arial, Helvetica, sans-serif">If the policy is not stated clearly 
+        and consistently, and not made known throughout an organization, it creates 
+        a situation ripe for exploitation.</font></P>
+      <p><b><font face="Arial, Helvetica, sans-serif">Application Settings</font></b></p>
+      <P><font face="Arial, Helvetica, sans-serif">The desktop applications that 
+        handle documents containing active content typically have built-in controls 
+        that can be used to control or prevent access. For example, both Netscape 
+        and Microsoft&reg; Web browsers have an options menu that can be used 
+        to select appropriate security settings regarding active content within 
+        downloadable documents. Spreadsheet, word processor, and presentation 
+        graphic software applications have similar controls. Even today, many 
+        manufacturers deliver products with insecure default settings. Users of 
+        such applications need to become familiar with the security options available 
+        and use them in accordance with organizational policy.</font> </P>
+      <p><b><font face="Arial, Helvetica, sans-serif">Automated Filters</font></b></p>
+      <P><font face="Arial, Helvetica, sans-serif">If malicious content has been 
+        identified and understood, it can be detected and eliminated or rejected 
+        completely from entering. For example, many firewalls are capable of filtering 
+        electronic mail attachments for well-known file types, such as .exe executable 
+        files, and deleting them at the point of entry. More sophisticated filters 
+        can perform checks for viruses within executables and hidden macros within 
+        document files. Anti-virus software has also become increasingly capable 
+        of detecting electronic documents having active content with malicious 
+        code</font>. </P>
+      <p><b><font face="Arial, Helvetica, sans-serif">Version Control</font></b></p>
+      <P><font face="Arial, Helvetica, sans-serif">Users can gain better security 
+        by applying security patches when available. This is a well-known and 
+        effective remedy, but for a variety of reasons, it is also an often-ignored 
+        one. Users can also take advantage of security enhancements to their applications 
+        by upgrading to newer versions. Microsoft&reg; Windows&reg;98 users can 
+        use the Windows&reg; update feature to find bug fixes and product updates 
+        and download them automatically from the Web. Using this feature, however, 
+        requires the user to use code that will scan the computer for installation 
+        information in order to properly install any upgrades. The Microsoft&reg; 
+        Web site states that none of this information is sent to Microsoft&reg; 
+        or over the Internet. Updating software products automatically over the 
+        Web is becoming increasingly popular, as the benefits to the user are 
+        considerable. As this practice becomes more commonplace, users must be 
+        better aware of the implicit decisions they make when allowing vendors 
+        to run software on their machine. For example, updating an audio player 
+        on a computer may allow the vendor to track the user&#146;s musical preferences.</font> 
+      </P>
+      <p><b><font face="Arial, Helvetica, sans-serif">Readers</font></b></p>
+      <P><font face="Arial, Helvetica, sans-serif">Occasionally, manufacturers of 
+        desktop applications provide free software readers, which are capable 
+        of interpreting their proprietary file formats, for recipients of the 
+        documents who do not own the application. The Adobe&reg; Acrobat&reg; 
+        Reader, for example, allows users to view and print Portable Document 
+        Format (PDF) files, but does not allow users to edit them. Since the software 
+        readers are only intended to produce a readable rendition of the document 
+        and are not full-fledge applications, they bypass many potentially harmful 
+        features and exploits based on implementation vulnerabilities contained 
+        in a specific application. Besides manufacturer-provided readers, general-purpose 
+        software readers are commercially available, which are capable of rendering 
+        dozens of file formats. A related measure is the selection of documents 
+        with less capable formats of active content, when multiple choices are 
+        offered. Some Web sites offer an electronic document in a variety of formats 
+        such as native word processor format, PostScript&reg;, or PDF. While PDF 
+        represents text and graphics using the imaging model of the PostScript&reg; 
+        language, PDF is not a programming language and contains no language constructs, 
+        making it the safest alternative.</font></P>
+      <p><b><font face="Arial, Helvetica, sans-serif">System Isolation</font></b></p>
+      <P><font face="Arial, Helvetica, sans-serif">Isolation works two ways. First, 
+        a production computer system that is unable to receive documents containing 
+        active content is unlikely to be affected by malicious hidden code. Although 
+        it is not always possible to isolate a system physically, logical isolation 
+        may be applied, at least to some degree. Second, risky functions, such 
+        as Web browsing, may be confined to a second system designated exclusively 
+        for that purpose. Often older or spare systems are available and could 
+        be put to good use this way.</font> </P>
+      <H3><font face="Arial, Helvetica, sans-serif">Summary</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">Active-content documents offer 
+        several benefits to both the users of these documents and their authors. 
+        Java applets, JavaScript, and ActiveX&reg; provide additional functionality 
+        to Web pages, plug-ins enable browsers to support new types of content, 
+        PostScript&reg; offloads the processing and interpretation of the presentation 
+        of documents to the printer, and macros automate repetitive word processing 
+        and spreadsheet tasks. The benefits of each of these active-content technologies 
+        must be carefully weighed against the risks they pose. Security is not 
+        black or white, but shades of gray. When employing active-content technology, 
+        security measures should be put in place to reduce risk to an acceptable 
+        level and to recover if an incident occurs. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Informed security officers, 
+        administrators, and other IT professionals are responsible for developing 
+        security policies based on their organization&#146;s specific security 
+        needs and level of acceptable risk. Unfortunately, there is rarely a &#147;one 
+        size fits all&#148; guideline that fits the unique needs of every organization 
+        and each organization must decide what constitutes an acceptable level 
+        of risk. Establishing an organizational security policy is an important 
+        step in developing and applying appropriate security measures. The IT 
+        and security staff have a responsibility for keeping abreast of the associated 
+        risks with emerging technologies by subscribing to security mailing lists 
+        and visiting vendor Web sites for information and updates for products 
+        used within their organization. As active content moves beyond desktop 
+        personal computers to mobile handsets, television sets, and a wide variety 
+        of other consumer electronic goods, users will be faced with competing 
+        and difficult tradeoffs between privacy and security, with increased functionality 
+        and ease-of-use. </font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Before handling documents containing 
+        active content, consider seriously the following checklist, which summarizes 
+        some recommendations drawn from the previous material:</font></P>
+    <UL>
+        <LI> <font face="Arial, Helvetica, sans-serif">Identify critical information 
+          resources and maintain regular backups. </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Identify and assess the 
+          risk to critical information resources from active content. </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Develop (or follow) the 
+          enterprise security policy regarding active content. </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Evaluate and install virus 
+          scanners, firewalls, and active-content filters according to enterprise 
+          security requirements. Keep these products upgraded to the latest version. 
+          </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Become knowledgeable of 
+          the security settings of desktop applications. </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Keep informed of the latest 
+          security advisories from CERT and subscribe to security mailing lists. 
+          </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Obtain and install the 
+          latest software upgrades and patches that address security vulnerabilities 
+          in desktop applications, such as Web browsers, readers, and electronic 
+          mail. </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Obtain all software through 
+          approved distribution channels. </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Institutionalize the download, 
+          evaluation, and distribution of needed plug-ins and freeware from the 
+          Internet to the organization. </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Read the fine print before 
+          agreeing to download application software and plug-ins. </font></LI>
+        <li><font face="Arial, Helvetica, sans-serif">Do not run active content 
+          or software from untrusted sources. Enable ActiveX&reg; code only from 
+          trusted Web sites that require its use.</font></li>
+        <LI><font face="Arial, Helvetica, sans-serif"> Consider using an isolated 
+          system and safe browser settings when visiting untrusted Web sites. 
+          </font></LI>
+        <LI><font face="Arial, Helvetica, sans-serif"> Do not open documents containing 
+          active content or execute any electronic mail attachments without first 
+          verifying them with the sender. Be especially wary of attachments to 
+          electronic chain mails that have been forwarded from friends of friends. 
+          </font></LI>
+    </UL>
+      <H3><font face="Arial, Helvetica, sans-serif">Glossary</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">The following definitions highlight 
+        key concepts used throughout this bulletin:</font></P>
+    <UL>
+        <li><I><font face="Arial, Helvetica, sans-serif">Active Content</font></I><font face="Arial, Helvetica, sans-serif">: 
+          Active content refers to electronic documents that are able to automatically 
+          carry out or trigger actions without the intervention of a user.</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Computer Virus</I>: A 
+          computer virus is similar to a Trojan horse (see below) insofar as it 
+          is a program that contains hidden code, which usually performs some 
+          unwanted function as a side effect. The main difference is that the 
+          hidden code in a computer virus can replicate by attaching a copy of 
+          itself to other programs and may also include an additional &quot;payload&quot; 
+          that triggers when specific conditions are met.</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Interpreter</I>: An interpreter 
+          is a program that processes a script or other program expression and 
+          carries out the requested action, in accordance with the language definition.</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Malicious Code</I>: Malicious 
+          code refers to programs that are written intentionally to carry out 
+          annoying or harmful actions. They often masquerade as useful programs 
+          or are embedded into useful programs, so that users are induced into 
+          activating them. Types of malicious code include Trojan horses and computer 
+          viruses.</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Script</I>: A script 
+          is a sequence of commands, often residing in an ASCII file that can 
+          be interpreted and executed automatically. Unlike compiled programs, 
+          which execute directly on a computer processor, a script must be processed 
+          by another program that carries out the indicated action.</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Scripting Language</I>: 
+          A scripting language defines the syntax and semantics for writing scripts. 
+          Typically, scripting languages follow the conventions of a simple programming 
+          language, but they can also take on a more basic form such as a macro 
+          or a batch file. JavaScript, VBScript, and Perl are examples of scripting 
+          languages.</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><I>Trojan Horse</I>: A Trojan 
+          horse is a useful or seemingly useful program that contains hidden code 
+          of a malicious nature. When the program is invoked, so is the undesired 
+          function whose effects may not become immediately obvious. The name 
+          stems from an ancient exploit of invaders' gaining entry to the city 
+          of Troy by concealing themselves in the body of a hollow wooden horse, 
+          presumed to be left behind by the invaders as a gift to the city.</font></li>
+    </ul>
+      <H3><font face="Arial, Helvetica, sans-serif">Online Resources</font></H3>
+      <P><font face="Arial, Helvetica, sans-serif">A wealth of security information 
+        is available online. The following are a few notable sites that one can 
+        begin to explore for further information:</font></P>
+      <UL>
+        <li><font face="Arial, Helvetica, sans-serif">Microsoft&reg; Internet 
+          Explorer Security Page. Microsoft&reg; posts information and code fixes 
+          for security problems here as soon as they are available.<br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.microsoft.com/windows/ie/security/default.asp">http://www.microsoft.com/windows/ie/security/default.asp</a><br>
+          &nbsp; </font></li>
+        <li><font face="Arial, Helvetica, sans-serif">Netscape Security Page. 
+          Latest news concerning the security of Netscape&#146;s client, server, 
+          and development software.<br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://home.netscape.com/security/notes/">http://home.netscape.com/security/notes/</a></font><br>
+          &nbsp;</li>
+        <li><font face="Arial, Helvetica, sans-serif">Computer Security Resource 
+          Clearinghouse (CSRC). The CRSC contains current U.S. security policy 
+          documents, calendar of events, security publications, training resources, 
+          and information on various computer security subjects.<br>
+          <a href="http://csrc.nist.gov">http://csrc.nist.gov</a></font><br>
+          &nbsp; </li>
+        <li><font face="Arial, Helvetica, sans-serif">The Federal Computer Incident 
+          Response Capability (FedCIRC). FedCIRC provides a government focal point 
+          for incident reporting, handling, prevention and recognition.<br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.fedcirc.gov/">http://www.fedcirc.gov/</a></font><br>
+          &nbsp;</li>
+        <li><font face="Arial, Helvetica, sans-serif">WWW Security FAQ. The World 
+          Wide Web Consortium site contains a repository of information about 
+          the World Wide Web for developers and users.<br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.w3.org/Security/Faq/">http://www.w3.org/Security/Faq/</a></font><br>
+          &nbsp; </li>
+        <li><font face="Arial, Helvetica, sans-serif">System Administration, Networking, 
+          and Security (SANS) Institute. The SANS community creates four types 
+          of products and services: system and security alerts and news updates, 
+          special research projects and publications, in-depth education, and 
+          certification.<br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.sans.org">http://www.sans.org</a><br>
+          &nbsp; </font></li>
+        <li><font face="Arial, Helvetica, sans-serif">Computer Emergency Response 
+          Team (CERT) Coordination Center. CERT issues security advisories, helps 
+          start other incident response teams, coordinates the efforts of teams 
+          when responding to large-scale incidents, provides training to incident 
+          response professionals, and researches the causes of security vulnerabilities.<br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cert.org/">http://www.cert.org/</a></font><br>
+          &nbsp; </li>
+        <li><font face="Arial, Helvetica, sans-serif">RISKS forum. ACM Committee 
+          on Computers and Public Policy forum on risks to the public in computers 
+          and related systems. <br>
+          <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://catless.ncl.ac.uk/Risks/">http://catless.ncl.ac.uk/Risks/</a></font></li>
+      </ul>
+      <p><font size="-4"><sup><font face="Arial, Helvetica, sans-serif">TM</font></sup></font><font face="Arial, Helvetica, sans-serif">Java 
+        and all Java based marks are trademarks or registered trademarks of Sun 
+        Microsystems, Inc., in the United States and other countries.</font></P>
+      <P><font face="Arial, Helvetica, sans-serif">Disclaimer: Any mention of commercial 
+        products or reference to commercial organizations is for information only; 
+        it does not imply recommendation or endorsement by the National Institute 
+        of Standards and Technology nor does it imply that the products mentioned 
+        are necessarily the best available for the purpose.</font></P>
+  </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: <!-- #BeginDate format:Am1 -->February 21, 2003<!-- #EndDate --> <br>
+        Page created: March 16, 2000</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>
