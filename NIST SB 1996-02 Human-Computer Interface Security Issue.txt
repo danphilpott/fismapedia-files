@@ -1,0 +1,253 @@
+HUMAN/COMPUTER INTERFACE SECURITY ISSUES
+To build secure applications in an open systems environment, one
+must consider general security issues related to the
+human/computer interface.  This bulletin discusses some of these
+issues including the identification of users, platforms, and
+hardware security.
+
+IDENTIFYING USERS
+Generally, a user's first activity when starting a session with
+a secured computer system is identifying himself/herself to the
+system.  The most common ways to identify and authenticate users
+are by the use of physical keys, account names and passwords, and
+biometric checks.
+
+Physical Keys
+A physical key is an object whose characteristics are somehow
+secret, and which is usually somewhat difficult to reproduce.
+It could be:
+
+  -  a piece of machined metal that unlocks the computer;
+
+  -  a hardware device that attaches to an I/O channel (e.g., a
+     serial line with an RS-232 connector), which can be
+     interrogated by the system, and which must be present to
+     execute certain programs; or
+
+  -  a smart card, which is a credit-card-sized circuit board
+     which contains some form of non-volatile memory, and may
+     even have a CPU.
+
+The risks of physical keys are familiar and obvious:
+
+  -  keys can be forgotten, broken, lost, borrowed or lent;
+
+  -  keys can be stolen or copied (by a determined user);
+
+  -  keys and compromised locks can be expensive to replace;
+
+  -  it can be difficult or impossible to automatically or
+     remotely revise authorizations associated with a particular
+     physical key; and
+
+  -  physical keys must be physically managed, i.e., stored,
+     logged, kept secure, etc.
+
+Often a physical key is used with a password or biometric check.
+
+Passwords
+A password is a sequence of characters which is a shared secret
+between the user and the system.  Passwords are usually stored on
+the system in a user-inaccessible location or are stored in
+an encrypted form.  Passwords present a variety of risks:
+
+  -  passwords can be guessed, shared, written down, or
+     forgotten;
+
+  -  passwords can be stolen by observation;
+
+  -  passwords tend not to be changed very often, and if they
+     are, are more readily forgotten;
+
+  -  passwords in plaintext are passed over the network or are
+     stored in publicly readable locations on the system;
+
+  -  encrypted passwords are often publicly readable, making them
+     susceptible to cryptographic analysis; and
+
+  -  short passwords can be found via brute-force methods.
+
+These risks led system architects to search for other
+identification methods, including biometric checks.
+
+Biometric Checks
+A relatively new method of identification for computer systems
+is the biometric check.  It consists of comparing some readily
+accessible and reliably unique physical characteristic of a human
+user against the system's stored values for that characteristic.
+Some commonly used biometrics are hand proportions, facial
+images, retinal images, fingerprints, and voice prints.
+
+The advantages of biometrics are that they cannot be lent
+like a physical key or forgotten like a password.  However,
+biometric checks have some obvious drawbacks:
+
+  -  all the biometric sensors are relatively expensive, in both
+     monetary and computing terms;
+
+  -  measuring hands requires that the appropriate hand be free,
+     ungloved, and that the user has a measurable hand;
+
+  -  a facial image scan requires that the user's appearance not
+     change drastically;
+
+  -  a retinal image scan requires that the user has a measurable
+     retina, that eyeglasses or a contact lens not interfere, and
+     that the user is willing to allow the scanner's laser to
+     scan their eye;
+
+  -  fingerprint analysis has the same drawbacks as the hand
+     proportion metrics;
+
+  -  voice print analysis is affected by noise and throat
+     problems, and requires that the user have a measurable
+     voice.
+
+PLATFORMS
+Each category of hardware/software platform has its own strengths
+and weaknesses with regard to its human/computer interface and
+security.
+
+Personal Computers
+As organizations begin to install open systems operating systems
+and programs on their personal computers, the limitations of
+those platforms must be recognized and handled appropriately.
+Traditionally, most personal computers were designed to be
+single-user, single-tasking systems.  As a result, many of the
+safeguards one usually associates with multi-user, multi-tasking
+systems are reduced or absent.  Currently, some personal computer
+operating systems support a limited form of task-switching or
+cooperative multi-tasking.  In general:
+
+  -  Although some personal computers have keyed locks, the keys
+     are not necessarily unique, so one size fits all;
+
+  -  Password protection of the machine is absent or not enabled;
+
+  -  There is no built-in support for sharing a single machine
+     between multiple users; and
+
+  -  Every program has unlimited access to all the hardware, and
+     by extension, all the software.  As a result:
+
+          -    Any program can modify the hardware and software
+               interrupts and timers.
+ 
+          -    Any program can read or write any area of memory.
+
+          -    There is little or no protection against the
+               inadvertent or intentional modification or
+               deletion of files.
+
+Fortunately, most open systems operating systems provide the
+needed safeguards.
+
+Workstations
+Multi-user, multi-tasking workstations generally have operating
+system architectures that address the weaknesses associated with
+personal computers.  Most workstation operating systems support
+passwords, provide an insulating and protective layer of software
+between the user program and the hardware, and provide memory
+isolation between user program processes and the operating
+system.
+
+However, other weaknesses exist that usually are not addressed.
+Some of the relevant UNIX-derived operating system weaknesses
+are:
+
+  -  Programs do not run in a ``least resource'' environment. 
+     Any application can potentially monopolize all the resources
+     of a system;
+
+  -  Programs do not run in a ``least privilege'' environment. 
+     That is, although a user may expect an application to affect
+     only the files the user specified, a program can actually
+     manipulate any resource the user can manipulate;
+
+  -  Tty's and pseudo-tty's are not handled in a secure manner. 
+     A program can open a terminal and wait for another program
+     to open the same terminal;
+
+  -  Programs share the same directories to create temporary
+     files, which means a program can modify or delete the work
+     files of other programs;
+
+  -  Programs are built with shared libraries containing
+     references to relative rather than absolute pathnames;
+
+  -  Programs that access a file without checking if it is a
+     symbolic link can be tricked into accessing a substitute
+     file;
+
+  -  Setuid programs (i.e., those programs capable of running
+     with a user ID other than the one which is the owner of the
+     executable file and/or capable of changing user Ids while
+     running) are inherently unsafe; and
+
+  -  Network conveniences like hosts.equiv and NFS have many
+     bugs, security holes, and potential management pitfalls. 
+
+Most of these problems are addressed by the Compartmented Mode
+Workstation requirements, but are usually not addressed by the
+normal, commercial workstation platforms.
+
+Servers
+For the purposes of this discussion, a server is a multi-user,
+multi-tasking computer system that is intended to provide
+simultaneous service to multiple users.  It often runs what are
+considered mission-critical applications.  Nowadays, workstations
+and servers often run the same operating system, so all the
+shortcomings of the workstation operating systems are shared by
+the server.  In addition, servers are most often accessed via a
+network, rather than multiple serial connections, so they are
+more sensitive to the risks of networking.
+
+HARDWARE SECURITY
+All software security depends on hardware security.  If the
+hardware can be stolen or surreptitiously replaced, secure
+software will not help.  When computers filled a room, stolen
+computers were not a big problem.  Now that laptop and palmtop
+computers are the fastest growing market, physical security is at
+least as important as software security.  Some of the most common
+problems are:
+
+  -  equipment and removable media is stolen or replaced;
+
+  -  security can be circumvented by changing hardware setup
+     parameters;
+
+  -  systems can be booted by unauthorized users;
+
+  -  systems can be booted from unauthorized software;
+
+  -  boot media can be rewritten by unauthorized software; and
+
+  -  unauthorized software can be executed from removable media.
+
+Some of the safeguards which can be taken are:
+
+  -  locked doors and secured equipment;
+
+  -  lockable cases, keyboards, and removable media drives;
+
+  -  key or password-protected configuration and setup;
+
+  -  password required to boot;
+
+  -  password required to mount removable media;
+
+  -  read-only boot media; and
+
+  -  storing removable media in secured areas.
+
+Last, but not least, users need training in the correct use of
+the system.  Untrained users can intentionally or unintentionally
+subvert security policies through lack of training.
+
+This bulletin summarizes a chapter in NIST Special Publication
+800-7, Security in Open Systems.  The document is available for
+sale by the National Technical Information Service (NTIS) at
+(703) 487-4650; order number PB95-105383, price $36.50.  It is
+also available electronically, in HTML format, on our Computer
+Security Resource Clearinghouse (CSRC) at:  http://csrc.nist.gov  
+Click on Publications, then click on Special Publications.

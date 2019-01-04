@@ -1,0 +1,356 @@
+AUDIT TRAILS
+
+Audit trails maintain a record of system activity both by system and
+application processes and by user activity of systems and applications.  In
+conjunction with appropriate tools and procedures, audit trails can assist
+in detecting security violations, performance problems, and flaws in
+applications.  This bulletin focuses on audit trails as a technical control
+and discusses the benefits and objectives of audit trails, the types of
+audit trails, and some common implementation issues.
+
+An audit trail is a series of records of computer events, about an
+operating system, an application, or user activities.  A computer system
+may have several audit trails, each devoted to a particular type of
+activity.  Auditing is a review and analysis of management, operational,
+and technical controls.  The auditor can obtain valuable information about
+activity on a computer system from the audit trail.  Audit trails improve
+the auditability of the computer system. 
+
+Audit trails may be used as either a support for regular system operations
+or a kind of insurance policy or as both of these.  As insurance, audit
+trails are maintained but are not used unless needed, such as after a
+system outage.  As a support for operations, audit trails are used to help
+system administrators ensure that the system or resources have not been
+harmed by hackers, insiders, or technical problems.
+
+BENEFITS AND OBJECTIVES
+Audit trails can provide a means to help accomplish several
+security-related objectives, including individual accountability,
+reconstruction of events (actions that happen on a computer system),
+intrusion detection, and problem analysis.
+
+Individual Accountability
+Audit trails are a technical mechanism that help managers maintain
+individual accountability.  By advising users that they are personally
+accountable for their actions, which are tracked by an audit trail that
+logs user activities, managers can help promote proper user behavior.
+Users are less likely to attempt to circumvent security policy if they know
+that their actions will be recorded in an audit log.
+
+For example, audit trails can be used in concert with access controls to
+identify and provide information about users suspected of improper
+modification of data (e.g., introducing errors into a database).  An audit
+trail may record "before" and "after" versions of records. (Depending upon
+the size of the file and the capabilities of the audit logging tools, this
+may be very resource-intensive.)  Comparisons can then be made between the
+actual changes made to records and what was expected.  This can help
+management determine if errors were made by the user, by the system or
+application software, or by some other source.
+
+Audit trails work in concert with logical access controls, which restrict
+use of system resources.  Granting users access to particular resources
+usually means that they need that access to accomplish their job.
+Authorized access, of course, can be misused, which is where audit trail
+analysis is useful.  While users cannot be prevented from using resources
+to which they have legitimate access authorization, audit trail analysis is
+used to examine their actions.  For example, consider a personnel office in
+which users have access to those personnel records for which they are
+responsible.  Audit trails can reveal that an individual is printing far
+more records than the average user, which could indicate the selling of
+personal data.  Another example may be an engineer who is using a computer
+for the design of a new product.  Audit trail analysis could reveal that an
+outgoing modem was used extensively by the engineer the week before
+quitting.  This could be used to investigate whether proprietary data files
+were sent to an unauthorized party.  
+
+Reconstruction of Events
+Audit trails can also be used to reconstruct events after a problem has
+occurred.  Damage can be more easily assessed by reviewing audit trails of
+system activity to pinpoint how, when, and why normal operations ceased.
+Audit trail analysis can often distinguish between operator-induced errors
+(during which the system may have performed exactly as instructed) or
+system-created errors (e.g., arising from a poorly tested piece of
+replacement code).  If, for example, a system fails or the integrity of a
+file (either program or data) is questioned, an analysis of the
+audit trail can reconstruct the series of steps taken by the system, the
+users, and the application.  Knowledge of the conditions that existed at
+the time of, for example, a system crash, can be useful in avoiding future
+outages.  Additionally, if a technical problem occurs (e.g., the corruption
+of a data file) audit trails can aid in the recovery process (e.g., by
+using the record of changes made to reconstruct the file).  
+
+Intrusion Detection
+Intrusion detection refers to the process of identifying attempts to
+penetrate a system and gain unauthorized access.  If audit trails have been
+designed and implemented to record appropriate information, they can assist
+in intrusion detection.  Although normally thought of as a real-time
+effort, intrusions can be detected in real time, by examining audit records
+as they are created (or through the use of other kinds of warning
+flags/notices), or after the fact (e.g., by examining audit records in a
+batch process).  
+
+Real-time intrusion detection is primarily aimed at outsiders attempting to
+gain unauthorized access to the system.  It may also be used to detect
+changes in the system's performance indicative of, for example, a virus or
+worm attack (forms of malicious code).  There may be difficulties in
+implementing real-time auditing, including unacceptable system performance.
+
+After-the-fact identification may indicate that unauthorized access was
+attempted (or was successful).  Attention can then be given to damage
+assessment or reviewing controls that were attacked.  
+
+Problem Analysis
+Audit trails may also be used as on-line tools to help identify problems
+other than intrusions as they occur.  This is often referred to as
+real-time auditing or monitoring.  If a system or application is deemed to
+be critical to an organization's business or mission, real-time auditing
+may be implemented to monitor the status of these processes (although, as
+noted above, there can be difficulties with real-time analysis).  An
+analysis of the audit trails may be able to verify that the system operated
+normally (i.e., that an error may have resulted from operator error, as
+opposed to a
+system-originated error).  Such use of audit trails may be complemented by
+system performance logs.  For example, a significant increase in the use of
+system resources (e.g., disk file space or outgoing modem use) could
+indicate a security problem. 
+
+AUDIT TRAILS AND LOGS
+A system can maintain several different audit trails concurrently.  There
+are typically two kinds of audit records, (1) an event-oriented log and (2)
+a record of every keystroke, often called keystroke monitoring.
+Event-based logs usually contain records describing system events,
+application events, or user events.  
+
+An audit trail should include sufficient information to establish what
+events occurred and who (or what) caused them.  In general, an event record
+should specify when the event occurred, the user ID associated with the
+event, the program or command used to initiate the event, and the result.
+Date and time can help determine if the user was a masquerader or the
+actual person specified.  
+
+Keystroke Monitoring
+Keystroke monitoring is the process used to view or record both the
+keystrokes entered by a computer user and the computer's response during an
+interactive session.  Keystroke monitoring is usually considered a special
+case of audit trails.  Examples of keystroke monitoring would include
+viewing characters as they are typed by users, reading users' electronic
+mail, and viewing other recorded information typed by users.  (See the CSL
+Bulletin of March 1993, for guidance on the legality of keystroke monitoring.)
+
+Some forms of routine system maintenance may record user keystrokes.  This
+could constitute keystroke monitoring if the keystrokes are preserved along
+with the user identification so that an administrator could determine the
+keystrokes entered by specific users.  Keystroke monitoring is conducted in
+an effort to protect systems and data from intruders who access the systems
+without authority or in excess of their assigned authority.  Monitoring
+keystrokes typed by intruders can help administrators assess and repair
+damage caused by intruders.    
+
+Audit Events
+System audit records are generally used to monitor and fine-tune system
+performance.  Application audit trails may be used to discern flaws in
+applications, or violations of security policy committed within an
+application.  User audits records are generally used to hold individuals
+accountable for their actions.  An analysis of user audit records may
+expose a variety of security violations, which might range from simple
+browsing to attempts to plant Trojan horses or gain unauthorized privileges.
+     
+The system itself enforces certain aspects of policy (particularly
+system-specific policy) such as access to files and access to the system
+itself.  Monitoring the alteration of systems configuration files that
+implement the policy is important.  If special accesses (e.g., security
+administrator access) have to be used to alter configuration files, the
+system should generate audit records whenever these accesses are used.
+
+Sometimes a finer level of detail than system audit trails is required.
+Application audit trails can provide this greater level of recorded detail.
+If an application is critical, it can be desirable to record not only who
+invoked the application, but certain details specific to each use.  For
+example, consider an e-mail application.  It may be desirable to record who
+sent mail, as well as to whom they sent mail and the length of messages.
+Another example would be that of a database application.  It may be useful
+to record who accessed what database as well as the individual rows or
+columns of a table that were read (or changed or deleted), instead of just
+recording the execution of the database program.
+
+A user audit trail monitors and logs user activity in a system or
+application by recording events initiated by the user (e.g., access of a
+file, record or field, use of a modem).
+
+Flexibility is a critical feature of audit trails.  Ideally (from a
+security point of view), a system administrator would have the ability to
+monitor all system and user activity, but could choose to log only certain
+functions at the system level, and within certain applications.  The
+decision of how much to log and how much to review should be a function of
+application/data sensitivity and should be decided by each functional
+manager/application owner with guidance from the system administrator and
+the computer security manager/officer, weighing the costs and benefits of
+the logging.  Audit logging can have privacy implications; users should be
+aware of applicable privacy laws, regulations, and policies that may apply
+in such situations.
+
+System-Level Audit Trails
+If a system-level audit capability exists, the audit trail should capture,
+at a minimum, any attempt to log on (successful or unsuccessful), the
+log-on ID, date and time of each log-on attempt, date and time of each
+log-off, the devices used, and the function(s) performed once logged on
+(e.g., the applications that the user tried, successfully or
+unsuccessfully, to invoke).  System-level logging also typically includes
+information that is not specifically security-related, such as system
+operations, cost-accounting charges, and network performance.
+
+Application-Level Audit Trails
+System-level audit trails may not be able to track and log events within
+applications, or may not be able to provide the level of detail needed by
+application or data owners, the system administrator, or the computer
+security manager.  In general, application-level audit trails monitor and
+log user activities, including data files opened and closed, specific
+actions, such as reading, editing, and deleting records or fields, and
+printing reports.  Some applications may be sensitive enough from a data
+availability,
+confidentiality, and/or integrity perspective that a "before" and "after"
+picture of each modified record (or the data element(s) changed within a
+record) should be captured by the audit trail.
+
+User Audit Trails
+User audit trails can usually log:
+
+     -    all commands directly initiated by the user;
+     -    all identification and authentication attempts; and
+     -    files and resources accessed.
+
+It is most useful if options and parameters are also recorded from
+commands.  It is much more useful to know that a user tried to delete a log
+file (e.g., to hide unauthorized actions) than to know the user merely
+issued the delete command, possibly for a personal data file.
+
+IMPLEMENTATION ISSUES 
+Audit trail data requires protection, since the data should be available
+for use when needed and is not useful if it is not accurate.  Also, the
+best planned and implemented audit trail is of limited value without timely
+review of the logged data.  Audit trails may be reviewed periodically, as
+needed (often triggered by occurrence of a security event), automatically
+in real-time, or in some combination of these.  System managers and
+administrators, with guidance from computer security personnel, should
+determine how long audit trail data will be maintained -- either on the
+system or in archive files.  
+
+Following are examples of implementation issues that may have to be
+addressed when using audit trails. 
+
+Protecting Audit Trail Data
+Access to on-line audit logs should be strictly controlled.  Computer
+security managers and system administrators or managers should have access
+for review purposes; however, security and/or administration personnel who
+maintain logical access functions may have no need for access to audit logs.  
+
+It is particularly important to ensure the integrity of audit trail data
+against modification.  One way to do this is to use digital signatures.
+Another way is to use write-once devices.  The audit trail files need to be
+protected since, for example, intruders may try to "cover their tracks" by
+modifying audit trail records.  Audit trail records should be protected by
+strong access controls to help prevent unauthorized access.  The integrity
+of audit trail information may be particularly important when legal issues
+arise, such as when audit trails are used as legal evidence.  (This may,
+for example, require daily printing and signing of the logs.) Questions of
+such legal issues should be directed to the cognizant legal counsel.  
+
+The confidentiality of audit trail information may also be protected, for
+example, if the audit trail is recording information about users that may
+be disclosure-sensitive such as transaction data containing personal
+information (e.g., "before" and "after" records of modification to income
+tax data).  Strong access controls and encryption can be particularly
+effective in preserving confidentiality.
+
+Review of Audit Trails
+Audit trails can be used to review what occurred after an event, for
+periodic reviews, and for real-time analysis.  Reviewers should know what
+to look for to be effective in spotting unusual activity.  They need to
+understand what normal activity looks like.  Audit trail review can be
+easier if the audit trail function can be queried by user ID, terminal ID,
+application name, date and time, or some other set of parameters to run
+reports of selected information.
+
+Audit Trail Review After an Event.  Following a known system or application
+software problem, a known violation of existing requirements by a user, or
+some unexplained system or user problem, the appropriate system-level or
+application-level administrator should review the audit trails.  Review by
+the application/data owner would normally involve a separate report, based
+upon audit trail data, to determine if their resources are being misused.  
+
+Periodic Review of Audit Trail Data.  Application owners, data owners,
+system administrators, data processing function managers, and computer
+security managers should determine how much review of audit trail records
+is necessary, based on the importance of identifying unauthorized
+activities.  This determination should have a direct correlation to the
+frequency of periodic reviews of audit trail data. 
+
+Real-Time Audit Analysis.  Traditionally, audit trails are analyzed in a
+batch mode at regular intervals (e.g., daily).  Audit records are archived
+during that interval for later analysis.  Audit analysis tools can also be
+used in a real-time, or near real-time fashion.  Such intrusion detection
+tools are based on audit reduction, attack signature, and variance
+techniques.  Manual review of audit records in real-time is almost never
+feasible on large multiuser systems due to the volume of records generated.
+ However, it might be possible to view all records associated with a
+particular user or application, and view them in real time.  (This is
+similar to keystroke monitoring, though, and may be legally restricted.)
+
+Tools for Audit Trail Analysis
+Many types of tools have been developed to help to reduce the amount of
+information contained in audit records, as well as to distill useful
+information from the raw data.  Especially on larger systems, audit trail
+software can create very large files, which can be extremely difficult to
+analyze manually.  The use of automated tools is likely to be the
+difference between unused audit trail data and a robust program.  Some of
+the types of tools include:
+
+Audit reduction tools are preprocessors designed to reduce the volume of
+audit records to facilitate manual review.  Before a security review, these
+tools can remove many audit records known to have little security
+significance.  (This alone may cut in half the number of records in the
+audit trail.)  These tools generally remove records generated by specified
+classes of events, such as records generated by nightly backups might be
+removed.
+
+Trends/variance-detection tools look for anomalies in user or system
+behavior.  It is possible to construct more sophisticated processors that
+monitor usage trends and detect major variations.  For example, if a user
+typically logs in at 9 a.m., but appears at 4:30 a.m. one morning, this may
+indicate a security problem that may need to be investigated.
+
+Attack signature-detection tools look for an attack signature, which is a
+specific sequence of events indicative of an unauthorized access attempt.
+A simple example would be repeated failed log-in attempts. 
+
+COST CONSIDERATIONS
+Audit trails involve many costs.  First, some system overhead is incurred
+recording the audit trail.  Additional system overhead will be incurred
+storing and processing the records.  The more detailed the records, the
+more overhead is required.  Another cost involves human and machine time
+required to do the analysis.  This can be minimized by using tools to
+perform most of the analysis.  Many simple analyzers can be constructed
+quickly (and cheaply) from system utilities, but they are limited to audit
+reduction and identifying particularly sensitive events.  More complex
+tools that identify trends or sequences of events are slowly becoming
+available as off-the-shelf software.  (If complex tools are not available
+for a system, development may be prohibitively expensive.  Some intrusion
+detection systems, for example, have taken years to develop.)
+
+The final cost of audit trails is the cost of investigating anomalous
+events.  If the system is identifying too many events as suspicious,
+administrators may spend undue time reconstructing events and questioning
+personnel.
+
+FOR MORE INFORMATION
+This bulletin summarizes a chapter in NIST Special Publication 800-12,
+Introduction to Computer Security: The NIST Handbook.  The handbook is
+available electronically at:  http://csrc.nist.gov/nistpubs/800-12 in
+WordPerfect 6.1, MS Word, and PostScript formats.  You can also order the
+handbook from the Government Printing Office at (202) 512-1800, stock
+number SN003-003-03374-0, price $18.00.
+
+
+
+
+

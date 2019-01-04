@@ -1,0 +1,587 @@
+
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: May 1999</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="May 1999, May 1999 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, Computer Attacks:  What They Are and How to Defend Against Them">
+ <meta name="description" content="This is the May 1999 ITL Security Bulletin called Computer Attacks:  What They Are and How to Defend Against Them.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+      <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+        &nbsp;<br>
+      <CENTER>
+          <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>MAY 1999</b></font> 
+        </CENTER>
+      <table width="85%" border="1" cellspacing="1" cellpadding="2" align="center">
+        <tr> 
+          <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>Computer Attacks: 
+              What They Are and How to Defend Against Them</B></FONT></div>
+          </td>
+        </tr>
+      </table>
+
+      <p> <B><font size="+1" color="#000099" face="Arial, Helvetica, sans-serif">Introduction</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+        Using malicious programs like WinNuke, Papa Smurf, and Teardrop, intruders 
+        invade our privacy and undermine the integrity of our computers. In the 
+        1999 Computer Security Institute/FBI computer crime survey, fifty-seven 
+        percent of organizations cite their Internet connection as a "frequent 
+        point of attack." Thirty percent reported that they had found actual intrusions 
+        into their networks and 26 percent reported theft of proprietary information. 
+        The incident handling entity for the civilian government, FedCIRC, reported 
+        that 130,000 government sites totaling 1,100,000 hosts were subject to 
+        attacks in 1998. Computer crime is substantial. It is clear that we must 
+        increase our efforts to secure our systems and mitigate crime in the relatively 
+        new medium of cyberspace.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> In order to prevent attacks 
+        in cyberspace, systems administrators need a high-level understanding 
+        of the methods attackers use to penetrate computers. You cannot effectively 
+        fight a war without some knowledge of the weapons of your enemy. The Information 
+        Technology Laboratory, National Institute of Standards and Technology, 
+        researches the tricks of intruders and educates the public on how to stop 
+        them. This bulletin:</font></p>
+      <UL TYPE="SQUARE">
+        <LI><font face="Arial, Helvetica, sans-serif"> Presents an overview of 
+          hacker tools that penetrate computers; </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Classifies the various 
+          attacks that attackers use against networks; </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Statistically explores 
+          what kinds of computer attacks are being publicly published on the Internet; 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Lists the most popular 
+          attacks on the Internet today; and </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Discusses security solutions 
+          that can prevent the majority of publicly available computer attacks. 
+          </font>
+      </UL>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Overview 
+        of Attacker Tools</FONT></B><BR>
+        Vast resources are available on the Internet that enable intruders to 
+        penetrate computer networks. Detailed software vulnerability information 
+        is publicly discussed on newsgroups. Attacking tutorials are available 
+        that describe how to write automated programs that penetrate computers 
+        by taking advantage of these vulnerabilities. Thousands of automated software 
+        tools have been written that enable anyone to launch computer attacks. 
+        Computer attacks are no longer found on obscure pirate bulletin boards 
+        but rather on publicly available commercial Web sites whose sole purpose 
+        is to serve up this information.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> These computer attack programs 
+        are freely available to anyone on the Internet. Besides being available, 
+        these attacks are becoming easier to use. A few years ago, one had to 
+        have Unix to run an attack and had to know how to compile source code. 
+        Today, attacks with user-friendly graphical user interfaces (GUIs) that 
+        run on Windows hosts are available. Attack scripts are easy to use and 
+        dangerous. It is vital that systems administrators understand the danger 
+        these attacks pose and how to protect their networks against them. </font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Classification 
+        of Computer Attacks</FONT></B><BR>
+        When we say "computer attack," we mean programs run by people to gain 
+        unauthorized control over a computer. These attacks take a variety of 
+        forms but generally fall in the following categories:</font></p>
+      <OL TYPE="1">
+        <LI> 
+        <font face="Arial, Helvetica, sans-serif"><FONT COLOR="#000099"><B>Remote 
+        Penetration:</B></font> Programs that go out on the Internet (or network) and 
+        gain unauthorized control of a computer </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Local Penetration:</B> 
+          Programs that gain unauthorized access to the computer on which they 
+          are run </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Remote Denial of Service</B> 
+          Programs that go out on the Internet (or network) and shut down another 
+          computer or a service provided by that computer </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Local Denial of Service:</B> 
+          Programs that shut down the computer on which they are run </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Network Scanners:</B> 
+          Programs that map out a network to figure out which computers and services 
+          are available to be exploited </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Vulnerability Scanners:</B> 
+          Programs that scour the Internet looking for computers vulnerable to 
+          a particular type of attack </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Password Crackers:</B> 
+          Programs that discover easy-to-guess passwords in encrypted password 
+          files. Computers can now guess passwords so quickly that many seemingly 
+          complex passwords can be guessed. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"><B>Sniffers:</B> Programs 
+          that listen to network traffic. Often these programs have features to 
+          automatically extract usernames, passwords, or credit card information. 
+          </font>
+      </OL>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Statistical 
+        Sampling of Publicly Available Computer Attacks</FONT></B><BR>
+        In 1998, NIST categorized and analyzed 237 computer attacks that were 
+        published on the Internet out of an estimated 400 published attacks. This 
+        sample yielded the following statistics:</font></p>
+      <TABLE SUMMARY="Table lists percentages and lesson to be learned of the types of computer attacks" WIDTH="575" BORDER="1" ALIGN="Center" CELLSPACING="3" CELLPADDING="5">
+        <TR> 
+          <TD VALIGN="TOP">Statistic:<BR>
+            Lesson: </TD>
+          <TD>29% of attacks can launch from Windows hosts<BR>
+            One does not need to understand Unix to be dangerous anymore. We are 
+            in an era of "point and click" attacks.<BR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD VALIGN="TOP">Statistic: <BR>
+            Lesson: </TD>
+          <TD>20% of attacks are able to remotely penetrate network elements (e.g., 
+            routers, switches, hosts, printers, and firewalls)<BR>
+            Attacks that give remote users access to hosts are not rare.<BR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD VALIGN="TOP">Statistic: <BR>
+            Lesson: </TD>
+          <TD>3% of the attacks enable Web sites to attack those who visited the 
+            site<BR>
+            Surfing the Web is not a risk-free activity.<BR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD VALIGN="TOP">Statistic: <BR>
+            Lesson: </TD>
+          <TD>4% of attacks scan the Internet for vulnerable hosts<BR>
+            Automated scanning attack tools, which find easily compromised hosts, 
+            abound. System administrators, with management concurrence or with 
+            professional assistance, should scan their own systems regularly before 
+            someone else does.<BR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD VALIGN="TOP">Statistics: <BR>
+            Lesson: </TD>
+          <TD>5% of attacks are effective against routers and firewalls<BR>
+            The Internet infrastructure components themselves are vulnerable to 
+            attack. (To the computer industry's credit, most attacks were denial 
+            of service and scanning and only a few were penetration attacks.)</TD>
+        </TR>
+      </TABLE>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">The 
+        Most Popular Attacks on the Internet</FONT></B><BR>
+        In March 1999, the most popular attacks (or vulnerable applications) found 
+        by NIST were Sendmail, ICQ, Smurf, Teardrop, IMAP, Back Orifice, Netbus, 
+        WinNuke, and Nmap. These are discussed below.</font></p>
+      <OL TYPE="1">
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>Sendmail:</B></font><font face="Arial, Helvetica, sans-serif"> 
+          Sendmail is an extremely old program that has had vulnerabilities throughout 
+          its history. Sendmail is proof that complex software is rarely completely 
+          patched because developers constantly add new features that introduce 
+          new vulnerabilities. Recent attacks against sendmail fell into the categories 
+          of remote penetration, local penetration, and remote denial of service.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>ICQ:</B></font><font face="Arial, Helvetica, sans-serif"> 
+          ICQ is a sophisticated chat program that stands for "I-Seek-You." It 
+          is currently owned by America Online and used by over 26 million users. 
+          In the past year, several ICQ attacks were developed that allowed one 
+          to impersonate other people and decrypt "encrypted" traffic. An attacker 
+          would use these attacks by going to a chat room and finding two people 
+          that are friends. The attacker then pretends to be someone's friend 
+          and sends them a Trojan horse (malicious code embedded into a legitimate 
+          program) via ICQ.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>Smurf: 
+          </B></font><font face="Arial, Helvetica, sans-serif"> Smurf uses a network 
+          that accepts broadcast ping packets to flood the target with ping reply 
+          packets. Think of smurf as an amplifier allowing an attacker to anonymously 
+          flood a target with a huge amount of data.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>Teardrop:</B></font><font face="Arial, Helvetica, sans-serif"> 
+          Teardrop freezes vulnerable Windows 95 and Linux hosts by exploiting 
+          a bug in the fragmented packet re-assembly routines.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>IMAP:</B></font><font face="Arial, Helvetica, sans-serif"> 
+          The Internet Message Access Protocol (IMAP) allows users to download 
+          their e-mail from a server. Last year, IMAP server software was released 
+          with a vulnerability that allows a remote attacker to gain complete 
+          control over the machine. This vulnerability is extremely important 
+          because a large number of mail servers use the vulnerable IMAP software.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>Back 
+          Orifice:</B></font><font face="Arial, Helvetica, sans-serif"> Back Orifice 
+          is a Trojan horse that allows a user to control remotely a Windows 95/98 
+          host with an easy-to-use GUI.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>Netbus:</B></font><font face="Arial, Helvetica, sans-serif"> 
+          Netbus is similar to Back Orifice but it works against Windows NT as 
+          well as Windows 95/98.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>WinNuke:</B></font><font face="Arial, Helvetica, sans-serif"> 
+          WinNuke freezes a Windows 95 host by sending it out-of-band TCP data.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font color="#000099" face="Arial, Helvetica, sans-serif"><B>Nmap:</B></font><font face="Arial, Helvetica, sans-serif"> 
+          Nmap is a sophisticated network-scanning tool. Among other features, 
+          nmap can scan using a variety of protocols, operate in stealth mode, 
+          and automatically identify remote operating systems. </font>
+      </OL>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">How 
+        to Prevent the Majority of Computer Attacks</FONT></B><BR>
+        Protecting one's networks from computer attacks is an ongoing and non-trivial 
+        task; however, some simple security measures will stop the majority of 
+        network penetration attempts. For example, a well-configured firewall 
+        and an installed base of virus checkers will stop most computer attacks. 
+        Here, we present a list of 14 different security measures that, if implemented, 
+        will help secure a network.</font></p>
+      <OL TYPE="1">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Patching</B><BR>
+          Companies often release software patches in order to fix coding errors. 
+          Unfixed, these errors often allow an attacker to penetrate a computer 
+          system. Systems administrators should protect their most important systems 
+          by constantly applying the most recent patches. However, it is difficult 
+          to patch all hosts in a network because patches are released at a very 
+          fast pace. Focus on patching the most important hosts and then implement 
+          the other security solutions mentioned below. Patches usually must be 
+          obtained from software vendors.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Virus Detection</B><BR>
+          Virus-checking programs are indispensable to any network security solution. 
+          Virus checkers monitor computers and look for malicious code. One problem 
+          with virus checkers is that one must install them on all computers for 
+          maximum effectiveness. It is time-consuming to install the software 
+          and requires updating monthly for maximum effectiveness. Users can be 
+          trained to perform these updates but they can not be relied upon. In 
+          addition to the normal virus checking on each computer, we recommend 
+          that organizations scan e-mail attachments at the e-mail server. This 
+          way, the majority of viruses are stopped before ever reaching the users.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Firewalls</B><BR>
+          Firewalls are the single most important security solution for protecting 
+          one's network. Firewalls police the network traffic that enters and 
+          leaves a network. The firewall may outright disallow some traffic or 
+          may perform some sort of verification on other traffic. A well-configured 
+          firewall will stop the majority of publicly available computer attacks. 
+          <BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Password Crackers</B><BR>
+          Hackers often use little-known vulnerabilities in computers to steal 
+          encrypted password files. They then use password-cracking programs that 
+          can discover weak passwords within encrypted password files. Once a 
+          weak password is discovered, the attacker can enter the computer as 
+          a normal user and use a variety of tricks to gain complete control of 
+          your computer and your network. While used by intruders, such programs 
+          are invaluable to systems administrators. Systems administrators should 
+          run password-cracking programs on their encrypted password files regularly 
+          to discover weak passwords. <BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Encryption</B><BR>
+          Attackers often break into networks by listening to network traffic 
+          at strategic locations and by parsing out clear text usernames and passwords. 
+          Thus, remote password-protected connections should be encrypted. This 
+          is especially true for remote connections over the Internet and connections 
+          to the most critical servers. A variety of commercial and free products 
+          are available to encrypt TCP/IP traffic.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Vulnerability Scanners</B><BR>
+          Vulnerability scanners are programs that scan a network looking for 
+          computers that are vulnerable to attacks. The scanners have a large 
+          database of vulnerabilities that they use to probe computers in order 
+          to determine the vulnerable ones. Both commercial and free vulnerability 
+          scanners exist.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Configuring Hosts for 
+          Security</B><BR>
+          Computers with newly installed operating systems are often vulnerable 
+          to attack. The reason is that an operating system's installation programs 
+          generally enable all available networking features. This allows an attacker 
+          to explore the many avenues of attack. All unneeded network services 
+          should be turned off.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>War Dialing</B><BR>
+          Users often bypass a site's network security schemes by allowing their 
+          computers to receive incoming telephone calls. The user enables a modem 
+          upon leaving work and then is able to dial in from home and use the 
+          corporate network. Attackers use war dialing programs to call a large 
+          number of telephone numbers looking for those computers allowed to receive 
+          telephone calls. Since users set up these computers themselves, they 
+          are often insecure and provide attackers a backdoor into the network. 
+          Systems administrators should regularly use war dialers to discover 
+          these back doors. Both commercial and free war dialers are readily available.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Security Advisories</B><BR>
+          Security advisories are warnings issued by incident response teams and 
+          vendors about recently discovered computer vulnerabilities. Advisories 
+          usually cover only the most important threats and thus are low-volume 
+          and high-utility reading. They describe in general terms the threat 
+          and give very specific solutions on how to plug the vulnerability. Excellent 
+          security advisories are found from a variety of sources, but the most 
+          popular come from the Carnegie Mellon Emergency Response Team at <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cert.org">http://www.cert.org</a>.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Intrusion Detection</B><BR>
+          Intrusion detection systems detect computer attacks. They can be used 
+          outside of a network's firewall to see what kinds of attacks are being 
+          launched at a network. They can be used behind a network's firewall 
+          to discover attacks that penetrate the firewall. They can be used within 
+          a network to monitor insider attacks. Intrusion detection tools come 
+          with many different capabilities and functionality. For a paper on the 
+          uses and types of intrusion detection systems, see <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.icsa.net/services/consortia/intrusion/educational_material.shtml">http://www.icsa.net/services/consortia/intrusion/educational_material.shtml</A>.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Network Discovery Tools 
+          and Port Scanners</B><BR>
+          Network discovery tools and port scanners map out networks and identify 
+          the services running on each host. Attackers use these tools to find 
+          vulnerable hosts and network services. Systems administrators use these 
+          tools to monitor what host and network services are connected to their 
+          network. Weak or improperly configured services and hosts can be found 
+          and patched.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Incident Response Handling</B><BR>
+          Every network, no matter how secure, has some security events (even 
+          if just false alarms). Staff must know beforehand how to handle these 
+          events. Important points that must be resolved are: when should one 
+          call law enforcement, when should one call an emergency response team, 
+          when should network connections be severed, and what is the recovery 
+          plan if an important server is compromised? CERT provides general incident 
+          handling response capabilities for our nation, (<A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cert.org">http://www.cert.org</A>). 
+          FedCIRC is the incident response handling service for the civilian federal 
+          government, (<A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.fedcirc.gov">http://www.fedcirc.gov</A>).<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Security Policies</B><BR>
+          The strength of a network security scheme is only as strong as the weakest 
+          entry point. If different sites within an organization have different 
+          security policies, one site can be compromised by the insecurity of 
+          another. Organizations should write a security policy defining the level 
+          of protection that they expect to be uniformly implemented. The most 
+          important aspect of a policy is creating a uniform mandate on what traffic 
+          is allowed through the organization's firewalls. The policy should also 
+          define how and where security tools (e.g., intrusion detection or vulnerability 
+          scanners) should be used in the network. To obtain uniform security, 
+          the policy should define secure default configurations for different 
+          types of hosts.<BR>
+          &nbsp;<BR>
+          </font>
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>Denial-of-Service Testing 
+          (for firewalls and Web servers)</B><BR>
+          Denial-of-service (DOS) attacks are very common on the Internet. Malicious 
+          attackers shut down Web sites, reboot computers, or clog up networks 
+          with junk packets. DOS attacks can be very serious, especially when 
+          the attacker is clever enough to launch an ongoing, untraceable attack. 
+          Sites serious about security can launch these same attacks against themselves 
+          to determine how much damage can be done. We suggest that only very 
+          experienced systems administrators or vulnerability analysis consultants 
+          perform this type of analysis. </font>
+      </ol>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">For 
+        More Information</FONT></B><BR>
+        More details on computer attacks can be found in the paper <B>"Understanding 
+        the Global Attack Toolkit Using a Database of Dependent Classifiers"</B>, 
+        at the URL: <A HREF="http://www.itl.nist.gov/div893/staff/mell/pmhome.html">http://www.itl.nist.gov/div893/staff/mell/pmhome.html</A></font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><I>General Computer Security 
+        Information:</I></B><BR>
+        <A HREF="http://csrc.nist.gov">NIST Computer Security Resource Center</A>:</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.fedcirc.gov">Federal 
+        Computer Incident Response Capability</A>:</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cerias.purdue.edu">Center 
+        for Education and Research in Information Assurance and Security</A>:</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cert.org">Carnegie 
+        Mellon Emergency Response Team</A>:</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Disclaimer:</B> Any mention 
+        of commercial products or reference to commercial organizations is for 
+        information only; it does not imply NIST recommendation or endorsement.</font></p>
+      <p> 
+        <CENTER>
+          <font face="Arial, Helvetica, sans-serif"><A HREF="#top"><B>To Top</B></A></font>
+</CENTER></p>
+
+      </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: <!-- #BeginDate format:Am1 -->February 19, 2003<!-- #EndDate --> <br>
+        Page created: August 26, 2000</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>

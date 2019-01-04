@@ -1,0 +1,192 @@
+ADVANCED ENCRYPTION STANDARD
+
+NIST's Information Technology Laboratory has initiated a process
+to develop a Federal Information Processing Standard (FIPS) for
+Advanced Encryption Standard (AES) incorporating an Advanced
+Encryption Algorithm (AEA).  To begin the process, draft minimum
+acceptability requirements and draft criteria to evaluate
+candidate algorithms were published for comment in the Federal
+Register of January 2, 1997.  Also announced for comment were
+draft submission requirements.  NIST has scheduled an open,
+public workshop on the draft minimum acceptability requirements,
+evaluation criteria, and submission requirements.  
+
+It is intended that the AES will specify an unclassified,
+publicly disclosed encryption algorithm capable of protecting
+sensitive government information well into the next century. 
+This bulletin describes the process of developing an AES and
+invites comments from the public, manufacturers, voluntary
+standards organizations, and federal, state, and local government
+users so that their needs can be considered.
+
+Background
+
+To fulfill its responsibilities under the Computer Security Act
+of 1987, the Information Technology Management Reform Act of
+1996, Executive Order 13011, and OMB Circular A-130, NIST
+develops standards and guidelines to ensure the protection of
+sensitive, unclassified information processed in federal computer
+systems.  NIST recognizes that many institutions, both within and
+outside the federal government, have considerable investments in
+their current installed base of encryption equipment implementing
+the Data Encryption Algorithm, specified in FIPS 46-2, Data
+Encryption Standard (DES).  
+
+DES was first approved in 1977 and was most recently reaffirmed
+by the Secretary of Commerce in 1993, until December 1998.  In
+1993 the following statement was included in the standard:
+
+      "At the next review (1998), the algorithm specified in this
+      standard will be over twenty years old.  NIST will consider
+      alternatives which offer a higher level of security.  One of
+      these alternatives may be proposed as a replacement standard
+      at the 1998 review."  
+
+NIST foresees that a multi-year transition period will be
+necessary to move toward any new encryption standard and that DES
+will continue to be of sufficient strength for many applications. 
+NIST plans to consult with all interested parties so that a
+smooth transition can be accomplished. 
+
+Encryption algorithms submitted for consideration as the AEA for
+incorporation into the FIPS for AES will be reviewed on the basis
+of evaluation criteria.  Comments on the draft criteria (and, at
+the appropriate time, of candidate algorithms) from voluntary
+consensus standards organizations are particularly encouraged.
+  
+Proposed Draft Minimum Acceptability Requirements and Evaluation
+Criteria
+
+The draft minimum acceptability requirements and evaluation
+criteria are:
+
+A.1  AES shall be publicly defined.
+
+A.2  AES shall be a symmetric block cipher.
+
+A.3  AES shall be designed so that the key length may be
+      increased as needed. 
+
+A.4  AES shall be implementable in both hardware and software. 
+
+A.5  AES shall either be a) freely available or b) available
+      under terms consistent with the American National Standards
+      Institute (ANSI) patent policy.
+
+A.6  Algorithms which meet the above requirements will be judged
+      based on the following factors:
+
+      a)  security (i.e., the effort required to cryptanalyze),
+
+      b)  computational efficiency,
+      
+      c)  memory requirements,
+
+      d)  hardware and software suitability,
+
+      e)  simplicity,
+
+      f)  flexibility, and
+      
+      g)  licensing requirements.
+
+NIST is seeking comments on these draft minimum acceptability
+criteria and evaluation criteria, suggestions for other criteria,
+and relative importance of each individual criterion in the
+evaluation process.  Criteria will be finalized by NIST following
+the criteria workshop.  
+
+Proposed Draft Submission Requirements
+
+In order to provide for an orderly, fair, and timely evaluation
+of candidate algorithm proposals, submission requirements will
+specify the procedures and supporting documentation necessary to
+submit a candidate algorithm.
+
+B.1  A complete written specification of the algorithm including
+      all necessary mathematical equations, tables, and parameters
+      needed to implement the algorithm.
+
+B.2  Software implementation and source code, in ANSI C code,
+      which will compile on a personal computer.  This code will
+      be used to compare software performance and memory
+      requirements with respect to other algorithms.
+
+B.3  Statement of estimated computational efficiency in hardware
+      and software.
+
+B.4  Encryption example mapping a specified plaintext value into
+      ciphertext.
+
+B.5  Statement of licensing requirements and patents which may be
+      infringed by implementations of this algorithm.  
+
+B.6  An analysis of the algorithm with respect to known attacks. 
+
+B.7  Statement of advantages and limitations of the submitted
+      algorithm.  
+
+Since both the evaluation criteria and submission requirements
+have not yet been set, candidate algorithms should NOT be
+submitted at this time.
+
+Comments
+
+Comments on the proposed FIPS for AES must be received on or
+before April 2, 1997.  Written comments should be sent to:
+
+      Director, Information Technology Laboratory
+      Attn:  FIPS for AES Comments
+      Technology Building, Room A231
+      National Institute of Standards and Technology
+      Gaithersburg, MD 20899 
+
+Electronic comments may be sent to AES@nist.gov.  
+
+Comments received in response to the Federal Register notice (on
+which this ITL Bulletin is based) will be made part of the public
+record and will be made available for inspection and copying in
+the Central Records and Reference Inspection Facility, Room 6020,
+Herbert C. Hoover Building, 14th Street between Pennsylvania and
+Constitution Avenues, NW, Washington, DC, 20230.  
+
+AES Workshop
+
+The AES Evaluation Criteria/Submission Requirements Workshop will
+be held on April 15, 1997, from 9:00 a.m. to 4:00 p.m.  Open to
+the public, the workshop will be held in the Green Auditorium,
+Administration Building, National Institute of Standards and
+Technology, Gaithersburg, Maryland.  Copies of the comments
+submitted will be available at the workshop.  
+
+For planning purposes, advance registration is encouraged.  To
+register, please fax your name, address, telephone, fax and e-
+mail address to 301-948-1233 (Attn:  AES Criteria Workshop) by
+April 10, 1997.  Registration will also be available at the door. 
+
+For More Information
+
+For general information on the AES and the planned workshop,
+contact:
+
+      Edward Roback
+      National Institute of Standards and Technology
+      Building 820, Room 426
+      Gaithersburg, MD 20899
+      Telephone:  301-975-3696
+      Fax:  301-948-1233
+      Email:  edward.roback@nist.gov
+
+Technical inquiries regarding the proposed draft evaluation
+criteria and draft submission requirements should be addressed
+to: 
+
+      Miles Smid
+      National Institute of Standards and Technology
+      Building 820, Room 426
+      Gaithersburg, MD 20899
+      Telephone:  301-975-2938
+      Fax:  301-948-1233
+      Email:  miles.smid@nist.gov
+
+

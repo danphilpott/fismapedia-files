@@ -1,0 +1,479 @@
+IMPLEMENTATION ISSUES FOR CRYPTOGRAPHY
+
+NIST is aware of several implementation issues that can
+significantly affect the security of otherwise robust
+cryptographic systems.  This bulletin describes the
+implementation vulnerabilities and recommends controls to
+mitigate overall system risk.
+
+The research that supports this bulletin is based primarily on a
+specific security review performed by NIST on a federal agency
+system.  This system was developed to replace and update paper-
+based processing of work requests and approvals, and to keep
+accounting records.  The system is based on a large relational
+database where electronic forms and user-provided data are stored
+in centrally located UNIX mainframes.  A Wide Area Network is
+used to transmit information between users and from the
+mainframes to personal computers (PCs), so that users can
+manipulate and view the data and perform cryptographic security
+functions.  There are currently 5,000 system users, with 40,000
+users expected by the end of 1997.  Although the majority of the
+users are located in the United States, there are several sites
+in other parts of the world.
+
+Like many administrative applications, a replacement for
+handwritten signatures was required to totally automate this
+system.  The organization also identified requirements for
+authentication and confidentiality; cryptography, relying on
+secure key management, was employed to provide these security
+services.
+
+Note:  Text box in paper version for following two paragraphs
+---------------------------------------------------------------
+Secure Key Management
+Key management provides the foundation for the secure generation,
+storage, distribution, and translation of keys.  One of the
+fundamental principles for protecting keys is the practice of
+split knowledge and dual control.  As defined in American
+National Standards Institute (ANSI) X9.17-1985, Financial
+Institution Key Management (Wholesale), split knowledge is "a
+condition under which two or more parties separately have key
+components which, individually, convey no knowledge of the
+resultant cryptographic key.  The resultant key exists only
+within secure equipment."  Dual control is explained in the
+standard as "a process of utilizing two or more separate entities
+(usually persons), operating in concert, to protect sensitive
+functions or information."  Split knowledge and dual control may
+be used to protect the centrally stored user secret keys and root
+private keys, secure the distribution of user tokens, and
+initialize all cryptomodules in the system to "authorize" their
+use in performing cryptographic functions within a system.
+
+Central sites play an important role in key management.  In
+public-key systems, central sites typically include a
+Certification Authority (CA), which is an entity that issues and
+revokes public key certificates, and may even generate key pairs.
+The CA private key should be protected with split knowledge and
+dual control.  ANSI X9.17 relies on Key Management Facilities
+(KMFs) and Key Translation Centers to manage secret keys and
+translate those secret keys for decryption and signature
+verification.  In either case, whether in a secret- or public-key
+system, the security of the central sites is critical to the
+overall cryptographic security of the system.
+-----------------------------------------------------------------
+Recommendations for Systems
+The following are NIST's recommendations for the addition of
+cryptographic security to an automated information system.  These
+recommendations could be applied to many systems implementing
+cryptographic security services, whether the type of cryptography
+being used is secret- or public-key based.
+
+General System Recommendations
+
+-    Have cryptographic modules tested before distributing them
+     throughout the system.
+
+     Cryptographic services are provided using cryptographic
+     modules (cryptomodules), which may include capabilities such
+     as signature generation and verification (possibly involving
+     key notarization), encryption and decryption, key
+     generation, key distribution, etc.  Examples of
+     cryptomodules are external encryption "boxes," smartcards,
+     PC Cards, PC adapters, and software modules, among other
+     possible hardware, software, or firmware implementations.
+
+     If a large number of cryptomodules are needed to provide
+     security services in a system, then an undetected error in a
+     cryptomodule's design could potentially affect the
+     performance of a cryptographic function for every user in
+     the system.  For example, the verification of a chain of
+     public key certificates might not function correctly, or key
+     notarization (for secret keys) might be done improperly by a
+     cryptomodule.  Verifying a chain of public key certificates
+     helps a signature verifier determine if a signature was
+     generated with a particular key.  Likewise, key notarization
+     helps ensure that no party other than the signer of the data
+     can use the data key to sign or encrypt information.  If
+     either of these functions were to be implemented incorrectly
+     in a cryptomodule, the potential for the dissemination of
+     weak cryptography could be introduced into the system,
+     possibly allowing for signature forgery or the verification
+     of invalid signatures.
+
+     This shows the importance of testing a cryptomodule before
+     using it to provide cryptographic security services in a
+     large system.  Federal agencies may only acquire
+     cryptomodules which have either been validated under the
+     Cryptographic Module Validation (CMV) Program or submitted
+     to an accredited laboratory for CMV testing.  A series of
+     tests are run on cryptomodules to test for conformance to
+     Federal Information Processing Standard (FIPS) 140-1,
+     Security Requirements for Cryptographic Modules. 
+
+     The tests encompass features such as physical and operating
+     system security, roles and services, and others.  Under the
+     CMV testing, cryptographic algorithms are tested for
+     conformance to standards such as the Data Encryption
+     Standard, Digital Signature Standard, and Secure Hash
+     Standard.  By performing tests which compare results
+     generated by the implementation against known values and
+     values generated by a reference implementation, the
+     algorithms are exercised to detect implementation flaws. 
+     Such testing would help detect implementation flaws in a
+     cryptomodule's design.
+
+-    Make use of cryptographic services as much as possible.
+
+     By consistently replacing traditional methods of secure
+     operation with cryptographic methods, the security and
+     efficiency of a system improves dramatically.  Benefits from
+     implementing electronic or digital signatures include
+     reducing the possibility of forgery, reducing administrative
+     processing time, and decreasing the burden of maintaining
+     "traditional" paperwork.  A system implementing cryptography
+     will naturally generate new documentation, and the
+     cryptographic technology should be applied in handling that
+     documentation.  Security officers, for example, may have to
+     generate and sign requests for keys or cryptographic
+     modules.  Instead of using paper forms, electronic forms
+     could be generated, signed, and sent to the appropriate
+     parties, who can verify the signatures and act on the
+     request in a very timely manner.
+
+-    Provide consistent documentation and training to all system
+     users, and place emphasis on educating them about using
+     cryptographic services and protecting cryptographic keys.
+
+     It is particularly important that all users be aware of
+     their responsibilities and the procedures they must follow
+     in ordinary as well as unusual circumstances.  These
+     procedures should be standard among all sites in the system.
+     Of special importance are the central sites, where security
+     officers are responsible for equipment that might generate
+     and manage keys for system users.  If no documented set of
+     procedures is followed, weaknesses may be introduced into
+     the system.
+
+General Key Management
+
+-    Cryptographic keys may need special physical protection.
+
+     If keys or key components are stored on a token (e.g.,
+     floppy disk, PC Card, smartcard, etc.), this token may have
+     to be stored in a special manner to prevent unauthorized
+     individuals from accessing the key or key component.  For
+     example, if key components for starting a Certification
+     Authority or Key Management Facility are stored on tokens
+     which are secured in a safe, multiple people might have
+     access to this token.  Therefore, additional protection is
+     needed for each token, possibly by using a tamper-evident
+     envelope, to enable the token's owner to determine if a
+     token was used by another person.
+
+-    Make sure that users are aware of their liabilities and
+     responsibilities, and that they understand the importance of
+     keeping their keys secure.
+
+     The security of cryptographic keys in an electronic or
+     digital signature system is the foundation of a secure
+     system; therefore, users must maintain control of their
+     keys!  Users must be provided with a list of
+     responsibilities and liabilities, and each user should sign
+     a statement acknowledging these concerns before receiving a
+     key (if it is a long-term, user-controlled key).  If
+     different user types (e.g., security officer, regular user)
+     are implemented in a system, they should be aware of their
+     unique responsibilities, especially regarding the
+     significance of a key compromise or loss.
+
+-    Authentication timeout features are important for protecting
+     keys from compromise or misuse.
+
+     An authentication timeout feature for a cryptographic module
+     or token is important to minimize the possibility of an
+     unauthorized individual accessing an "active" cryptomodule
+     and using its cryptographic keys.  This could happen if a
+     cryptomodule is left unattended by a user who has
+     authenticated to it and loaded their cryptographic keys.
+     One alternative is to force a user to periodically re-
+     authenticate oneself to a cryptomodule, rather than allow
+     them to stay logged in for an indefinite amount of time.
+     For sensitive applications, it may be necessary to restrict
+     the hours during which they can take place.
+
+Key Management Facility / Certification Authority
+
+-    Maintaining control of central or root keys from the time of
+     generation is critical.
+
+     Central or root keys are most likely to be used in sensitive
+     applications such as encrypting user keys, signing a central
+     key database for integrity, binding a key pair to a user, or
+     generating user keys.  If these keys are compromised, a
+     complete system compromise (involving the compromise of user
+     keys, encrypted data, and/or signed data) becomes a very
+     real threat.  It is essential to maintain the security of
+     these central keys from the very beginning - the generation
+     process.  No one but the proper owner(s) of a key or key
+     component should ever be able to use that key or key
+     component.  If split knowledge and dual control are a
+     requirement for central or root keys, then a failure to
+     maintain split knowledge and dual control of those keys at
+     any time in their lifecycle could present both a security
+     problem and a potential system compromise.
+
+-    Keep a log of when root keys are used.
+
+     A record should be maintained of every instance that a
+     central/root key is used.  This should be an automated
+     feature that is built into the system.
+
+-    Sign all centrally stored data and encrypt sensitive data,
+     such as secret keys that are used to provide
+     confidentiality.
+
+     All centrally stored data that is related to user keys
+     should be signed for integrity, and possibly encrypted for
+     confidentiality (all user secret keys and CA private keys
+     should be encrypted).  Individual key records in a database
+     - as well as the entire database - should be signed.  To
+     enable tamper detection, each individual key record should
+     be signed, so that its integrity can be checked before
+     allowing that key to be used in a cryptographic function.
+     When signing the entire database, at least the important
+     fields that do not change regularly should be signed (this
+     allows for faster verification).
+
+-    Prepare for the possibility of compromise!
+
+     It is imperative to have a plan for handling the compromise
+     or suspected compromise of central/root keys or key
+     components at a central site; this should be established
+     before the system goes "live."  The contingency plan should
+     address what actions should be taken with system software
+     and hardware, central/root keys, user keys, previously
+     generated signatures, encrypted data, etc.
+
+-    Sign and verify the code that implements the cryptographic
+     functions.
+
+     Software at the central key management site should be
+     electronically signed and periodically verified to check the
+     integrity of the code.  This provides a means of detecting
+     the unauthorized modification of system software.  Within a
+     cryptomodule, this feature of generating and verifying a
+     cryptographic checksum is required by FIPS 140-1.
+
+-    A system implemented for a federal government agency should
+     have its centrally stored keys and system software
+     controlled by federal employees.
+
+     Proper control of central/root keys and key management
+     software and hardware is critical to the security of the
+     system.  In the situation where a federal agency operates a
+     system that was developed by a contractor, federal employees
+     should be in control of this material.  Once the system goes
+     live, unlimited access to central data, code, and
+     cryptomodules should not be given to non-federal employees,
+     including those who were contracted to develop and/or
+     maintain the system.  It is understood, though, that the
+     agency may need outside assistance in maintaining the
+     system.
+
+-    Use different types of central and root keys, where
+     possible, to maximize the scalability of the system and the
+     integrity of cryptographic data.
+
+     Different "types" of root keys might be implemented to bring
+     up a new system, initialize a new central site, or serve as
+     backup keys for the same central site.  It is very important
+     to have backup copies of central/root keys, since the
+     compromise or loss of those components could prevent access
+     to keys in the central database, and possibly deny system
+     users the ability to decrypt data or perform signature
+     verifications.
+
+-    Be aware of security issues when migrating from a prototype
+     to a live system.
+
+     When moving the system from a prototype to a live phase, the
+     safest strategy is to generate new central/root keys and
+     reissue keys for other system users.  However, if it is not
+     feasible to do this, then prior to migration a review of the
+     generation, distribution, and storage procedures used for
+     the root keys should be performed, to ensure that their
+     security was maintained throughout their lifecycle.
+     Otherwise, a security flaw or compromise in the prototype
+     phase could be passed on to the live system.
+
+-    Keep the KMF/CA flexible for scalability.
+
+     Allow for the possibility of multiple "central" sites.
+     Additional central sites may be required if more users are
+     added to the system.  Ramifications on the root keys should
+     be considered, including how they are stored, how root keys
+     are to be generated for and distributed to the new central
+     site, and how database information will be communicated to
+     the new central site and used by holders of the new root
+     keys.
+
+Key Distribution
+
+-    If a key is stored on a token, and a personal identification
+     number (PIN) is used to access the token, then only that
+     token's owner should ever have possession of both the token
+     and its corresponding PIN.
+
+     This applies to root security officers who may generate a
+     token and its PIN, as well as any intermediaries.  To
+     prevent a courier from having sole control of both items,
+     security officers should distribute the token and PIN in
+     separate mailings (in separate packages mailed on different
+     days).  Receipt of each item should always be confirmed to
+     the original sender.  A failure to maintain control of this
+     token and PIN could lead to a key compromise and the misuse
+     of cryptographic functions within the system.
+
+Key Storage and Destruction
+
+-    Determine reasonable lifetimes for keys associated with
+     different types of users.
+
+     Users with different roles in the system should have keys
+     with lifetimes that take into account the users' roles and
+     responsibilities, the applications for which the keys are
+     used, and the security services which are provided by the
+     keys (user/data authentication, confidentiality, data
+     integrity, etc.).  Reissuing keys should not be done so
+     often that it becomes burdensome; however, it should be
+     performed often enough to minimize the loss caused by a
+     possible key compromise.
+
+-    Archive user keys for a sufficiently long cryptoperiod.
+
+     A cryptoperiod is the time during which a key can be used
+     for signature verification or decryption; it should extend
+     well beyond the lifetime of a key (where the lifetime is the
+     time during which a key can be used to generate a signature
+     and/or perform encryption).  Keys should be archived for a
+     lengthy cryptoperiod (on the order of decades), so that they
+     can be used to verify signatures and decrypt ciphertext
+     during the cryptoperiod.
+
+-    Handle the deactivation/revocation of keys so that data
+     signed prior to a compromise date (or date of loss) can be
+     verified.
+
+     It should be possible to designate a signing key as LOST or
+     COMPROMISED, so signatures generated prior to a specified
+     date can be verified.  Otherwise, all data previously signed
+     with a lost/compromised key would have to be reviewed and
+     re-signed.
+
+Signature Generation and Verification; Encryption and Decryption
+
+-    Determine what data fields must be protected using a
+     cryptographic function.
+
+     The implementor should be aware of the fields that are being
+     signed and encrypted.  It may not be necessary for all
+     fields in a form to be signed and/or encrypted.  Limiting
+     the data input to a cryptographic function may have a
+     significant impact on the speed with which that function can
+     be performed.  Fields containing sensitive data should be
+     identified, and then a determination should be made of what
+     cryptographic functions should be applied to those fields:
+     integrity, authenticity, and/or confidentiality.
+
+-    Protect data prior to signature generation/verification and
+     encryption/decryption.  Be careful of how data is handled
+     during these processes!
+
+     Implementors should be very careful about how data is
+     handled before it is signed/verified (encrypted/decrypted).
+     If the data is stored on the computer where the
+     cryptographic function is performed, this might not pose a
+     problem.  However, if data is stored in a central database
+     and transferred to the computer only at the time the
+     cryptographic function is to be performed, the data should
+     be very carefully protected during transmission.  If data is
+     not carefully protected, an intruder could potentially alter
+     data before a signature is generated, without the signer's
+     knowledge.
+
+-    Before generating a signature, users should be able to view
+     all data to be signed.  It should be made obvious to users
+     as to exactly what data a cryptographic function is applied
+     to.
+
+     Users should be able to see all the data that is being
+     signed, and it should be clearly marked for the signer.
+     Users may not know which data is included in a signature.
+     Knowing what is encrypted is important, too; users may be
+     concerned if they know that certain data is not being
+     encrypted.  It is not essential that all data being
+     signed/encrypted should appear on one screen, but the user
+     should at least be able to view all of the data before
+     performing the cryptographic function.
+
+-    Plan for the need of a user to re-sign data, in a tightly
+     controlled manner that is logged.
+
+     Signature verification may fail due to a change in an
+     organizational code, a form number, a person-s last name,
+     etc.  These values might be more likely to change between
+     signature generation and verification if they are pulled
+     from a database to reconstruct a message.  Strict controls
+     should be put in place to restrict the use of the re-signing
+     capability to specific situations and/or specific
+     individuals (e.g., the original signer or a database
+     administrator acting on the original signer's behalf).  The
+     re-signing tool should allow a person to examine what
+     changed in the message content from the time of the original
+     signature, and to decide whether or not the change warrants
+     the generation of a new signature.  All use of the re-
+     signing tool should be carefully controlled and audited.
+     Such an audit trail should minimally include:  suspected
+     cause of verification failure, whether or not the data was
+     re-signed, who determined the data should be re-signed, who
+     performed the re-signing, and the date/time of re-signing.
+
+Summary
+
+These recommendations apply to the design of a system for
+cryptographic services, but there are other issues to be
+addressed in achieving overall security.  Adding cryptography to
+a system will not necessarily provide adequate security.
+Cryptography is best used when it is designed as an integrated
+part of the system, rather than as an add-on feature.  When this
+cannot be done, cryptographic functions should be carefully added
+so that the security that they are intended to provide is not
+compromised.
+
+Standards referred to in this bulletin are:
+
+ANSI X9.17-1985, Financial Institution Key Management
+(Wholesale), American Banker's Association, Approved April 4,
+1985, Reaffirmed 1991.
+
+FIPS 140-1, Security Requirements for Cryptographic Modules, U.S.
+DOC/NIST, January 11, 1994.
+
+FIPS 46-2, Data Encryption Standard (DES), U.S. DOC/NIST,
+Reaffirmed December 30, 1993.
+
+FIPS 186, Digital Signature Standard (DSS), U.S. DOC/NIST, May
+19, 1994.
+
+FIPS 180-1, Secure Hash Standard (SHS), U.S. DOC/NIST, April 17,
+1995.
+
+ANSI standards are available from the American National Standards
+Institute, Publications Department, 11 West 22nd Street, 13th
+floor, New York, NY 10036, telephone (212) 642-4900.
+
+FIPS are available electronically from our Computer Security
+Resource Clearinghouse (CSRC) at http://csrc.nist.gov   For paper
+copies, contact the National Technical Information Service
+(NTIS), 5285 Port Royal Road, Springfield, VA 22161, telephone
+(703) 487-4650, fax (703) 321-8547.

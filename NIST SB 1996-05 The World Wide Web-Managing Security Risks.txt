@@ -1,0 +1,398 @@
+THE WORLD WIDE WEB:  MANAGING SECURITY RISKS
+Computer users are finding the Internet and the World Wide Web
+(or Web for short) extremely useful for browsing through
+information, publishing documents, and exchanging information.
+Web applications have become popular because of the availability
+of powerful personal computers (PCs) capable of high quality
+graphics, easy Internet access, and a simple hypertext markup
+language (HTML) and network protocol. 
+
+As a result, many organizations and individuals are becoming
+Web-aware.  The Web offers all kinds of information, from
+research papers, to customer support and marketing information,
+to club calendars and family bulletin boards.  A myriad of Web
+indexing and searching services allow readers to find what
+they're looking for.  Organizations also use Internet protocols
+to support their internal networks (often called intranets).
+
+Although the Web is used for other applications such as
+electronic commerce, the primary one is Internet publishing.
+This CSL Bulletin addresses general security issues related to
+the use of the World Wide Web, concentrating on risk management
+for Web readers and publishers. 
+
+A Web reader is anyone who uses a Web browser (a Web client
+application which typically supports more than one Web protocol)
+for access to Web-based information.  A Web publisher is a person
+or organization that uses a Web server to provide information and
+access to applications for internal or external users.
+
+Note:  Any mention of particular technologies or commercial
+products is for the purposes of explanation and illustration
+only.  It does not imply a recommendation or endorsement by NIST
+or the U.S. Department of Commerce.
+
+WEB READERS
+The goal of risk management is to balance expected gains against
+unexpected losses, so as to maximize overall gain and minimize
+loss.  Some readers may be using the Web just for fun, but
+organizational users have more to lose (and gain).  Some of the
+gains a Web reader might expect are:
+
+  -  a more user-friendly interface;
+
+  -  more timely access to information;
+
+  -  access to more or previously unavailable information; and
+
+  -  keeping current with technology.
+                
+Quantifying those gains can be difficult.  One measure would be
+an estimate of how much more time would have been spent getting
+the information via other means.  Potential losses are somewhat
+easier to quantify.
+
+Losses
+Some of the more likely losses and their causes that a Web reader
+faces are:
+
+Damage to the system and user information from buggy software,
+virus-infected executables, trojan horse programs, embedded
+macros, and downloadable applets (an applet is a small program
+that is downloaded and executed on-the-fly by the browser).  Some
+recent viruses can even erase the boot EPROMs (Erasable
+Programmable Read Only Memory) of some PCs, rendering them
+unusable.
+
+Monetary or credit damage from illegitimate companies or
+Web-based scams, or by having credit card information stolen via
+network sniffing or break-ins at the server.
+
+Privacy can be compromised when information regarding a user's
+browsing activities is published or sold.  The reader's Internet
+address, date and time, and the names of the files accessed may
+be recorded by the Web server.  If the Web reader fills out any
+form, additional information may be recorded as well.
+
+Reputation can be damaged by individuals who expose information
+about the reader, or who masquerade as the reader and perform
+antisocial acts.  For example, a Web applet could cause the Web
+reader's browser to send email of the applet author's choice.
+
+Most threats that the Web reader faces are not new, but the Web
+makes them potentially more hazardous.  For example, viruses have
+been around for years, but the point-and-click Web browser
+interface makes it easy to instantly download and execute an
+infected program.  Anyone with a telephone is exposed to
+telemarketing scams, but a virtual Web storefront with fancy
+graphics somehow seems more trustworthy than a stranger's voice
+over the telephone.  Many companies collect and sell customer
+purchase information, but one wouldn't expect the act of reading
+an online brochure to add one's email address to a telemarketing
+database.
+
+Threats
+Web threats stem from shortcuts in the software development
+process, shortcomings in popular operating systems, deficiencies
+in the Internet protocols, and the problems inherent in managing
+the Internet.
+
+Buggy software is endemic to the software development process.
+Developers continually add new features to differentiate their
+products and increase market share.  Users usually prefer to use
+the latest and greatest version of any new Web client or server.
+Much of the software is provided on a try-before-you-buy basis,
+which allows people to test-drive software but provides no
+warranty in the event of bugs.
+
+Web browsers are especially hazardous because they can allow
+access to untrustworthy systems on the Internet and they often
+invoke other applications as a side effect of their use.  Some
+may also act as an FTP (file transfer protocol) client, Usenet
+news (Internet-based discussion groups) client, or an email
+client.  Each new feature increases the risk of a dangerous bug.
+
+Impersonation of an individual or organization is difficult to
+prevent on the Internet.  Computer user identification is usually
+meaningful only within an organization and depends on the
+policies within that organization and how well they are enforced.
+An email address may or may not uniquely identify an individual,
+and many organizations do not provide outside access to internal
+email addresses.  In any case, email is usually easy to forge,
+being the electronic equivalent to a postcard written in pencil.
+Although secure email protocols have been proposed, none has been
+widely implemented.
+
+When a browser connects to a Web server, the server gets the
+Internet address of the connecting system.  If it is a multi-user
+system, the server cannot tell what user on the system connected.
+The address of a single-user PC may not be very useful either,
+since systems using dial-up TCP/IP (Transmission Control
+Protocol/Internet Protocol) may be assigned a different address
+every time they connect.
+
+Until recently, the agency responsible for registering most
+Internet Domain names only confirmed that the requested name was
+unique.  It did not require proof that a name like ORPHANS.ORG
+was going to be used by a nonprofit organization or that WXY.COM
+was an actual business entity.  Consequently, an Internet user
+has no dependable way of identifying and authenticating an
+individual or organization on the Internet.
+
+Eavesdropping (also known as sniffing or snooping) of network
+traffic is unavoidable as long as local area networks (LANs) use
+broadcast protocols and the data are unencrypted and travel over
+public networks.  You should be at least as cautious using the
+Web for sensitive matters as you would be discussing something
+confidential on a public or cellular telephone.
+
+The costs associated with recovering from losses can be minor or
+major.  Users can spend days recovering from a virus infection.
+Data corruption is more difficult to discover and recover from,
+since there may be no obvious symptoms.  Impersonation could
+result in anything from a forged love letter to an order for
+10,000 pizzas (with anchovies).
+
+Risk Control
+Some remedies exist to reduce some of the risks to a Web reader.
+The easiest to implement are those based on loss avoidance.
+
+  -  If you don't use the Web, you're not exposed to its dangers.
+    
+  -  If you never download executable code, your system won't be
+     infected by a virus.
+
+  -  If you don't buy things over the Web, you can't be cheated.
+
+  -  If you never give out financial information (like credit
+     card numbers or bank account numbers) over the Web, it can't
+     be misused or stolen.
+
+Other remedies are based on loss control or mitigation.
+
+  -  Backup your system regularly.  Be sure that you can recover
+     your software and data in the event of a crash or virus
+     infestation.
+
+  -  Be a careful shopper to reduce the danger of buggy software.
+     Buy from known sources.  Don't run beta test code.  Buy the
+     simplest browser that gets the job done.  Turn off features
+     you don't use.  Don't download every viewer and applet you
+     run across.
+
+  -  If your organization has one, test new Web applications on a
+     sacrificial computer system that is isolated from the
+     internal network and doesn't contain any important data.
+
+  -  Until better security mechanisms are in widespread use, if
+     you must buy over the Internet, take some precautions.
+     Check the identity of the vendor via another channel, e.g.,
+     paper mail or telephone listing.  Patronize vendors that use
+     a Web server with a secure channel between your system and
+     theirs.
+
+Impersonation
+The problem of impersonation is somewhat difficult to solve.  An
+organization can maintain tight controls over the hardware and
+software of its intranet to make impersonating someone else
+within the organization relatively difficult.  It can also
+usually exercise some form of discipline over its members to
+prevent or punish transgressions.  The greater Web is part of the
+Internet, which is an international system of networks.  No one
+has authority to prevent or punish abuses across the entire
+Internet.
+
+A form of public key encryption can be used to identify
+individuals, computer systems, and organizations.  As yet, there
+is no global infrastructure to support the management of the
+keys.  Individual organizations can still choose to implement
+this kind of identification for their intranet, and some
+commercial Web servers and browsers implement a vendor-specific
+form of key exchange so that Web servers can authenticate
+themselves to browsers.
+
+Eavesdropping
+>From a technical perspective, the simplest remedy for
+eavesdropping is to encrypt messages and channels.  However, the
+use of encryption for confidentiality has the same drawbacks
+associated with using encryption for personal identification.  It
+is relatively easy to implement within an organization, but hard
+to implement between organizations.  Encryption of all network
+traffic can be expensive in terms of hardware, software, and
+central processing unit (CPU) cycles.
+
+Several commercial Web servers and browsers support encryption of
+all Web requests between the browser and server. Currently, most
+secure servers can only talk to browsers from the same vendor and
+can only use keys from a limited set of key certificate
+authorities.  Eventually, most Web vendors will be using Web
+servers that provide public key-based authentication of the
+server and encryption of the channel between the browser and
+server.
+
+Organizational Support for Readers
+Organizations need to provide guidance and support to their Web
+readers.  An organization should have clear, workable, and
+enforceable Web usage and security policies.
+
+Some measures an organization can take are:
+
+  -  Buy licensed software from a trusted vendor;
+
+  -  Run proactive virus checkers;
+
+  -  Distribute approved browser configuration files and trusted
+     viewers; and
+
+  -  Educate your readers.  Tell them:
+
+      -   what's allowable usage, covering issues like private
+          email, Usenet posting, personal browsing, etc.;
+     
+      -   not to download unapproved browsers, viewers, and
+          applets; and
+
+      -   not to configure their Web browser to automatically
+          invoke an application just because the Web server
+          suggests it.
+
+Particular technologies such as active forms or downloadable
+applets must be carefully examined and approved before being
+approved for organizational use.
+
+WEB PUBLISHERS
+Web publishers face the same challenges as Web readers.  They
+need to recognize the potential losses from various threats and
+implement risk reduction measures.
+
+Losses
+The types of losses a Web publisher can incur are similar to
+those of a Web reader, namely:
+
+Damage to their systems and networks from buggy and misconfigured
+server software, insecure Common Gateway Interface (CGI)
+programs, and untrustworthy server-side applets.
+
+Monetary and credit damage by theft of service, nonpayment,
+credit card fraud, etc.
+
+Privacy can be compromised when the organization's or its
+customers' confidential information is exposed.
+
+Reputation can be damaged if information is changed or lost,
+confidential customer information is exposed, or service is
+denied.
+
+Threats
+Buggy or misconfigured Web server software can damage or allow
+damage to information or software.  Security-related bugs have
+been discovered in all of the popular UNIX-based Web servers.
+Most of the bugs were caused by chronic UNIX/C errors in string
+handling, environment variables, and the use of the system()
+call.  Theoretically, since the source code was available for
+most of the servers, the errors should have been immediately
+spotted by the Internet users who downloaded the code. 
+Practically, however, most users download a binary executable and
+never look at the source code, or merely give it a cursory look
+before compiling and installing it.  Users assume that someone
+more conscientious than themselves has carefully studied the
+code. 
+
+Most Web servers provide some kind of access control; they can be
+configured to accept or deny connections based on Internet
+address or domain name.  There are several problems with this
+method.  As described above, Internet addresses and domain names
+are a weak identification method.  Also, unless you can configure
+an attack computer with various addresses, it is difficult to
+tell if your configuration rules are correct or if the Web server
+author implemented the access control algorithms correctly.
+
+Web servers support dozens of optional features.  The most
+popular features are usually the best debugged, since other
+people have already discovered the problems.  If you use
+little-used or experimental features, you are the guinea pig.
+
+CGI programs allow the Web server to execute an external program
+when particular URLs (Uniform Resource Locators) are accessed.
+This provides a gateway to other programs that may query a
+database or create on-the-fly HTML.  Unfortunately, it's easy to
+create insecure CGI programs that allow an attacker to trick the
+Web server into executing other programs.  Only careful
+configuration of the Web server and CGI program, and careful
+review of the CGI code, can prevent those mistakes.
+
+If the Web server is broken into, it can serve as a stepping
+stone to break into other networks and systems in the
+organization.  The privacy of the organization and its customers
+can be violated if confidential data are kept on the Web server.
+Production systems could be damaged or brought down.  If
+financial data are kept on the Web server, they could be altered
+or stolen.  The reputation of the organization can be damaged if
+information is maliciously altered or customers are denied
+service.
+
+Risk Control
+Exercise central coordination of Web publishing in your
+organization.  Establish procedures for verifying the security
+and integrity of your Web servers and their contents.
+
+Keep it simple.  Run the Web server on a stripped-down system,
+i.e., turn off nonessential network protocols, create the minimum
+necessary user accounts, and remove nonessential software.
+
+Partition your systems to limit the damage that can be done.  For
+example:
+
+  -  Don't put confidential data on a publicly accessible server.
+
+  -  Don't run a publicly accessible server on an internal
+     production system or on your internal network.
+
+  -  Store confidential customer data, like credit card
+     information, on a tightly controlled system, apart from the
+     Web documents.
+
+  -  If possible, store read-only data on immutable media.
+
+  -  Don't do program development on the server system.  Keep
+     compilers off the server.
+
+  -  Configure the network and internal systems such that the Web
+     server system is not trusted.
+
+  -  Don't allow that system access to internal resources, such
+     as network filesystems, printers, and accounts.
+
+Track Web software bug reports, especially security-related ones.
+Track developments in Web security, in the areas of encryption,
+authentication, and payment protocols.
+
+Tell Web software vendors that quality is more important than
+endless new features.
+
+SUMMARY
+You have to protect yourself, because all other controls are
+after the fact.  The university may never discipline the student
+who broke into your system.  The Federal Bureau of Investigation
+may never find the money you lost in an interstate Internet scam.
+You don't want to have to wait for Interpol to investigate your
+case.
+
+As the Internet and the World Wide Web evolve, you must continue
+to educate yourself and your organization as new protocols, file
+formats, applications, and products are introduced.
+
+For More Information
+
+WWW Consortium Security Resources
+
+     http://www.w3.org/pub/WWW/Security/
+
+WWW Security Frequently Asked Questions
+
+     http://www-genome.wi.mit.edu/WWW/faqs/www-security-faq.html
+
+NIST Computer Security Resource Clearinghouse
+
+     http://csrc.nist.gov/
+

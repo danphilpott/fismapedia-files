@@ -1,0 +1,161 @@
+                 Computer Systems Laboratory Bulletin
+                               February 1991
+
+               
+                    COMPUTER SECURITY ROLES OF NIST AND NSA
+
+The passage of the Computer Security Act of 1987 and the recent issuance of
+the "National Policy for the Security of National Security Telecommunications
+and Information Systems," a classified Presidential directive, has clarified
+the division of responsibilities between the National Institute of Standards
+and Technology (NIST) and the National Security Agency (NSA).  This CSL
+Bulletin provides federal agencies with an explanation of the roles of NIST
+and NSA in computer security and gives points of contact for agency computer
+security and information resources management personnel.  
+
+DIVISION OF RESPONSIBILITIES BETWEEN NIST AND NSA
+
+NIST Responsibilities
+
+The Computer Security Act of 1987 assigned NIST the responsibility for the
+development and promulgation of cost-effective computer security standards and
+guidelines for the federal unclassified systems community.  NIST's Computer
+Systems Laboratory (CSL) is also responsible for the development of standards
+and guidelines for federal computer systems including computer-related
+telecommunications systems.  The term unclassified information as used in this
+document excludes information covered by 10 U.S.C. Section 2315, the Warner
+Amendment.
+
+NSA Responsibilities
+
+NSA and its National Computer Security Center (NCSC) have responsibility for
+the security of systems and telecommunications involving classified and Warner
+Amendment systems, collectively known as "national security systems."  The
+President has designated the Director of NSA as the National Manager for
+computer security for national security systems.  
+
+      "National security systems" are those telecommunications and information
+      systems operated by the U.S. Government, its contractors, or agents,
+      that contain classified information or, as set forth in 10 U.S.C.
+      Section 2315, that involves intelligence activities, involves
+      cryptologic activities related to national security, involves command
+      and control of military forces, involves equipment that is an integral
+      part of a weapon or weapons systems, or involves equipment that is
+      critical to the direct fulfillment of military or intelligence missions,
+      excluding equipment or services used for routine administrative and
+      business applications.  
+
+NSA's responsibilities in this area are specified in the classified
+Presidential directive issued in July 1990.  
+
+AGENCY COMPUTER SECURITY ASSISTANCE
+
+Unclassified Systems - NIST
+
+CSL's Computer Security Division is available to assist federal departments
+and agencies with all facets of computer security.  These include, but are not
+limited to, security planning, risk management, contingency planning, security
+awareness and training, network security, encryption, personal authentication
+technologies, smart card applications, and virus detection and prevention. 
+Detailed technical assistance can be provided to agencies on a cost-
+reimbursable basis.  In accordance with the Computer Security Act of 1987,
+NIST draws upon the technical expertise of NSA as appropriate, for example in
+the area of classified threat assessment.  All inquiries should be directed
+to:
+
+      Chief, Computer Security Division 
+      Building 225, Room A216
+      Computer Systems Laboratory
+      National Institute of Standards and Technology
+      Gaithersburg, MD  20899
+      Telephone (301) 975-2934 or FTS 879-2934
+
+NIST has established and chairs the Federal Computer Security Program Managers
+Forum which meets regularly to coordinate issues of interest to computer
+security program managers in the federal unclassified security community.  The
+forum provides a structured format for sharing information and expertise among
+agencies at the computer security program manager level.  For further
+information regarding the forum, please contact:
+
+      Chairman, Federal Computer Security Program Managers Forum
+      Building 225, Room B154
+      Computer Systems Laboratory
+      National Institute of Standards and Technology
+      Gaithersburg, MD  20899
+      Telephone (301) 975-3240 or FTS 879-3240
+      
+NIST publishes a list of all currently available Federal Information
+Processing Standards (FIPS), guidelines, and related publications on computer
+security.  For a complimentary copy of NIST Publication List 91, Computer
+Security Publications, or to be placed on the mailing list for CSL Bulletins,
+you may contact:
+
+      CSL Publications
+      Building 225, Room B151
+      National Institute of Standards and Technology  
+      Gaithersburg, MD  20899
+      Telephone (301) 975-2821 or FTS 879-2821
+
+National Security Systems - NSA
+
+The National Security Agency, through the National Computer Security Center,
+assists federal departments and agencies with information security
+(communications and computer security) in issues related to national security
+systems.  A full range of services, including risk assessment, security
+planning, operations security, and identification of security measures, is
+offered by NSA for national security systems.  Also, NSA publishes the
+Information Systems Security Products and Services Catalog, which contains the
+Evaluated Products List.  This list includes security products that NSA has
+evaluated, those systems that are currently undergoing evaluation, and the
+current status of such evaluations.  This catalog serves as a valuable
+reference source for both classified and unclassified computer security
+programs.  
+
+Upon request of federal agencies and their contractors, NSA conducts
+assessments of the vulnerabilities of information systems to hostile
+exploitation/disruption and provides recommendations on Information Systems
+Security (INFOSEC) countermeasures that are needed to eliminate or reduce
+these vulnerabilities.  In allocating available resources, NSA assigns
+priority to assessments of national security systems as defined in the
+classified Presidential directive.  However, requests for assessments of
+unclassified systems not covered by the national policy will be given
+consideration by NSA.  Inquiries regarding assessments for unclassified
+systems should be initially directed to NIST.  
+
+For further information on NSA and NCSC, contact:
+
+      Director
+      National Security Agency
+      Attn:  National Computer Security Center
+      Airport Square #11
+      Fort George G. Meade, MD  20755-6000
+
+The National Security Telecommunications and Information Systems Security
+Committee (NSTISSC), established by Presidential directive, provides a policy-
+setting structure for the national security systems community.  Agencies are
+represented on the NSTISSC as either members or observers, as determined by
+the Presidential directive.  Additionally, the NSTISSC has two subcommittees: 
+the Subcommittee on Information Systems Security (SISS) and the Subcommittee
+on Telecommunications Security (STS). 
+For further information regarding the NSTISSC and its subcommittees, you may
+contact:
+
+      Director 
+      National Security Agency
+      Attn:  NSTISSC Secretariat 
+      Operations Building #3, Room COW89
+      Fort George G. Meade, MD  20755-6000
+
+
+
+Acronyms
+
+FIPS        Federal Information Processing Standard
+NCSC        National Computer Security Center (NSA)
+CSL         Computer Systems Laboratory (NIST)
+NIST        National Institute of Standards and Technology
+NSA         National Security Agency
+NSTISSC     National Security Telecommunications and Information
+              Systems Security Committee
+SISS        Subcommittee on Information Systems Security
+STS         Subcommittee on Telecommunications Security

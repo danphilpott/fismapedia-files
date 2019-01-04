@@ -1,0 +1,484 @@
+
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: August 1999</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="August 1999, August 1999 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, The Advanced Encryption Standard: A Status Report">
+ <meta name="description" content="This is the August 1999 ITL Security Bulletin called The Advanced Encryption Standard: A Status Report.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+      <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+        &nbsp;<br>
+      <CENTER>
+          <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>AUGUST 1999</b></font>
+        </CENTER>
+      <table width="85%" border="1" cellspacing="1" cellpadding="2" align="center">
+        <tr> 
+          <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>The Advanced 
+              Encryption Standard: A Status Report</B></FONT></div>
+          </td>
+        </tr>
+      </table>
+
+      <p> <font face="Arial, Helvetica, sans-serif">NIST's Information Technology 
+        Laboratory is working with industry and the cryptographic community to 
+        develop an Advanced Encryption Standard (AES). The goal is to develop 
+        a Federal Information Processing Standard (FIPS) that specifies an encryption 
+        algorithm(s) capable of protecting sensitive (unclassified) government 
+        information well into the next century. The algorithm(s) is expected to 
+        be used by the U.S. Government and, on a voluntary basis, by the private 
+        sector. This ITL Bulletin gives a status report on the development of 
+        the AES, summarizes the evaluation process, and briefly describes the 
+        five finalist algorithms selected in Round 1 of the AES development process.</font></p>
+      <p> <B><font size="+1" color="#000099" face="Arial, Helvetica, sans-serif">Background</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+        On January 2, 1997, NIST announced the initiation of an effort to develop 
+        the AES and made a formal call for algorithms on September 12, 1997. The 
+        call stipulated that the AES must specify an unclassified, publicly disclosed 
+        encryption algorithm(s), available royalty-free, worldwide. In addition, 
+        the algorithm(s) would implement symmetric key cryptography as a block 
+        cipher and (at a minimum) support a block size of 128-bits and key sizes 
+        of 128-, 192-, and 256-bits.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> On August 20, 1998, NIST announced 
+        its acceptance of fifteen AES candidate algorithms at the First AES Candidate 
+        Conference (AES1). These algorithms had been submitted by members of the 
+        cryptographic community from around the world. At that conference and 
+        in a published <I>Federal Register</I> notice, NIST solicited public comments 
+        on the candidates. A Second AES Candidate Conference (AES2) was held in 
+        March 1999 to discuss the results of the analysis conducted by the global 
+        cryptographic community on the candidate algorithms. The public comment 
+        period on the initial review of the algorithms closed on April 15, 1999.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Evaluation 
+        Criteria</FONT></B><BR>
+        In the call for candidate algorithms, NIST specified the evaluation criteria 
+        that would be used to compare the candidate algorithms. These criteria 
+        were developed from public comments to the proposed criteria and from 
+        the discussions at a public AES workshop held on April 15, 1997, at NIST. 
+        The evaluation criteria are divided into three major categories: Security, 
+        Cost, and Algorithm and Implementation Characteristics.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><I><B>Security</B></I> is 
+        the most important factor in the evaluation. Security encompasses features 
+        such as resistance of the algorithm to cryptanalysis, soundness of its 
+        mathematical basis, randomness of the algorithm output, and relative security 
+        as compared to other candidates.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><I><B>Cost</B></I> is a second 
+        important area of evaluation that encompasses licensing requirements, 
+        computational efficiency (speed) on various platforms, and memory requirements. 
+        Since one of NIST's goals is that the final AES algorithm(s) be available 
+        worldwide on a royalty-free basis, intellectual property claims and potential 
+        conflicts must be considered in the selection process. The speed of the 
+        algorithms on a variety of platforms must also be considered. During Round 
+        1, the focus was primarily on the speed associated with 128-bit keys. 
+        Additionally, memory requirements and constraints for software implementations 
+        of the candidates are important considerations.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The third area of evaluation 
+        is <I><B>algorithm and implementation characteristics</B></I> such as 
+        flexibility, hardware and software suitability, and algorithm simplicity. 
+        Flexibility includes the ability of an algorithm:</font></p>
+      <UL TYPE="SQUARE">
+        <LI><font face="Arial, Helvetica, sans-serif"> to handle key and block 
+          sizes beyond the minimum that must be supported, </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> to be implemented securely 
+          and efficiently in many different types of environments, and </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> to be implemented as a 
+          stream cipher, hashing algorithm, and to provide additional cryptographic 
+          services. </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"> It must be feasible to implement 
+        an algorithm in both hardware and software, and efficient firmware implementations 
+        are advantageous. The relative simplicity of an algorithm's design is 
+        also an evaluation factor.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Results 
+        from Round 1</FONT></B><BR>
+        The Round 1 public review extended from the official announcement of the 
+        fifteen AES candidates on August 20, 1998, at AES1 until the official 
+        close of the comment period on April 15, 1999. During Round 1, many members 
+        of the global cryptographic community supported the AES development effort 
+        by analyzing and testing the fifteen AES candidates.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> NIST facilitated and focused 
+        the discussion of the candidate algorithms by providing an electronic 
+        discussion forum that was used to comment on the candidates, discuss relevant 
+        AES issues, inform the public of new analysis results, etc. The AES home 
+        page <A HREF="http://www.nist.gov/aes">http://www.nist.gov/aes</A> has 
+        served as a tool to disseminate information such as papers for AES2 and 
+        other Round 1 public comments.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> Twenty-eight papers were submitted 
+        to NIST for consideration for AES2. Twenty-one of those papers were presented 
+        at AES2 as part of the formal program, and several of the remaining seven 
+        were also presented during an informal session at that conference. All 
+        of the submitted papers were posted on the AES home page several weeks 
+        prior to AES2 in order to promote informed discussions at the conference.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> AES2 gave members of the global 
+        cryptographic community a chance to present and discuss the analysis that 
+        had been performed on the AES candidates during Round 1, as well as other 
+        important topics relevant to the AES development effort. In addition to 
+        the AES2 papers, NIST received fifty-six sets of public comments on the 
+        candidate algorithms during Round 1. All of these comments were made publicly 
+        available on the AES home page on April 19, 1999.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> NIST performed an analysis 
+        of mathematically optimized ANSI C and Java<FONT SIZE="-7"><SUP>(TM)</SUP></FONT> 
+        implementations<A HREF="#ASK"><FONT COLOR="#000099"><B>*</B></FONT></A> 
+        of the candidate algorithms that were provided by the submitters prior 
+        to the beginning of Round 1. Additionally, NIST performed extensive statistical 
+        testing on all of the candidates. The testing of ANSI C implementations 
+        focused on the speed of all fifteen candidates on various desktop systems, 
+        using different combinations of processors, operating systems, and compilers. 
+        The submitters' Java(<FONT COLOR="#000099"SIZE="-7"><B><SUP>TM</SUP></B></FONT>) 
+        code was tested for speed and memory usage on a desktop system, and other 
+        features of the code were measured as well. Statistical testing was performed 
+        on all fifteen candidates to determine if the algorithms generate output 
+        that is statistically indistinguishable from truly random data. Testing 
+        results are available on the AES home page.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Selection 
+        Process Prior to Round 2</FONT></B><BR>
+        At the conclusion of the Round 1 public review, NIST established an AES 
+        technical review team to recommend algorithms for Round 2 evaluations. 
+        The team was composed of NIST employees who had been engaged in reviewing 
+        the algorithms, reviewing the public comments on the candidates, selecting 
+        papers for AES2, conducting NIST's efficiency and randomness testing, 
+        attending and presenting information at the AES conferences, and managing 
+        the AES development process. The team met several times over the course 
+        of two months to develop their consensus position.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> During the evaluation process, 
+        the NIST team considered all comments, papers, verbal comments at conferences, 
+        NIST studies, reports, and proposed modifications. The team discussed 
+        each candidate relative to the announced evaluation criteria and other 
+        pertinent criteria suggested during the public analysis. The review of 
+        each algorithm included a methodical evaluation of the following factors:</font></p>
+      <UL TYPE="SQUARE">
+        <LI><font face="Arial, Helvetica, sans-serif"> security (including any 
+          known attacks or weaknesses), </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> efficiency (both speed 
+          and memory usage), </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> flexibility (implementation 
+          on low- and high-end smart cards; support of additional key and block 
+          sizes, including whether the reference code actually supported the additional 
+          key sizes; suitability for use as a pseudo-random number generator, 
+          hashing algorithm, etc.; and whether or not encryption and decryption 
+          were the same procedure), </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> algorithm simplicity, and 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> other issues that were 
+          discussed in the received public comments. </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"> Although it was considered, 
+        the team readily agreed that it was not possible to conduct a quantitatively 
+        based selection of the finalists. For example, comments were not received 
+        regarding the security analysis of some candidates, whereas other algorithms 
+        were reported as "broken." Since security is considered the most important 
+        evaluation criteria, the AES review team made a first cut of the candidates 
+        based on security, then proceeded with the other selection criteria. This 
+        evaluation process resulted in the team selection of five candidates with 
+        superior characteristics as finalists for Round 2 evaluation.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> It is important to note that 
+        the selection of an algorithm as a finalist does not constitute endorsement 
+        by NIST of the algorithm or its security. Similarly, the non-selection 
+        of an algorithm is not necessarily to be taken as a statement about the 
+        algorithm's quality, security, efficiency, or other characteristics.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Round 
+        2 AES Finalists</FONT></B><BR>
+        Using the analyses and comments received, NIST selected five finalist 
+        algorithms: <B>MARS, RC6<FONT color="#000099" SIZE="-7"><SUP>TM</SUP></FONT>, 
+        Rijndael, Serpent,</B> and <B>Twofish</B>. No significant security vulnerabilities 
+        were found for these candidates during the Round 1 analysis, and each 
+        of these algorithms constitutes potentially superior technology. Below 
+        is a summary of each of the finalist candidates in alphabetical order. 
+        Profiles and overall assessments for all fifteen Round 1 candidates can 
+        be found in the NIST Round 1 Report (from which this summary is extracted), 
+        which is available on the AES home page.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>MARS</B> incorporates its 
+        "cryptographic core" into an innovative, heterogeneous overall structure. 
+        It also features a variety of operations, including the technique of rotating 
+        digits by a varying number of places that is determined by both the data 
+        and the secret key. Consequently, while MARS performs well in general, 
+        it performs particularly well on computer platforms that support its rotation 
+        and multiplication operations efficiently. NIST accepted a modification 
+        to MARS for Round 2 (proposed by the submitter) that should improve its 
+        ability and flexibility to function in some memory-constrained environments, 
+        such as low-end smart cards. MARS was submitted to the AES development 
+        effort by the International Business Machines Corporation.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>RC6</B> is an algorithm 
+        that is simple enough to memorize and should be easy to implement compactly 
+        in both software and hardware. Its simplicity also should facilitate its 
+        further security analysis in Round 2, which is assisted by the analysis 
+        of its predecessor, RC5. RC6 does not use substitution tables; instead, 
+        the principal engine for its security is the technique of rotating digits 
+        by a varying number of places that is determined by the data. In general, 
+        RC6 is fast and it is particularly fast on platforms that support its 
+        rotation and multiplication operations efficiently; its key setup is also 
+        fast. RC6 was submitted to the AES development effort by RSA Laboratories.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Rijndael</B> performs excellently 
+        across all considered platforms. Its key setup is fast and its memory 
+        requirements are low, so it also should perform well in hardware and in 
+        memory-constrained environments. The straightforward design and the conservative 
+        choice of operations should facilitate its further analysis, and the operations 
+        should be relatively easy to defend against certain attacks on physical 
+        implementations. Even though parallel processing was not considered during 
+        the Round 1 selection process by the AES review team, Rijndael has the 
+        potential of benefiting from advances in computer processors that allow 
+        many instructions to be executed in parallel. Rijndael was submitted to 
+        the AES development effort by Joan Daemen and Vincent Rijmen.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Serpent</B> is ultra-conservative 
+        in its security margin; the designers chose to use twice as many iterations 
+        as they believed secure against currently known attacks. Consequently, 
+        Serpent's performance is relatively slow compared to the other four finalists. 
+        In some settings, however, this should be mitigated by the efficiency 
+        of optimized implementations using what the submitters call the "bitslice" 
+        mode, for which the algorithm was specially designed. Serpent should fit 
+        well in hardware (with potential tradeoffs of speed versus space) and 
+        in memory-constrained environments. The straightforward design and the 
+        conservative choice of operations should facilitate further analysis of 
+        this candidate, and the operations should be easy to defend against certain 
+        attacks on physical implementations. Serpent was submitted to the AES 
+        development effort by Ross Anderson, Eli Biham, and Lars Knudsen.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Twofish</B> exhibits fast 
+        and versatile performance across most platforms; it also should perform 
+        well both in hardware and in memory-constrained environments. It features 
+        variable substitution "tables" that depend on the secret key. The submitters 
+        believe that such tables generally offer greater security than tables 
+        with fixed values. The possibility of pre-computing these tables to varying 
+        degrees helps Twofish offer a wide variety of performance tradeoffs. Depending 
+        on the setting, Twofish can be optimized for speed, key setup, memory, 
+        code size in software, or space in hardware. Twofish was submitted to 
+        the AES development effort by Bruce Schneier, John Kelsey, Doug Whiting, 
+        David Wagner, Chris Hall, and Niels Ferguson.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B><FONT SIZE="+1" COLOR="#000099">Next 
+        Steps</FONT></B><BR>
+        With the announcement of the finalists, NIST formally opens the "Round 
+        2" public evaluation process and solicits comments on the remaining algorithms 
+        through May 15, 2000. Comments can be submitted via the AES home page. 
+        NIST actively seeks comments and analysis on any aspect of the candidate 
+        algorithms, including but not limited to the following topics:</font></p>
+      <UL TYPE="SQUARE">
+        <LI><font face="Arial, Helvetica, sans-serif"> cryptanalysis, </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> intellectual property, 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> crosscutting analyses of 
+          all of the AES finalists, </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> selection and use of multiple 
+          AES algorithms, </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> overall recommendations, 
+          and </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> implementation issues. 
+          </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"> NIST is providing an opportunity 
+        for the sponsors of the AES finalists to revise the ANSI C and Java(<FONT COLOR="#000099" SIZE="-7"><B><SUP>TM</SUP></B></FONT>) 
+        implementations of their algorithms. NIST intends to make these implementations 
+        available (via CD-ROM) within two months of the beginning of Round 2.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> Near the end of Round 2, NIST 
+        will sponsor the Third AES Candidate Conference (AES3), an open, public 
+        forum for discussion of the analyses of the AES finalists. Submitters 
+        of the AES finalists will be invited to attend and engage in discussions 
+        regarding comments on their algorithms. AES3 will be held April 13-14, 
+        2000, in New York, New York. Registration and logistical information will 
+        be posted on the AES home page. Proposed papers for this conference are 
+        due to NIST by January 15, 2000.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> Following the close of the 
+        Round 2 public analysis period on May 15, 2000, NIST intends to study 
+        all available information and propose the AES, which will incorporate 
+        one or more AES algorithms selected from the finalists. The AES will be 
+        announced as a proposed Federal Information Processing Standard (FIPS) 
+        that will be published for public review and comment. Following the comment 
+        period, the standard will be revised, as appropriate, by NIST in response 
+        to those comments. A review, approval, and promulgation process will then 
+        follow. If all steps of the AES development process proceed as planned, 
+        it is anticipated that the standard will be completed by the summer of 
+        2001.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><A NAME="ASK">* Certain commercial 
+        equipment, instruments or materials are identified in this paper to foster 
+        understanding. Such identification does not imply recommendation or endorsement 
+        by the National Institute of Standards and Technology, nor does it imply 
+        that the materials or the equipment identified is necessarily the best 
+        available for the purpose.</A></font></p>
+      <CENTER>
+        <font face="Arial, Helvetica, sans-serif"><A HREF="#top"><B>To Top</B></A></font>
+</CENTER>
+
+      </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: 
+        <!-- #BeginDate format:Am1 -->January 17, 2005<!-- #EndDate -->
+         <br>
+        Page created: August 26, 2000</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>

@@ -1,0 +1,384 @@
+GENERALLY ACCEPTED SYSTEM SECURITY PRINCIPLES (GSSPs):  GUIDANCE ON
+SECURING INFORMATION TECHNOLOGY (IT) SYSTEMS
+
+For the security of any system to be strong, the system's owners
+must consider three fundamental security areas:  management
+controls, operational controls, and technical controls.  While
+technical controls, such as encryption, digital signatures, or
+firewalls, receive the most attention, inadequate operational
+controls and the day-to-day administration of technical controls
+often create the most vulnerabilities.  
+
+Strong management controls are needed to tie all the aspects of
+security together into a sensible protection strategy.  NIST
+Special Publication 800-14, Generally Accepted Principles and
+Practices for Securing Information Technology Systems, helps
+organizations to improve their operational and management
+controls.  This CSL Bulletin explains some of the needs which
+GSSPs can solve and presents a set of generally accepted system
+security principles developed by NIST. 
+
+Needs
+If you are concerned about these issues, you should consider the
+application of GSSPs to solve different problems:
+
+Support for electronic interchange.  When multiple organizations
+conduct business together, the organizations become linked in a
+way that may compromise one of the organizations.  For example,
+Organization A gives Organization B computer accounts on A's
+systems and someone breaks into Bþs computers and then uses B's
+systems to break into A.  GSSPs define levels or types of
+security that organizations can require for various types of
+access to systems or data given to support electronic
+interchange. 
+
+Audit standards/baseline.  When an organization or an operating
+unit of an organization is audited, confusion exists about a
+reasonable baseline of security controls.  Many organizations
+maintain baseline GSSPs (often called checklists).  While
+security-savvy (and money-savvy) organizations recognize that
+deviations from the baseline are often necessary, a baseline is
+still helpful.  Often, it does not make sense to individually
+study each control in each environment to determine the ideal (in
+terms of costs and benefits) implementation, but to make a
+general decision that will be þrightþ for most situations.  
+
+Reduction of liability.  When something goes wrong in an
+organization (affecting the organization, its customers, or other
+external parties), the assignment of blame soon follows.  The
+question arises whether the organization, its computer security
+staff, or system administration staff followed a standard of due
+care or diligence, or followed general standards or practices of
+professional care.  GSSPs define standards of care.  
+
+Awareness.  GSSPs promote awareness of security issues and
+facilitate communications among organizations or interest groups. 
+While not defining specific security practices, security
+principles define a common beginning point for inter-
+organizational discussions about security.
+
+Promotion of computer security in IT products and services.  When
+buying computer products, organizations buy that product's
+security.  One important way to improve overall security across
+all sectors is to improve the security that comes with products. 
+GSSPs define security functions and assurances that manufacturers
+can build into products.
+
+Solutions
+While no single effort fulfills all of these needs, NIST has
+produced guidance related to baselines and awareness as well as
+co-sponsoring a major international effort, the Common Criteria
+Project, to promote IT security.  In addition, the Reference
+section of this bulletin provides a list of GSSP-related
+documents prepared by other organizations.
+
+NIST Special Publication 800-14, Generally Accepted Systems
+Security Principles and Practices for Securing Information
+Technology Systems, and NIST Special Publication 800-12, An
+Introduction to Computer Security:  The NIST Handbook address the
+need for high-level principles and provide a baseline set of
+practices.  These documents can help organizations begin the
+process of defining common security practices.  Each community of
+interest needs to develop their own set of standard practices. 
+This decentralized approach allows the affected groups to spend
+their security dollars and other resources where they are most
+needed and appropriate.  For example, bank-to-bank money
+transfers may need different controls than those needed for
+competing organizations to share computer resources for a joint
+project.
+
+The GSSP document also provides a time- and resource-saving
+baseline for internal or external audit.  However, there are
+times when an organization will make sound and justified
+decisions not to use some of the controls described here.  
+
+GSSPs provide a baseline which is useful for addressing liability
+issues.  The extent to which liability-related organizations or
+entities (such as insurance firms, juries, or internal
+organizations) make use of GSSPs is up to those entities.  GSSPs,
+however, do not provide the "right answer" that fits all
+organizations and situations.  In addressing liability, recognize
+the most fundamental assumption of computer security:  computers
+cannot ever be fully secured.  NIST strongly urges all parties
+addressing liabilities to do so in a risk management framework.  
+
+An international effort, called the Common Criteria, is the nexus
+of several national efforts attempting to develop product
+security specifications and evaluations.  NIST and the National
+Security Agency from the U.S. and other governments (Canada, UK,
+France, Germany, Netherlands) have recently published draft 1.0
+of the Common Criteria and are working on implementation issues. 
+The Common Criteria is specifically designed to allow communities
+of interest to develop product specifications, called protection
+profiles.
+
+Generally Accepted System Security Principles 
+The generally accepted security principles are based on
+principles developed by Organization for Economic Co-operation
+and Development's (OECD) Guidelines for the Security of
+Information Systems.  Developed in 1992, the OECD Guidelines 
+provide a foundation from which governments and the private
+sector, acting singly and in concert, can construct a framework
+for securing IT systems.  The OECD Guidelines are the current
+international guidelines which have been endorsed by the U.S.  In
+developing principles, NIST drew upon the OECD Guidelines, added
+material, combined some principles, and clarified others.
+
+The eight principles provide an anchor on which to build IT
+security programs.  The principles are intended to guide security
+decisions; they are not designed to produce specific answers. 
+
+Computer Security Supports the Mission of the Organization.   
+Through the selection and application of appropriate safeguards,
+security helps the organization's mission by protecting its
+physical and financial resources, reputation, legal position,
+employees, and other tangible and intangible assets. 
+Unfortunately, security is sometimes viewed as thwarting the
+mission of the organization by imposing poorly selected,
+bothersome rules and procedures on users, managers, and systems. 
+
+On the contrary, well-chosen security rules and procedures do not
+exist for their own sake -- they are put in place to protect
+important assets and support the organizational mission. 
+Security, therefore, is a means to an end and not an end in
+itself.  In a private-sector business, having good security is
+usually secondary to the need to make a profit; security ought to
+increase the firm's ability to make a profit.  In a public-sector
+agency, security is usually secondary to the agency's providing
+services to citizens.  Security, then, ought to help improve the
+service provided to the citizen.
+
+To act on this, managers need to understand both their
+organizational mission and how each information system supports
+that mission.  After a system's role has been defined, the
+security requirements implicit in that role can be defined. 
+Security can then be explicitly stated in terms of the
+organization's mission. 
+
+The roles and functions of a system may not be restricted to a
+single organization.  In an inter-organizational system, each
+organization benefits from securing the system.  For example, for
+electronic commerce to be successful, each participant requires
+security controls to protect their resources.  Good security on
+the buyer's system also benefits the seller; the buyer's system
+is less likely to be used for fraud or to be unavailable or
+otherwise negatively affect the seller.  (The reverse is also
+true.)
+
+Computer Security is an Integral Element of Sound Management. 
+Information and IT systems are often critical assets that support
+the mission of an organization.  Protecting them can be as
+important as protecting other organizational resources, such as
+money, physical assets, or employees.  However, including
+security considerations in the management of information and
+computers does not completely eliminate the possibility that
+these assets will be harmed.  Ultimately, managers must decide
+what level of risk they are willing to accept, taking into
+account the cost of security controls.
+
+As with other resources, the management of information and
+computers may transcend organizational boundaries.  When an
+organization's information and IT systems are linked with
+external systems, management's responsibilities extend beyond the
+organization.  Management must know what general level or type of
+security is employed on the external system(s) or seek assurance
+that the external system provides adequate security for their
+organization's needs.  
+
+Computer Security Should Be Cost-Effective.  The costs and
+benefits of security should be carefully examined in both
+monetary and non-monetary terms to ensure that the cost of
+controls does not exceed expected benefits.  Investments in
+security should be appropriate and proportionate to the value of
+and degree of reliance on the IT systems and to the severity,
+probability, and extent of potential harm.  Requirements for
+security vary, depending upon the particular IT system.
+
+In general, security is a smart business practice.  By investing
+in security measures, an organization can reduce the frequency
+and severity of computer security-related losses.  For example,
+an organization may estimate that it is experiencing significant
+losses per year in inventory through fraudulent manipulation of
+its IT system.  Security measures, such as an improved access
+control system, may significantly reduce the loss.
+
+Moreover, a sound security program can thwart hackers and reduce
+the frequency of viruses.  Elimination of these threats can
+reduce unfavorable publicity as well as increase morale and
+productivity.
+
+Security benefits have direct and indirect costs.  Direct costs
+include purchasing, installing, and administering security
+measures, such as access control software or fire-suppression
+systems.  Additionally, security measures sometimes affect system
+performance, employee morale, or retraining requirements.  All of
+these must be considered in addition to the basic cost of the
+control itself.  These additional costs may well exceed the
+initial cost of the control (as is often seen, for example, in
+the costs of administering an access control package).  Solutions
+to security problems should not be chosen if they cost more, in
+monetary or non-monetary terms, directly or indirectly, than
+simply tolerating the problem.
+
+Systems Owners Have Security Responsibilities Outside Their Own
+Organizations.  If a system has external users, its owners have a
+responsibility to share appropriate knowledge about the existence
+and extent of security measures so that other users can be
+confident that the system is adequately secure.  This does not
+imply that all systems must meet any minimum level of security,
+but does imply that system owners should inform their clients or
+users about the nature of the security.
+
+In addition to sharing information about security, organization
+managers should act in a timely, coordinated manner to prevent
+and to respond to breaches of security to help prevent damage to
+others.  Taking such action should not jeopardize the security of
+systems.
+
+Computer Security Responsibilities and Accountability Should Be
+Made Explicit.  The responsibility and accountability of owners,
+providers, and users of IT systems and other parties concerned
+with the security of IT systems should be explicit.  The
+assignment of responsibilities may be internal to an organization
+or may extend across organizational boundaries.  
+
+Depending on organizational size, the computer security program
+may be large or small, even a collateral duty of another
+management official.  Even small organizations can prepare a
+document that states organization policy and makes explicit
+computer security responsibilities.  This element does not
+specify that individual accountability must be provided for on
+all systems.  For example, many information dissemination systems
+do not require user identification or use other technical means
+of user identification and, therefore, cannot hold users
+accountable.
+
+Computer Security Requires a Comprehensive and Integrated
+Approach.  Providing effective computer security requires a
+comprehensive approach that considers a variety of areas both
+within and outside of the computer security field.  This approach
+extends throughout the entire information life cycle.
+
+To work effectively, security controls often depend upon the
+proper functioning of other controls.  Many such
+interdependencies exist.  If appropriately chosen, managerial,
+operational, and technical controls can work together
+synergistically.  On the other hand, without a firm understanding
+of the interdependencies of security controls, they can actually
+undermine one another.  For example, without proper training on
+how and when to use a virus-detection package, the user may apply
+the package incorrectly and, therefore, ineffectively.  As a
+result, the user may mistakenly believe that if their system has
+been checked once, it will always be virus-free, and the user may
+inadvertently spread a virus.  In reality, these
+interdependencies are usually more complicated and difficult to
+ascertain.  
+
+The effectiveness of security controls also depends on such
+factors as system management, legal issues, quality assurance,
+and internal and management controls.  Computer security needs to
+work with traditional security disciplines including physical and
+personnel security.  Many other important interdependencies exist
+that are often unique to the organization or system environment. 
+Managers should recognize how computer security relates to other
+areas of systems and organizational management.
+
+Computer Security Should Be Periodically Reassessed.  Computers
+and the environments in which they operate are dynamic.  System
+technology and users, data and information in the systems, risks
+associated with the system, and security requirements are ever-
+changing.  Many types of changes affect system security: 
+technological developments (whether adopted by the system owner
+or available for use by others); connection to external networks;
+a change in the value or use of information; or the emergence of
+a new threat.    
+
+In addition, security is never perfect when a system is
+implemented.  System users and operators discover new ways to
+intentionally or unintentionally bypass or subvert security. 
+Changes in the system or the environment can create new
+vulnerabilities.  Strict adherence to procedures is rare and
+procedures become outdated over time.  These issues make it
+necessary to reassess periodically the security of IT systems.
+
+Computer Security is Constrained by Societal Factors.  The
+ability of security to support the mission of an organization may
+be limited by various social factors.  For example, security and
+workplace privacy can conflict.  Commonly, security is
+implemented on an IT system by identifying users and tracking
+their actions.  However, expectations of privacy vary and can be
+violated by some security measures.  (In some cases, privacy may
+be mandated by law.) 
+
+Although privacy is an important societal issue, it is not the
+only one.  The flow of information, especially between a
+government and its citizens, is another situation where security
+may need to be modified to support a societal goal.  In addition,
+some authentication measures may be considered invasive in some
+environments and cultures.
+
+Security measures should be selected and implemented with a
+recognition of the rights and legitimate interests of others. 
+This involves balancing the security needs of information owners
+and users with societal goals.  Note that rules and expectations
+change with regard to the appropriate use of security controls;
+these changes may increase or decrease security.
+
+The relationship between security and societal norms is not
+necessarily antagonistic.  Security can enhance the access and
+flow of data and information by providing more accurate and
+reliable information and greater availability of systems. 
+Security can also increase the privacy afforded to an individual
+or help achieve other goals set by society.
+
+Conclusion
+NIST and other organizations have established a strong groundwork
+in the development of generally accepted system security
+principles and in the development of practices appropriate for
+baselines.  The next steps are the continued development of
+generally accepted practices for specific applications.  These
+should be developed by the users of the applications.  
+
+References
+
+Documents available on NIST's Computer Security Resource
+Clearinghouse web page (http://csrc.nist.gov) are so noted.
+
+British Standards Institution.  British Standard 7799, A Code of
+Practice for Information Security.  1995
+
+Common Criteria for Information Technology Security Evaluation,
+Version 1.0.  1996.  (available electronically)
+
+Datapro.  The Quest for Generally Accepted System Security
+Principles (GSSP).  Delran, NJ, October 1994.
+
+Ferraiolo, David et. al.  Minimum Security Requirements for
+Multi-User Operating Systems.  NISTIR 5153.  National Institute
+of Standards and Technology, March 1993.
+
+Guttman, Barbara and Edward A. Roback.   An Introduction to
+Computer Security:  The NIST Handbook.  Special Publication 800-
+12.  National Institute of Standards and Technology, October
+1995.  (available electronically)
+
+The Institute of Internal Auditory Research Foundation.  Systems
+Auditability and Control.  Altamonte Springs, FL, 1991.
+
+National Research Council.  Computers at Risk:  Safe Computing in
+the Information Age.  National Academy Press, Washington, DC,
+1991.
+
+Organization for Economic Co-operation and Development. 
+Guidelines for the Security of Information Systems.  Paris, 1992
+
+Privacy Working Group, Information Policy Committee, Information
+Infrastructure Task Force.  Privacy and the National Information
+Infrastructure:  Principles for Providing and Using Personal
+Information.  June 6, 1995.
+
+Swanson, Marianne and Barbara Guttman.  Generally Accepted
+Principles and Practices for Securing Information Technology
+Systems. Special Publication 800-14.  National Institute of
+Standards and Technology, September 1996.  (available
+electronically)

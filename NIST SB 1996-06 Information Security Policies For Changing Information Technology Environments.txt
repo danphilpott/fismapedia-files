@@ -1,0 +1,268 @@
+INFORMATION SECURITY POLICIES FOR CHANGING INFORMATION TECHNOLOGY
+ENVIRONMENTS
+
+The Office of Management and Budget (OMB) has issued a revised
+comprehensive policy on computer security which provides a model
+and structure useful to both the public and private sectors.  The
+policy is contained in the revised OMB Circular A-130, Appendix
+III, Security of Federal Automated Information.  The policy is
+mandatory for executive branch agencies, but many other
+government and private sector organizations may find its accepted
+business practices useful in developing information security
+practices in current and emerging information technology (IT)
+environments. 
+
+This bulletin highlights various aspects of the revised policy on
+computer security and their implications. 
+
+Individual Responsibility
+The main thrust of the revised Circular A-130 is to drive
+security responsibilities down to the users and managers of
+computer systems and information.  Since computers and electronic
+access are available to almost everyone, this approach is
+necessary to address security in current information technology
+environments.  Previous computer security policies and programs
+have focused on securing data processing centers and large custom
+applications. 
+
+General Support Systems and Major Applications
+To address computer security in today's environments, users and
+managers need a framework which can handle a myriad of
+technological possibilities.  A suggested structure offers two
+categories:  general support systems and major applications.
+General support systems include local area networks (LANs), wide
+area networks (WANs), personal computers (PCs), workstations,
+servers, networks and all manner of information technology
+including data processing centers.  General support systems are
+normally a collection of computers, networks, and other IT
+components.  They can run a huge variety of commercial off-the-
+shelf applications such as word processing, email, productivity
+tools, databases, and custom applications, although any one
+general support system may run only a few applications or many.
+These routine applications are part of the general support
+system.  The lines that separate general support systems from
+each other are often managerial rather than physical or
+electronic. 
+
+A major application is a critical business or mission resource.
+Although major applications are, like routine applications,
+resident on general support systems, they need to be given
+special management attention because of the organization's
+reliance on them. In government organizations, a typical major
+application is providing citizen benefits.  Agencies are most
+able to identify their major applications.
+
+OMB Circular A-130 does not distinguish between sensitive and
+non-sensitive systems.  Rather, consistent with the Computer
+Security Act of 1987, the Circular recognizes that systems are
+procured and operated to serve particular agency needs of varying
+sensitivity and criticality.  All general support systems contain
+some sensitive information and, therefore, require protection,
+including a security plan.  This should help prevent arguments
+about what is sensitive and allow that energy to be spent
+securing systems.
+
+Responsibility, Plans, Review, and Authorization
+In most organizations, it is appropriate to delegate decisions
+about computer security to line managers and to retain agency-
+level control of major applications.  The methodology for
+managing computer security is based on four interrelated
+management controls:  assigning responsibility for security,
+security planning, periodic review of security controls, and
+management authorization.  The goal of this process is to create
+management accountability for security decisions and
+implementation.  To be accountable for a decision, a manager
+needs authority.
+
+Although management controls are required for both general
+support systems and major applications, significant differences
+determine how they are implemented.  These are described below.
+
+Assigning Responsibility.  Circular A-130 requires that a single
+individual be assigned operational responsibility for security. 
+The individual must be knowledgeable about the information
+resources used and how to secure them.  For major applications,
+the assigned individual must be able to give special management
+attention to the security of the application.  By assigning a
+knowledgeable security officer, management should receive better
+security information which, in turn, should cause management to
+want someone knowledgeable and skillful in security positions.
+
+Security Planning.  Good security planning is essential, but it
+must be more than simply the generation and review of paper.
+Circular A-130 prescribes a series of specific planning
+activities rather than a theoretical framework.  The activities
+include the development of rules, security training, and the
+implementation of other operational, management, and technical
+controls.  Plans for major applications should be reviewed by the
+manager of the primary support system which the application uses.
+
+Review of Controls.  The security of a system or application
+degrades over time, as the technology evolves and as staffing and
+procedures change.  Organizations should use security reviews to
+assure that management, operational, and technical controls are
+appropriate and functioning effectively.  These review
+requirements are much broader than the certification review
+required under previous policies.  The security plan should be
+the basis for the review (furthering the usefulness of the
+security planning process).  For major applications, reviews must
+include an independent review or audit.  (Independent audits can
+be internal or external but should be performed by someone free
+from personal and external constraints which could impair their
+independence and should be organizationally independent.)
+
+Authorization.  The authorization of a system to process
+information, granted by a management official, provides an
+important quality control.  By authorizing processing of a system
+or application, a manager accepts the associated risk.  The
+authorization, which some agencies refer to as an accreditation,
+should be based on the review of controls.  The authorization of
+major applications will generally occur at a very high managerial
+level, either by a political appointee or a senior career federal
+employee.
+
+Rules
+Under the revised policy, agencies are required to develop
+security rules.  Rules are the same as system-specific policy.
+They are the decisions made about security-related options and
+required trade-offs, since all desired security objectives will
+probably not be achievable.  The system-specific policy, stated
+as operational rules, will have technical and operational
+implications.  The requirement for rules is designed to force
+people to address and document security-related decisions.  Some
+of the types of issues for which rules are needed are:
+     Are employees allowed to put work data on their home PCs?
+     How often do passwords change?
+     Who is allowed to have accounts on what computers?
+
+Risk Management
+Rules should be developed using a risk-based approach.  However,
+a formal risk assessment is not required.  Organizations require
+the flexibility to select decision-making processes which fit
+their environments. 
+
+The practical effect of this policy is that agencies no longer
+need periodic risk assessments of their computer systems.
+Agencies may still choose to perform a traditional risk
+assessment, which remains a valuable tool.  Risk assessments are
+most effective in areas where risks and safeguards can be
+quantified or otherwise discretely measured or described. 
+
+Many security personnel point out other benefits of traditional
+risk analysis, especially the visibility to upper management
+through system review and authorization.  Circular A-130 attempts
+to keep these important benefits as a part of the authorization
+of systems.
+
+Personnel Controls
+Since the greatest threat to most computer systems comes from
+authorized users, agencies should institute personnel controls
+such as least privilege, separation of duties, and individual
+accountability.  This is a much broader view of personnel
+security than in the old version, which only addressed personnel
+screening.  Screening is required for personnel (such as system
+or security administrators, emergency personnel, etc.) who can
+bypass technical and operational controls and therefore may not
+always be subject to other security controls such as least
+privilege, separation of duties, or individual accountability.
+This is, of course, a much smaller set of people and should
+result in significant cost savings to agencies.
+
+Incident Handling
+Organizations need an incident handling capability, which is the
+ability to detect and react quickly and efficiently to
+disruptions in normal processing caused by malicious technical
+threats.  Since information technology is so complex and widely
+distributed and users are often unfamiliar with the technology,
+an incident handling capability is imperative to provide security
+support.  Many organizations do not currently have an ability to
+handle or even to recognize computer security incidents.  The
+development of an incident handling capability does not have to
+involve a separate staff; it could be a service of a Help Desk
+(with appropriate training).  Agencies are directed to share
+information about common vulnerabilities so that the federal
+government can improve its overall ability to respond to security
+threats. 
+
+Training
+Like planning, training is an area of computer security which
+receives more praise than action.  Users should be trained about
+the specific general support systems or applications they use,
+based on the system rules, specifically including how to handle
+incidents.  This requirement cannot be met solely with
+organization-wide training programs which address basic computer
+security.  The training should use a media appropriate for the
+audience and the risk.  Training need not be formal classroom
+instruction; it could use interactive computer sessions or
+well-written and understandable brochures.  Specialized training
+of users is required for major applications.
+
+Network Interconnectivity
+Very few general support systems will exist as closed systems.
+Most are networked to other organization systems and to external
+public and private networks.  The gateways where networks meet
+serve an important security role.  System rules in the "other"
+network may be very different or enforced differently.  These
+system interconnections should be explicitly approved by
+organization managers. 
+
+One important type of gateway is a firewall or secure gateway.
+Secure gateways block or filter access between two networks,
+often between a private network and a larger, more public network
+such as the Internet.
+
+Contingency Planning
+Contingency planning is a vital element of a computer security
+program.  Not only should contingency plans be developed, but
+also they should be tested.  Federal agencies and private sector
+organizations have been expanding the scope of their contingency
+plans to include more than just large data centers.  The emphasis
+is on assuring that all the resources needed for mission and
+business critical functions will be available.  This includes
+people, communications, support equipment, services, and many
+other resources in addition to computing power.
+
+Public Access
+Federal agencies are encouraged to provide public access to
+information.  Organizations should reduce their risks by
+separating public access systems or records from agency internal
+systems.
+
+Assistance
+The Circular provides for assistance to agencies in implementing
+the revised policy.  NIST is tasked with helping agencies with
+security planning, interconnectivity, incident handling,
+training, and information sharing, as well as providing general
+assistance.  The Department of Justice is tasked with helping
+agencies with legal issues surrounding incidents.  The General
+Services Administration is tasked with providing guidance on
+including security in the acquisition process and providing or
+making available security services.
+
+Online Information
+Information about OMB Circular A-130 and issues addressed in the
+Circular is available online:
+
+Guttman, Barbara and Edward Roback.  An Introduction to Computer
+Security:  the NIST Handbook.  Special Publication 800-12.
+(http://csrc.nist.gov/nistpubs/800-12.  The handbook is available
+in postscript, WordPerfect, and Word.)
+
+Office of Management and Budget.  OMB Circular A-130.  Management
+of Federal Information Resources
+(http://csrc.nist.gov/secplcy/a130.txt  This is the entire A-130
+including Appendix III.)  The new Appendix contains two sections,
+a policy section and an explanatory section which clarifies OMB's
+intentions and provides implementation guidance. 
+
+Security Issues in Public Access Systems.  CSL Bulletin.  May
+1993. (http://csrc.nist.gov/nistbul/csl93-05.txt)
+
+Wack, John and Lisa Carnahan.  Keeping Your Site Comfortably
+Secure:  An Introduction to Internet Firewalls.  NIST Special
+Publication 800-10.  (http://csrc.nist.gov/nistpubs/800-10/)
+
+Computer Security Policy:  Setting the Stage for Success.  CSL
+Bulletin.  January 1994.  (http://csrc.nist.gov/nistbul/csl94-
+01.txt)
+

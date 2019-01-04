@@ -1,0 +1,315 @@
+             COMPUTER SYSTEMS LABORATORY BULLETIN
+         Advising users on computer systems technology
+                        February 1992
+
+ ESTABLISHING A COMPUTER SECURITY INCIDENT RESPONSE CAPABILITY
+
+Introduction
+
+Computer systems and the information they store are valuable
+resources that need to be protected.  Increasingly sophisti-
+cated threats including system and network intruders,
+computer viruses, and network worms can exploit a variety of
+weaknesses in computer systems and cause significant damage. 
+Due to increased use of local area networks (LANs) and large
+networks such as the Internet, damage caused by seemingly
+isolated computer security incidents can spread to other
+systems, causing widespread denial of service and other
+losses.
+
+Government agencies, business, and academic institutions need
+to take steps to understand the increased threats now
+affecting computer systems and to learn how to respond to
+computer security incidents with the requisite speed and
+skill.  This bulletin recommends the use of a Computer
+Security Incident Response Capability (CSIRC) as part of a
+computer security program so that incidents can be contained
+and ultimately prevented in a timely and cost-effective
+manner.
+
+A Changing Threat Scenario
+
+Prior to the mid 1980s, the predominate threats to computer
+security (besides errors and omissions) were physical and
+environmental, including insider attacks, fire and water
+damage, theft, and physical damage.  The threats are largely
+understood and controllable through the use of traditional
+controls and contingency planning.  Now, a new class of
+software-based threats has become as important to understand
+and control; these threats include unauthorized intruders and
+users who exploit system vulnerabilities, computer viruses,
+network worms, and Trojan horses.  Several factors have
+contributed to the growing presence of these threats.
+
+Reliance on Computers - Many agencies rely on computers and
+networks for communications and accomplishment of work; con-
+versely, many agencies would suffer great losses to produc-
+tivity should their systems become unavailable.  Due to
+system complexity, reliance on computer systems often pres-
+ents unanticipated risks and vulnerabilities.
+
+Computer Viruses - Computer viruses in particular have caused
+a major upheaval in personal computer security.  Some virus
+researchers believe that the virus problem is getting worse,
+due in part to the proliferation of personal computers (with
+minimal built-in security controls), LANs, and a disregard
+for safe computing practices.  The number of variants of
+viruses has also increased, pushing the total number of
+viruses close to one thousand or more.  Some researchers
+estimate that the probability of a personal computer user
+encountering a virus has increased substantially.
+
+Use of Large Networks - Large networks, linking governments,
+businesses, and academia, are growing by leaps and bounds. 
+Efficient response to computer security incidents is very
+important for agencies positioned on large networks, as com-
+promise of one computer can affect a significant number of
+other systems connected to the network but located in differ-
+ent organizations, with resultant legal and financial
+ramifications.  Incident response teams note that intruder
+attempts to penetrate systems occur daily at numerous sites
+throughout the United States, and that many agencies are
+often unaware that their systems have been penetrated or used
+as springboards for attacks on other systems.
+
+How Bad is the Problem? - Computer security incidents appear
+regularly in media reports.  In 1988, the Internet Worm
+caused shutdowns and denial of service problems for weeks to
+over 3000 sites.  In 1989, the NASA WANK (Worms Against Nu-
+clear Killers) Worm caused a major loss of availability along
+two large government networks, resulting in significant
+expense and investigations by the GAO into network manage-
+ment and security.  Other incidents include intruders using
+international networks to target to U.S. government systems. 
+There are also reports of virus-infected software being
+shipped by vendors and distributors, and reports of viruses
+on LAN servers that spread throughout entire organizations in
+minutes.  While publicized incidents tell us that the com-
+puter security picture is not good, most computer security
+incidents are never reported.
+
+The CSIRC Concept
+
+Many computer security programs are not effective in dealing
+with this newer and less-understood class of threats. 
+Traditional responses, such as risk analysis, contingency
+planning, and computer security reviews, have not been
+sufficient in controlling incidents and preventing signifi-
+cant damage.  Stories abound of incidents in which the prob-
+lems grow worse or do not go away.  Fearing unknown threats,
+some have misguidedly restricted their access to systems and
+networks.  Consequently, some organizations spend far too
+much time reacting to recurring incidents at costs to conve-
+nience and productivity.  What is needed, therefore, is a
+fundamentally different form of computer security response
+that is capable of quickly detecting and responding to inci-
+dents in a manner that is both cost-efficient and effective.
+
+A Computer Security Incident Response Capability (CSIRC) is
+prepared to detect and react to computer security incidents
+in a skilled and efficient manner.  A CSIRC is a combination
+of technically skilled people, policies, and techniques that
+constitute a proactive approach to handling computer security
+incidents.  A CSIRC, with traditional computer security
+elements, can provide organization-wide protection from
+damaging incidents, saving the organization valuable resourc-
+es and permitting it to take better advantage of computer
+technology.  Already, a number of agencies and other
+institutions have started CSIRC efforts, with good success.
+
+Skilled and Efficient Response - Skill and efficiency are the
+hallmarks of a CSIRC.  Without a CSIRC, incident response can
+be disorganized and ineffective, with much higher expenses
+and vulnerabilities still left open and unprotected.  For
+example, uneducated responses to small outbreaks of computer
+viruses can actually make the problems far worse, resulting
+in hundreds of computers being infected by the response team
+itself.  A CSIRC will help to manage incident response
+expenses that otherwise would be difficult to track, to make
+risk assessment more accurate, and to improve user training
+and awareness of computer security.  Conversely, an
+inefficient incident response effort could perpetuate exist-
+ing problems and even make them worse.
+
+Centralization and Non-Duplication of Effort - A CSIRC
+utilizes centralized means for reporting and handling inci-
+dents.  This increases efficiency; however, it also permits
+more accurate assessment of incidents, such as whether they
+are related (to more quickly avert possible widespread
+damage).  By virtue of centralization, CSIRC expenses and
+overhead can be held down and duplication of effort can be
+reduced or possibly eliminated.  Agencies may find that a
+significant cost savings can result.
+
+Enhanced User Awareness of Threats - The benefits of a CSIRC
+include enhanced user awareness of threats and knowledge of
+appropriate controls.  A CSIRC will identify vulnerabilities,
+issue computer security alerts, and make contacts with other
+computer security groups, all resulting in increased
+information that can be made available to the organization
+through a variety of mechanisms: electronic bulletin boards,
+networks, seminars, and training workshops.  This information
+will greatly improve users' ability to manage their systems
+efficiently and securely.
+
+Building a CSIRC
+
+Many computer security programs will not need to build a
+CSIRC "from the ground up."  Rather, they may already have a
+number of the building blocks necessary, such as help desks,
+central hotlines, and personnel with the requisite technical
+skills.
+
+Constituency - Implicit in the concept of a CSIRC is the
+requirement for a constituency, i.e., those users served by
+the CSIRC.  In many cases, the constituency will be the
+organization itself.  The size and scope of a CSIRC, however,
+are directly impacted by the needs and size of the constitu-
+ency, including its degree of technical knowledge, the
+diversity of technologies, and the sensitivity of the systems
+and data.
+
+CSIRC Structure - There is no "one" structure for a CSIRC;
+depending on an agency's needs and structure, a CSIRC can
+take many forms.  A highly centralized CSIRC may represent
+the most cost-effective structure; however, some agencies may
+find that a more distributed structure, with some inevitable
+overlap, will fit in best with existing agency structures. 
+Very small agencies and organizations may find it practical
+to share a CSIRC with a larger organization.  Hence, a CSIRC
+structure will vary depending on many factors.  Centralized
+reporting and centralization of effort will help to decrease
+operating costs and at the same time improve efficiency and
+security.
+
+Centralized Reporting - Effective incident response depends
+upon the constituency's ability to quickly and conveniently
+communicate with the CSIRC.  Effective communications
+mechanisms include a central telephone "hotline" monitored on
+a 24-hour basis, a central electronic-mail (e-mail) address,
+or a pager arrangement.  Users should be encouraged to
+contact the CSIRC by making the communications
+straightforward (i.e., having to remember only one telephone
+number).
+
+Alert Mechanisms - The constituency will be best served if
+there is also a convenient mechanism for the CSIRC to alert
+the constituency.  The CSIRC should be able to quickly reach
+all users by sending to a central mailing list or,
+alternatively, telephone voice mailbox messages or management
+points-of-contact lists.
+
+Personnel - CSIRC personnel will need to diagnose or
+understand technical problems, thus technical knowledge is a
+primary qualification.  Good communications skills are
+equally important.  Computer security incidents can foster
+emotionally charged situations; hence a skilled communicator
+must know how to resolve technical problems without fueling
+emotions or adding complications.  In addition, CSIRC
+personnel may spend much of their time communicating with
+affected users and managers, either directly or by preparing
+alert information, bulletins, and other guidance.  It may be
+difficult to find personnel who have the correct mix of tech-
+nical, communications, and political skills.  
+
+Contracting a CSIRC
+
+When contracting, agencies should keep in mind that numerous
+sensitive issues can arise from incident handling; these
+issues will be very important to consider in any contractual
+agreement.  Because a CSIRC may play a large role in
+determining computer security policy, agencies may find it
+advantageous to contract certain tasks associated with a
+CSIRC as opposed to contracting the entire CSIRC operation.
+
+Agencies should expect that increased communications and
+oversight will be necessary when contracting any part of a
+CSIRC and that some incident response expertise will have to
+be developed in-house for this purpose.  The agency and
+contractor will need to coordinate closely on many issues,
+including dealings with the media, vendors, legal and
+investigative matters, and dealings with outside groups
+(especially if involved in a mutual incident).  The sensi-
+tivity of data or operations may require contractor person-
+nel to get security clearances; handling classified informa-
+tion by contractors may require increased oversight.
+
+Importance of Traditional Computer Security
+Functions
+
+An incident response capability does not do away with the
+need for effective risk analysis, physical security, and
+other standard components of a computer security program. 
+Simple errors and omissions may still remain the primary
+threat to computer security, along with other physical and
+environmental threats; they should not be ignored or
+downplayed in light of the attention often given to viruses
+and related threats.  A strong risk analysis program remains
+highly important for identifying the complete set of threats,
+vulnerabilities, and controls; the logs and statistics
+gathered by a CSIRC will help to make subsequent risk
+analyses more precise and useful.  Computer security reviews
+are still a preferred method for improving the security
+program, of which a CSIRC is just one component.
+
+Cooperation Among CSIRCs
+
+System intruders, viruses, and similar threats do not respect
+organizational boundaries.  It follows, then, that
+cooperation among CSIRCs can be valuable for learning about
+current threats, sharing incident response-related
+information, and resolving incidents.  Additionally,
+cooperating CSIRCs may be able to assist each other in
+situations where one CSIRC possesses certain technical skills
+that another CSIRC lacks.
+
+The Forum of Incident Response and Security Teams - The Forum
+of Incident Response and Security Teams (FIRST) is a group of
+incident response teams whose members work together
+voluntarily to deal with computer security problems and their
+prevention.  The objective of FIRST is to further
+communications among CSIRCs and to foster increased
+participation in incident response-related activities.
+
+There are two types of participation in the forum.  Forum
+Members, i.e., incident response teams, assist a defined
+constituency in preventing and handling computer security-
+related incidents.  Liaisons are individuals or
+representatives of organizations other than emergency
+response teams that have a legitimate interest in and value
+to the forum.  Several U.S. agencies participate, as well as
+industry and academia.
+
+NIST Special Publication 800-3
+
+NIST Special Publication (SP) 800-3, Establishing a Computer
+Security Incident Response Capability (CSIRC), provides more
+information on issues in establishing and operating a CSIRC,
+including an annotated bibliography of incident response-
+related documents.  This guide can be obtained from the
+Government Printing Office (GPO), Washington, DC 20402, GPO
+Stock Number SN003-003-03121-6, for $3.00.  
+
+An electronic version of SP 800-3 in PostScript format can be
+obtained from our Computer Security BBS or via the Internet
+using ftp or e-mail.  Information about FIRST is also
+available, including membership information, operational
+procedures, and incident response team contact information.
+
+To contact the BBS, dial 301-948-5717 for 2400 BPS (301-948-
+5140 for 9600 BPS).  The filename for SP 800-3 is 800-3.ps -
+several files are also available concerning FIRST.  The ftp
+address is csrc.nist.gov, with filename pub/pubs/800-3.ps and
+the files in directory pub/first.  To obtain the files, send
+the following e-mail message to docserver@csrc.nist.gov:
+      send INDEX
+      send 800-3.ps
+An index of available files plus a copy of SP 800-3 will be
+sent to you in e-mail messages.
+
+For more information about NIST's ongoing work in incident
+response activities, contact John Wack, Computer Security
+Division, Room A-216, Technology Building, National Institute
+of Standards and Technology, Gaithersburg, MD 20899. 
+Telephone: 301-975-3411 (FTS 879-3411); e-mail:
+csrc@csrc.nist.gov.

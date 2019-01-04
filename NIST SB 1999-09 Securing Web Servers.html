@@ -1,0 +1,543 @@
+
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: September 1999</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="September 1999, September 1999 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, Securing Web Servers">
+ <meta name="description" content="This is the September 1999 ITL Security Bulletin called Securing Web Servers.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+      <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+        &nbsp;<br>
+      <CENTER>
+          <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>SEPTEMBER 1999</b></font> 
+        </CENTER>
+      <table width="85%" border="1" cellspacing="1" cellpadding="2" align="center">
+        <tr> 
+          <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>Securing Web 
+              Servers</B></FONT></div>
+          </td>
+        </tr>
+      </table>
+
+      <p> <font face="Arial, Helvetica, sans-serif">A Web site is a powerful tool 
+        that enables businesses, government, and private users to share information 
+        and conduct business on the Internet. Organizations - small and large, 
+        private and public - are devoting many resources to creating attractive, 
+        attention-getting Web sites, but they may be neglecting basic security 
+        controls. Recent attacks on Web sites have shown that the computers that 
+        support Web sites are vulnerable to attacks that can range from minor 
+        nuisances to significant interruptions of service. This ITL Bulletin discusses 
+        the most commonly employed methods for protecting Web servers and provides 
+        practical guidance on steps that organizations can take to reduce the 
+        threat of attacks.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><B>Creating a Plan to Secure 
+        Your Web Server</B><BR>
+        While most incidents cause minor embarrassment or inconvenience, it is 
+        possible for an intruder to cause real problems and severe losses. Every 
+        organization should establish a security program that assesses the risks 
+        of attacks and takes steps to reduce the risks to an acceptable level. 
+        Each organization has to decide its sensitivity to risk and how open it 
+        wants to be to the external world. When resources are limited, the cost 
+        of security incidents should be considered, and the investment in protective 
+        measures should be concentrated on areas of highest sensitivity.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif">There are three levels of Web 
+        security techniques that can be applied:<BR>
+        <BR>
+        <U>Level 1: Minimum Security</U></font></p>
+      <OL TYPE="1">
+        <LI><font face="Arial, Helvetica, sans-serif"> Upgrading Software/Installing 
+          Patches </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Using Single Purpose Servers 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Removing Unnecessary Applications 
+          </font>
+      </OL>
+      <font face="Arial, Helvetica, sans-serif"><U>Level 2: Penetration Resistance</U> 
+      </font>
+      <OL TYPE="1">
+        <LI><font face="Arial, Helvetica, sans-serif"> External Firewalls </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Remote Administration Security 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Restrict Server Scripts 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Web Server Shields with 
+          Packet Filtering </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Education and Personnel 
+          Resource Allocation </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Techniques listed in level 
+          1 </font>
+      </OL>
+      <font face="Arial, Helvetica, sans-serif"><U>Level 3: Attack Detection and 
+      Mitigation</U> </font>
+      <OL TYPE="1">
+        <LI><font face="Arial, Helvetica, sans-serif"> Separation of Privilege 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Hardware-Based Solutions 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Internal Firewalls </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Network-Based Intrusion 
+          Detection </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Host-Based Intrusion Detection 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Techniques listed in level 
+          2 </font>
+      </OL>
+      <p><font face="Arial, Helvetica, sans-serif"><B>Techniques to Secure Web 
+        Servers</B><BR>
+        The most common methods for protecting Web servers include:</font></p>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> Removal of unnecessary 
+          software, </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Detection of attacks upon 
+          a Web server, </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Correction of flaws in 
+          remaining software, </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Restriction of an attacker's 
+          actions once a part of a Web server is compromised, and </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Protection of the rest 
+          of the network if a Web server is compromised. </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Upgrading Software/Installing 
+        Patches</U><BR>
+        One of the simplest and yet most effective techniques for reducing risk 
+        is the installation of the latest software updates and patches. Web servers 
+        should be frequently (sometimes daily) examined to determine what software 
+        needs to be updated or patched. (NIST is actively working with other government 
+        agencies to develop tools to assist in the finding and applying of patches. 
+        When available, details will appear on the NIST Computer Security Resource 
+        Clearinghouse [http://csrc.nist.gov].) Any software on a Web server that 
+        an attacker could use to penetrate the system must be regularly updated. 
+        Software in this category includes the operating system, servers or any 
+        software that receives network packets, software running as root or administrator, 
+        and security software. The following process should be followed:</font></p>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> Make a list of such software 
+          and write down the associated version numbers. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Find the Web page for each 
+          piece of software and make sure that you have installed the latest version. 
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Find and install the available 
+          patches for the applicable version of the software. Each software vendor 
+          provides unique instructions on how to install its patches and usually 
+          these instructions are very simple. Be careful to follow vendor instructions; 
+          patches must often be installed in a set sequence for the process to 
+          work. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Verify that patched software 
+          functions correctly. </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Using Single-Purpose Servers</U><BR>
+        Organizations should run Web servers on computers dedicated exclusively 
+        to that task. A common mistake is to try to save money by running multiple 
+        servers on the same host. For example, it is not uncommon to run an e-mail 
+        server, Web server, and database server on the same computer. However, 
+        each server run on a host provides an attacker with avenues for attack. 
+        Each newly installed server then increases the organization's reliance 
+        upon that host while simultaneously decreasing its security. Given the 
+        decreasing cost of hardware and the increasing importance of having fast 
+        Web servers, it is generally effective to buy a dedicated host for each 
+        Web server. Also, in situations where a Web server constantly interacts 
+        with a database, it is best to use two separate hosts.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Removing Unnecessary Applications</U><BR>
+        All privileged software not specifically required by the Web server should 
+        be removed. For the purposes of this document, privileged software is 
+        defined as software that runs with administrator privileges or that receives 
+        packets from the network. Operating systems often run a variety of privileged 
+        programs by default. Many systems administrators are not even aware of 
+        the existence of many of these programs. Each privileged program provides 
+        another avenue by which an attacker can compromise a Web server. It is 
+        therefore crucial that Web servers be purged of unnecessary programs. 
+        For greater security and because it is often difficult to identify what 
+        software is privileged, many systems administrators remove all software 
+        not needed by a Web server.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>External Firewalls</U><BR>
+        Install public Web servers outside of an organization's firewall. In this 
+        configuration, the firewall prevents the Web server from sending packets 
+        into an organization's network. If an attacker on the Internet penetrates 
+        the external Web server, they have no more access to the organization's 
+        internal network than they had before. If a Web server is inside the organization's 
+        firewall and is penetrated by an attacker on the Internet, the attacker 
+        can use the Web server as a launching point for attacks on the internal 
+        systems. Thus, these attacks would completely bypass the security provided 
+        by the firewall.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Remote Administration Security</U><BR>
+        Since it is often inconvenient to administer a host from the physical 
+        console, system administrators often install software on Web servers to 
+        allow remote administration. From a security perspective, this practice 
+        is dangerous and should be minimized or eliminated. In order to increase 
+        the security where this practice is necessary:</font></p>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> Encrypt remote administration 
+          traffic such that attackers monitoring network traffic cannot obtain 
+          passwords or inject malicious commands into conversations. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Use packet filtering (see 
+          description below) to allow remote administration only from a designated 
+          set of hosts. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Maintain this designated 
+          set of hosts at a higher degree of security than normal hosts. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Do not use packet filtering 
+          as a replacement for encryption since attackers can spoof Internet Protocol 
+          (IP) addresses. (With IP spoofing, an attacker lies about their location 
+          by sending messages from an IP address other than their own. </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Restrict Server Scripts</U><BR>
+        Most Web sites contain scripts (small programs) created locally by Web 
+        site developers. A Web server runs these scripts when a user requests 
+        a particular page. Attackers can use these scripts to penetrate Web sites 
+        by finding and exercising flaws in the code. To find such flaws, an attacker 
+        does not necessarily need the script source code. Scripts must be carefully 
+        written with security in mind and system administrators should inspect 
+        them before placing them on a Web site. Do not allow scripts to run arbitrary 
+        commands on a system or to launch insecure (or non-patched) programs. 
+        Scripts should restrain users to doing a small set of well-defined tasks. 
+        They should carefully restrict the size of input parameters so that an 
+        attacker cannot give a script more data than it expects. If an attacker 
+        is allowed to do this, a system can often be penetrated using a technique 
+        called buffer overflow. (With a buffer overflow attack, an attacker convinces 
+        a Web server to run arbitrary code by giving it more information than 
+        it expected to receive.) Run scripts with non-administrator privileges 
+        to prevent an attacker from compromising the entire Web server in the 
+        event that a script contains flaws.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><B>Web Server Shields with 
+        Packet Filtering</B><BR>
+        A router set up to separate a Web server from the rest of the network 
+        can shield a Web server from many attacks. The router can thwart attacks 
+        before they reach the Web server by dropping all packets that do not access 
+        valid Web server services. Typically, the router should drop all network 
+        packets that do not go either to the Web server (port 80) or to the remote 
+        administration server being used. For additional security, only allow 
+        a pre-approved list of hosts to send traffic to a Web server's remote 
+        administration server. By doing so, an attacker can only compromise a 
+        Web server using the remote administration server via a restricted set 
+        of network paths. The filtering router shield offers similar protection 
+        to that of removing all unneeded software from a host since it prevents 
+        an attacker from requesting certain vulnerable services. Be aware that 
+        setting up a router with many filtering rules may noticeably slow its 
+        ability to forward packets.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Education and Personnel 
+        Resource Allocation</U><BR>
+        Attackers are able to penetrate most Web servers because the systems administrators 
+        are either not knowledgeable about Web server security or did not take 
+        the time to properly secure the system. Web site administrators must be 
+        trained about Web server security techniques and rewarded for spending 
+        time securing the site. Several excellent books and training seminars 
+        exist to aid administrators in securing Web sites.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><B>Separation of Privilege</B><BR>
+        Regardless of the security measures established for a Web server, penetration 
+        may still occur. If this happens, it is important to limit the attacker's 
+        actions on the penetrated host. Separation of privilege is a key concept 
+        for restricting actions once a part of the host is penetrated. To establish 
+        such control, [ER3]partition the various host resources among a set of 
+        user accounts. An attacker who penetrates some software will then be limited 
+        to acting within that single user account instead of having control over 
+        the entire system. For example, a Web server can run as one user, but 
+        the Web pages can be owned by another user and with the Web server given 
+        read-only access. Then, if attackers penetrate the Web server, they [ER4]cannot 
+        change the Web pages owned by other users. Likewise, intrusion detection 
+        software can run as another user to protect it from being modified by 
+        an attacker penetrating the Web server user. For the best security, run 
+        the Web server process as a user that has write privilege only in a few 
+        privately owned temporary directories. This requires storing the Web server 
+        software as read-only under one user but running it as a different user.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Hardware-Based Solutions</U><BR>
+        Hardware can implement separation of privilege concepts with a greater 
+        degree of security than software because hardware is not as easily modified 
+        as software. With software implementations, if the underlying operating 
+        system is penetrated, the attacker has complete control of all files on 
+        a Web server. Using read-only external hard disks or CD-ROMs, Web pages 
+        and even critical software can be stored in a way that an attacker cannot 
+        modify the files. The usual configuration is for the Web server to have 
+        a read-only port to the external hard disk while another well-protected 
+        computer has a read-write port so that the Web pages can be updated. Note 
+        that an attacker who penetrates a protected Web server can still copy 
+        data, change the copied data, and serve up the changed pages.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Internal Firewalls</U><BR>
+        Modern Web servers often serve as front ends to complex and possibly distributed 
+        applications. In this situation, a Web server often communicates with 
+        several other hosts, each of which contains particular data or performs 
+        particular computations. It is tempting to locate these computers inside 
+        of an organization's firewall for ease of maintenance and to protect these 
+        important computers. However, if an attacker can compromise a Web server, 
+        these back end systems may be penetrated using the Web server as a launching 
+        point. Instead, it is a good idea to separate the Web server back end 
+        systems from the rest of the organization's networks using an internal 
+        firewall. Then, penetration of the Web server and subsequently the Web 
+        server's back end systems does not provide access to the rest of the organization's 
+        networks.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Network-Based Intrusion 
+        Detection</U><BR>
+        Despite all attempts to patch a Web server and to securely configure it, 
+        vulnerabilities may still exist that are known to the outside world. Also, 
+        the Web server may be perfectly secure but an attacker may cleverly overwhelm 
+        the host's services such that it ceases to operate. In this kind of environment, 
+        it is important to know when your Web server has been compromised or shut 
+        down so that service can be quickly restored. Network-based intrusion 
+        detection systems (IDSs) monitor network traffic to determine whether 
+        a Web server is under attack or has been compromised or disabled. Modern 
+        IDSs have the ability to launch a limited response[ER7] to attacks or 
+        notify systems administrators via e-mail, pagers, or messages on a security 
+        console. Typical automated responses include killing network connections 
+        and blocking sets of IP addresses.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><U>Host-Based Intrusion Detection</U><BR>
+        Host-based IDSs reside on a Web server. Thus, they are better positioned 
+        to determine the state of the Web server than a network-based IDS. They 
+        provide the same benefits as network-based IDSs and in some circumstances 
+        can detect attacks better because they have finer grained access to the 
+        Web server's state. However, some drawbacks exist. An attacker that penetrates 
+        a Web server can disable a host-based IDS, thereby preventing it from 
+        issuing a warning. In addition, remote denial-of-service (DOS) attacks 
+        [ER8]often disable host-based IDSs while disabling the Web server. Remote 
+        DOS attacks enable an attacker to remotely shut down a Web server without 
+        actually penetrating it. Thus, host-based IDSs are useful but they should 
+        be used in conjunction with the typically more secure network-based IDSs.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><B>Limitations of Existing 
+        Solutions and Gaining Additional Assurance</B><BR>
+        Considerable research addresses issues of proving software secure. In 
+        some cases, it is possible to do this but it is very costly and time-consuming. 
+        Usually, by the time software is proven secure, it is obsolete and replaced 
+        with an unproven new version. Therefore, today's software is not proven 
+        secure and application of standard Web security techniques cannot guarantee 
+        that a Web server will be impenetrable.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif">However, a Web server can be 
+        made quite resistant to attacks by using the stated Web server security 
+        techniques in addition to using trustworthy software. By trustworthy, 
+        we mean software that can be demonstrated by some measure to be secure. 
+        The security afforded by software can be assessed by studying past vulnerabilities, 
+        using software specifically created with security as the principle goal, 
+        and using software evaluated by trusted third parties.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif">First, some level of assurance 
+        in software can be gained by looking at the past vulnerabilities discovered 
+        in different Web server software. The number of past vulnerabilities is 
+        an indicator of future vulnerabilities and also reflects how well the 
+        software was crafted. Trustworthiness is directly related to the quality 
+        of the software product. A poorly crafted product built explicitly to 
+        meet security needs remains a poorly crafted product and therefore not 
+        trustworthy.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif">Second, some companies specialize 
+        in creating very secure Web server software and some boast that no vulnerabilities 
+        have ever been discovered. Users have to balance vendor's security claims 
+        against any security-performance tradeoffs that have been made.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif">A third way to gain a level 
+        of assurance in software is to use evaluated and validated software. Many 
+        private-sector organizations perform third-party evaluations of commercial 
+        products in order to verify a particular level of security. One of the 
+        largest of these efforts is the National Information Assurance Partnership 
+        (NIAP). A joint venture between NIST and NSA, NIAP has helped create an 
+        international standard (ISO/IEC 15408) for specifying security requirements 
+        of IT products and evaluating them to that specification. It provides 
+        a framework by which commercial companies can have product claims tested 
+        by a third party and (if desired) obtain a certificate of validation from 
+        NIAP. Various security-enhanced products are currently under evaluation, 
+        including the firewalls of three major U.S. vendors. Look in the future 
+        for NIAP-evaluated Web server software.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><B>For More Information</B><BR>
+        This bulletin focused on how to protect Web servers. For an understanding 
+        of how hackers break into computers and how to defend networks against 
+        them, see the May ITL Bulletin entitled <B>Computer Attacks: What They 
+        Are and How to Defend Against Them</B>, available at <A HREF="http://csrc.nist.gov/publications/nistbul/">http://csrc.nist.gov/publications/nistbul</A>.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif">For detailed information on 
+        computer attacks, see the papers <B>Understanding the Global Attack Toolkit 
+        Using a Database of Dependent Classifiers</B> and <B>Understanding the 
+        World of Your Enemy with I-CAT (Internet Categorization of Attacks Toolkit)</B> 
+        located at the URL: <A HREF="http://www.itl.nist.gov/div893/staff/mell/pmhome.html">http://www.itl.nist.gov/div893/staff/mell/pmhome.html</A>.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><B>General Computer Security 
+        Information:</B><BR>
+        NIST Computer Security Clearinghouse: <A HREF="http://csrc.nist.gov/">http://csrc.nist.gov</A></font></p>
+      <p><font face="Arial, Helvetica, sans-serif">Federal Computer Incident Response 
+        Capability: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.fedcirc.gov/">www.fedcirc.gov</A></font></p>
+      <p><font face="Arial, Helvetica, sans-serif">National Information Assurance 
+        Partnership (NIAP): <A HREF="http://niap.nist.gov.">http://niap.nist.gov</A></font></p>
+      <p><font face="Arial, Helvetica, sans-serif">Center for Education and Research 
+        in Information Assurance and Security: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cerias.purdue.edu">http://www.cerias.purdue.edu</A></font></p>
+      <p><font face="Arial, Helvetica, sans-serif">Carnegie Mellon Emergency Response 
+        Team: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cert.org/">http://www.cert.org</A></font></p>
+      <CENTER>
+        <font face="Arial, Helvetica, sans-serif"><A HREF="#top"><B>To Top</B></A></font>
+</CENTER>
+
+      </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: <!-- #BeginDate format:Am1 -->February 18, 2003<!-- #EndDate --> <br>
+        Page created: August 26, 2000</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>

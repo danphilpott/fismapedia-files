@@ -1,0 +1,756 @@
+
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: November 1998</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="November 1998, November 1998 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, Common 
+          Criteria: Launching the International Standard">
+ <meta name="description" content="This is the November 1998 ITL Security Bulletin called Common 
+          Criteria: Launching the International Standard.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+      <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+        &nbsp;<br>
+      <CENTER>
+          <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>NOVEMBER 1998</b></font> 
+        </CENTER>
+      <table width="85%" border="1" cellspacing="1" cellpadding="2" align="center">
+        <tr> 
+          <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>Common Criteria: 
+              Launching the International Standard</B></FONT></div>
+          </td>
+        </tr>
+      </table>
+
+      <p> <font face="Arial, Helvetica, sans-serif">The Common Criteria (CC) for 
+        Information Technology (IT) Security Evaluation is the new standard for 
+        specifying and evaluating the security features of computer products and 
+        systems. The CC is intended to replace previous security criteria used 
+        in North America and Europe with a standard that can be used everywhere 
+        in the world. The CC will become International Standard (IS) 15408 in 
+        early 1999.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> Developing the CC has been 
+        a five-year international project involving NIST and the National Security 
+        Agency (NSA), on behalf of the United States, and security organizations 
+        in Canada, France, Germany, the Netherlands, and the United Kingdom. They 
+        have worked in close cooperation with the International Organization for 
+        Standardization (ISO).</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> In the United States, the 
+        new international standard CC has formed the basis for the National Information 
+        Assurance Partnership (NIAP), a joint activity of NIST and NSA to establish 
+        an IT product security evaluation program supported by a number of accredited, 
+        independent testing laboratories. The main goals of NIAP are to establish 
+        cost-effective evaluation of security-capable IT products and to promote 
+        the wide availability of tested products to federal agencies and others, 
+        thus playing a crucial role in helping to protect the U.S. information 
+        infrastructure. (Note: A glossary at the end of the bulletin defines key 
+        terms used throughout the document.)</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Purpose of CC</B><BR>
+        The CC will be used as the basis for evaluation of the security properties 
+        of IT products and systems. By using such a common criteria base, a wider 
+        audience may find the results of an IT security evaluation meaningful. 
+        The CC permits comparability among the results of independent security 
+        evaluations. It does so by providing a common set of requirements for 
+        the security functions of IT products and systems and the assurance measures 
+        applied to them during a security evaluation.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The evaluation process establishes 
+        a level of confidence that the security functions of such products and 
+        systems and the assurance measures applied to them must meet. The evaluation 
+        results may help consumers to determine whether the IT product or system 
+        is secure enough for their intended application and whether the security 
+        risks implicit in its use are tolerable.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The CC supports the development 
+        of standardized sets of well understood IT product security requirements 
+        by user communities in the form of Protection Profiles (PPs) for use in 
+        procurements and advice to manufacturers. Manufacturers can use similar 
+        sets of CC-based requirements to describe the security capabilities of 
+        their products. These are called Security Targets (STs), which can then 
+        be used as the basis for security evaluations of those products. Security 
+        evaluations are formalized testing and analytic processes that use the 
+        CC to determine whether IT products have been correctly developed to specification 
+        and whether they are effective in countering the security problems as 
+        claimed. Users can integrate evaluated IT products into their systems 
+        with increased confidence that their claimed security features will operate 
+        as intended.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Earlier Security Criteria 
+        Work</B><BR>
+        The CC represents the outcome of a long series of efforts to develop criteria 
+        for the security evaluation of IT products and systems that can be broadly 
+        useful within the international community. In the early 1980s, NSA developed 
+        the Trusted Computer System Evaluation Criteria (TCSEC or "Orange Book"). 
+        NSA has used the TCSEC extensively since then in its IT security product 
+        evaluation program.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> In the succeeding decade, 
+        various countries initiated the development of evaluation criteria that 
+        built upon the concepts of the TCSEC but were more flexible and adaptable 
+        to the evolving nature of IT.</font></p>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> In Europe, the European 
+          Commission published the Information Technology Security Evaluation 
+          Criteria (ITSEC) in 1991 after joint development by France, Germany, 
+          the Netherlands, and the United Kingdom. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> In Canada, the Canadian 
+          Trusted Computer Product Evaluation Criteria (CTCPEC) were published 
+          in early 1993 as a combination of the ITSEC and TCSEC approaches. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> In the United States, NIST 
+          and NSA jointly developed the draft Federal Criteria for Information 
+          Technology Security (FC) version 1.0, which was also published in early 
+          1993 as a second approach to combining North American and European concepts 
+          for evaluation criteria. </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"> Work began in 1990 in ISO 
+        to develop an international standard evaluation criteria for general use. 
+        The new criteria were to be responsive to the need for mutual recognition 
+        of standardized security evaluation results in a global IT market. This 
+        task was assigned to the Joint Technical Committee 1 - Information Technology 
+        (JTC1), subcommittee 27 - Security Techniques (SC27), Working Group 3 
+        - Security Criteria (WG3).</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Development of the Common 
+        Criteria</B><BR>
+        In June 1993, the seven organizations responsible for all the North American 
+        and European security criteria (listed at end of bulletin) pooled their 
+        efforts to align their separate criteria into a single set of widely useful 
+        international IT security criteria. This joint multi-national activity, 
+        named the CC Project, sought to resolve the conceptual and technical differences 
+        among the source criteria.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The results were to be delivered 
+        to WG3 as a contribution to the international standard criteria under 
+        development.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The CC Project sponsoring 
+        organizations formed the CC Editorial Board (CCEB) to develop the CC. 
+        They established a formal cooperative liaison with WG3 and contributed 
+        several early versions of the CC to WG3's work, which were in turn influenced 
+        by WG3 experts' interaction. Beginning in 1994, WG3 adopted these versions 
+        as successive working drafts of the ISO criteria.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> Version 1.0 of the CC was 
+        completed in January 1996 and distributed by ISO in April 1996 as a Committee 
+        Draft (CD). The CC Project used this version to perform a number of trial 
+        evaluations. A widespread public review of the document was also conducted.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The CC Implementation Board 
+        (CCIB) extensively revised the CC based on the results of trial use, public 
+        review, and interaction with ISO. Working closely with WG3, the CCIB completed 
+        CC version 2.0 in April 1998 and it was sent out by ISO for balloting 
+        as a Final Committee Draft. In October 1998, WG3 slightly revised the 
+        document and approved it as Final Draft International Standard 15408, 
+        for final balloting in the winter of 1998. The document is expected to 
+        become IS 15408 in early 1999 without further change.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> For historical and continuity 
+        purposes, ISO has accepted the continued use of the term "Common Criteria" 
+        (CC) within the document, while recognizing that the official ISO name 
+        for the new IS 15408 is "Evaluation Criteria for Information Technology 
+        Security."</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>CC Project Sponsoring Organizations</B><BR>
+        The seven European and North American governmental organizations provided 
+        nearly all of the effort that went into developing the CC from its inception 
+        to its completion. These organizations are also "evaluation authorities," 
+        managing product security evaluation programs for their respective national 
+        governments. They have committed themselves to replacing their respective 
+        evaluation criteria with the new IS 15408. Their goal is mutual recognition 
+        of each other's security product evaluation results, permitting a wider 
+        global market for good IT security products.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Interim Mutual Recognition</B><BR>
+        In April 1996, NIST in cooperation with NSA published a bulletin called 
+        "Guidance on the Selection of Low Level Assurance Evaluated Products." 
+        The bulletin recommended TCSEC Class C2 - "Controlled Access Protection" 
+        as an acceptable minimum set of security criteria for general use in low-threat 
+        environments. The bulletin also publicly acknowledged that the Canadian 
+        CTCPEC and the European ITSEC contained similar requirements.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The NIST bulletin recognized 
+        that, while full equivalency among these three criteria was not easy to 
+        establish, enough similarities existed to recommend the use of low-level 
+        assurance products evaluated under any of them. The bulletin also noted 
+        that equivalency should cease to be an issue once the CC is adopted and 
+        implemented by the participating countries.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> With the advent of CC version 
+        2.0 and its ISO counterpart, IS 15408, supported by the CC-based Mutual 
+        Recognition Arrangement signed by these countries in October 1998 (see 
+        end of bulletin), equivalency is no longer an issue.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Three Parts of the CC</B><BR>
+        Part 1 - Introduction and General Model Part 1 introduces the CC. It defines 
+        general concepts and principles of IT security evaluation and presents 
+        a general model of evaluation. Part 1 also defines constructs for expressing 
+        IT security objectives, for selecting and defining IT security requirements, 
+        and for writing high-level specifications for products and systems. These 
+        constructs are called Protection Profiles (PPs), Security Targets (STs) 
+        and packages, and are described in a later section. In addition, Part 
+        1 describes the usefulness of each part of the CC in terms of each of 
+        the target audiences.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> Part 2 - Security Functional 
+        Requirements Part 2 contains a catalog of well-defined and understood 
+        security functional requirements that are intended to be used as a standard 
+        way of expressing the security requirements for IT products and systems. 
+        The catalog is organized into classes, families, and components.</font></p>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> Classes are high-level 
+          groupings of families of requirements, all sharing a common security 
+          focus (e.g., identification and authentication). </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Families are lower-level 
+          groupings of requirement components, all sharing specific security objectives 
+          but differing in rigor or emphasis (e.g., user authentication). </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Components are the lowest 
+          selectable requirements that may be included in PPs, STs, or packages 
+          (e.g., unforgeable user authentication). </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"> Part 2 also includes an extensive 
+        annex of application notes for applying the material that it contains. 
+        While it is possible to explicitly state functional requirements not included 
+        in the Part 2 catalog in building CC-based constructs (PPs, STs, and packages), 
+        that course is not advised unless it is clearly not practical to use Part 
+        2 components. Using functional requirements not part of the catalog could 
+        jeopardize widespread acceptance of the result.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> Part 3 - Security Assurance 
+        Requirements Part 3 contains a catalog that establishes a set of assurance 
+        components that can be used as a standard way of expressing the assurance 
+        requirements for IT products and systems. The Part 3 catalog is organized 
+        into the same class - family - component structure as Part 2. Part 3 also 
+        defines evaluation criteria for PPs and STs. Part 3 presents the seven 
+        Evaluation Assurance Levels (EALs), which are predefined packages of assurance 
+        components that make up the CC scale for rating confidence in the security 
+        of IT products and systems.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The EALs have been developed 
+        with the goal of preserving the concepts of assurance drawn from the source 
+        criteria (TCSEC, ITSEC, and CTCPEC) so that results of previous evaluations 
+        remain relevant. For example, EALs levels 2-7 are generally equivalent 
+        to the assurance portions of the TCSEC C2-A1 scale. Note, however, that 
+        this equivalency should be used with caution as the levels do not derive 
+        assurance in the same manner, and exact mappings do not exist.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> As with Part 2, it is possible 
+        but not necessarily advisable to explicitly state assurance requirements 
+        not from Part 3 or to augment EAL packages with additional Part 3 components. 
+        Mutual recognition of product evaluation results is based largely on the 
+        EAL, so use of unique combinations of assurance requirements could jeopardize 
+        international acceptance of products evaluated against them.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Key Concepts</B><BR>
+        The CC defines three useful constructs for putting IT security requirements 
+        from Parts 2 and 3 together: the PP, the ST, and the package. The CC has 
+        been developed around the central notion of using in these constructs, 
+        wherever possible, the security requirements in Parts 2 and 3 of the CC, 
+        which represent a well-known and understood domain.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Protection Profile</B><BR>
+        The PP is an implementation-independent statement of security needs for 
+        a set of IT security products that could be built. The PP contains a set 
+        of security requirements, preferably taken from the catalogs in Parts 
+        2 and 3, which should include an EAL. A PP is intended to be a reusable 
+        definition of product security requirements that are known to be useful 
+        and effective.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> A PP could be developed by 
+        user communities, IT product developers, or other parties interested in 
+        defining such a common set of requirements. A PP gives consumers a means 
+        of referring to a specific set of security needs and communicating them 
+        to manufacturers. The PP also helps future product evaluation against 
+        those needs.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> The PP contains the following 
+        items:</font></p>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> PP introduction - identification 
+          and overview information, which allows users to identify PPs useful 
+          to them. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Target of evaluation (TOE) 
+          description - description of the IT product and its purpose, not necessarily 
+          from a security perspective. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> TOE security environment 
+          - description of the security aspects of the environment in which the 
+          product is intended to be used and the manner in which it is expected 
+          to be employed. This statement includes the following:<BR>
+          </font>
+          <UL TYPE="SQUARE">
+            <LI><font face="Arial, Helvetica, sans-serif"> Assumptions about the 
+              security aspects of the product's expected usage and operating environment, 
+              such as value of assets and limitations of use. Assumptions also 
+              describe the environment's physical, personnel, and connectivity 
+              aspects.<BR>
+              </font>
+            <LI><font face="Arial, Helvetica, sans-serif"> Threats against which 
+              the product or its supporting environment must specifically provide 
+              protection.<BR>
+              </font>
+            <LI><font face="Arial, Helvetica, sans-serif"> Organizational security 
+              policies or rules with which the product must comply. These can 
+              be any explicit statements of IT security needs that the product 
+              must meet.<BR>
+              <BR>
+              </font>
+          </UL>
+        <LI><font face="Arial, Helvetica, sans-serif"> Security objectives - a 
+          high-level statement of what the product and its environment are intended 
+          to accomplish in covering the threats, policies, and assumptions. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> IT security requirements 
+          - the detailed statement of IT security functional and assurance requirements 
+          that the product and its operating environment must satisfy to meet 
+          the objectives. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Application notes - additional 
+          supporting information that may be useful for the construction, evaluation, 
+          or use of the product. </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Rationale - the evidence 
+          describing how the PP is complete and cohesive and how a product built 
+          against it would be effective in meeting the objectives. </font>
+      </UL>
+      
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Security Target</B><BR>
+        An ST is a statement of security claims for a particular IT security product 
+        or system. The ST parallels the structure of the PP, though it has additional 
+        elements that include product-specific detailed information. The ST contains 
+        a set of security requirements for the product or system, which may be 
+        made by reference to a PP, directly by reference to CC functional or assurance 
+        components, or stated explicitly. An ST is the basis for agreement among 
+        all parties as to what security the product or system offers, and therefore 
+        the basis for its security evaluation. The ST contains a summary specification, 
+        which defines the specific measures taken in the product or system to 
+        meet the security requirements.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Package</B><BR>
+        An intermediate combination of security requirement components is termed 
+        a package. The package permits the expression of a set of either functional 
+        or assurance requirements that meet some particular need, expressed as 
+        a set of security objectives. A package is intended to be reusable and 
+        to define requirements that are known to be useful and effective in meeting 
+        the identified objectives. A package may be used in the construction of 
+        more complex packages or PPs and STs. The seven evaluation assurance levels 
+        (EALs) contained in Part 3 are predefined assurance packages.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Target of Evaluation</B><BR>
+        The TOE is an IT product or system to be evaluated, the security characteristics 
+        of which are described in specific terms by a corresponding ST, or in 
+        more general terms by a PP. In CC philosophy, it is important that a product 
+        or system be evaluated against the specific set of criteria expressed 
+        in the ST. This evaluation consists of rigorous analysis and testing performed 
+        by an accredited, independent laboratory. The scope of a TOE evaluation 
+        is set by the EAL and other requirements specified in the ST. Part of 
+        this process is an evaluation of the ST itself, to ensure that it is correct, 
+        complete, and internally consistent and can be used as the baseline for 
+        the TOE evaluation.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Uses of the CC</B><BR>
+        The CC is used in two general ways:</font></p>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> As a standardized way to 
+          describe security requirements, e.g., PPs and STs for IT products and 
+          systems; and </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> As a sound technical basis 
+          for evaluating the security features of these products and systems. 
+          </font>
+      </UL>
+      <p><font face="Arial, Helvetica, sans-serif"> The following hypothetical 
+        scenarios describe these two uses.</font></p>
+      <BLOCKQUOTE> 
+        <p> <font face="Arial, Helvetica, sans-serif"><B>Describing security requirements</B><BR>
+          In a typical PP development scenario, a community of users (e.g., a 
+          banking consortium) will determine that a standardized set of security 
+          capabilities should be used in software or hardware on their systems. 
+          They will begin to construct a PP to express those common requirements. 
+          They will first identify the type of product or products envisioned 
+          and the general IT features needed. They will then consider the environment 
+          in which it will operate, in particular identifying the security problems 
+          and challenges that must be addressed. That activity is, in essence, 
+          a risk analysis and leads to a statement of general needs or security 
+          objectives to be met both by the product and by its environment. </font></p>
+        <p><font face="Arial, Helvetica, sans-serif"> Security objectives are 
+          transformed by use of the CC Part 2 catalog into a set of coherent and 
+          mutually supportive IT security functional requirements statements. 
+          Based on the desired level of confidence in the security of products 
+          to be built, an EAL from Part 3 is assigned. (Note that the higher the 
+          EAL, the greater the burden on the product developer, and consequently 
+          the more time and money needed to bring the product to complete availability.)</font></p>
+        <p><font face="Arial, Helvetica, sans-serif"> The outcome of the process 
+          just described is a PP. It is desirable that the PP be submitted to 
+          an independent testing laboratory for evaluation, to ensure that it 
+          is correct, complete, and internally consistent. The PP may then be 
+          entered into a central registry for use by the community to communicate 
+          the product security needs to manufacturers, either informally or by 
+          incorporation into procurement documents.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif"> The preceding scenario involving 
+          a user community is only one possible approach to developing a PP, although 
+          it is the most commonly expected approach. It is also possible for one 
+          or several manufacturers to develop a PP that incorporates the features 
+          of their products, as a means of communication with potential users, 
+          ensuring interoperability via standardization or for other purposes.</font></p>
+        <p> <font face="Arial, Helvetica, sans-serif"><B>Evaluating product security</B><BR>
+          In a typical product evaluation scenario, a manufacturer identifies 
+          a market niche for an IT product with security capability. This niche 
+          may be represented by a PP incorporating the product desires of a group 
+          of users and potential customers. The manufacturer builds the product, 
+          following the PP-specified functional requirements from CC Part 2 and 
+          the developer assurance requirements in the EAL from Part 3. Once the 
+          product is built, the manufacturer prepares an ST, which in the simplest 
+          case makes a claim of compliance with a particular PP, thereby covering 
+          the functional and assurance requirements for the product. The manufacturer 
+          also develops as part of the ST a summary specification of the ways 
+          that the product's features meet these requirements. The manufacturer 
+          then submits the ST, the product, and accompanying documentation to 
+          an accredited, independent testing laboratory for evaluation.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif"> The laboratory evaluates 
+          the ST, to determine that it is a sound baseline for evaluation of the 
+          product and that any claims of PP compliance are supportable. The laboratory 
+          then proceeds to evaluate the product and its documentation against 
+          the ST. If the product passes evaluation, it can be submitted to an 
+          evaluation authority for validation of the evaluation results.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif"> While definitely preferable, 
+          it is not necessary for a product to claim compliance with a PP. In 
+          the absence of PP claims, the ST is prepared in a process similar to 
+          that described for the PP. The evaluation of the ST and then the corresponding 
+          product can proceed as before, but no PP compliance claims will be examined.</font></p>
+        <p> <font face="Arial, Helvetica, sans-serif"><B>Validating the results</B><BR>
+          An integral part of the CC-based process, as described in its Part 1, 
+          is the independent validation of evaluation results in order to ensure 
+          that a product's evaluation was conducted properly. An evaluation authority 
+          is a body that implements the CC for a specific community, responsible 
+          for setting the standards and monitoring the quality of evaluations 
+          conducted by testing laboratories within that community. Each of the 
+          CC partners is an evaluation authority for the government of its respective 
+          country.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif"> NIST and NSA work together 
+          as a single U.S. authority, as described below. The evaluation authority 
+          is responsible for overseeing all evaluations in its jurisdiction, qualitatively 
+          reviewing the results, and certifying or validating the findings. The 
+          term "validation" is used in the U.S. for this process, while the other 
+          CC partners use "certification," but the process is the same. Upon validation 
+          of a successful product evaluation, the product is awarded a CC certificate 
+          and is added to an official validated products list available to the 
+          public.</font></p>
+        <p> <font face="Arial, Helvetica, sans-serif"><B>Evaluating installed 
+          systems</B><BR>
+          Another way that the CC process can be used is to evaluate installed 
+          systems for such purposes as system certification and accreditation 
+          programs used in several federal agencies. The organization responsible 
+          for certifying a system's secure operation could develop an ST describing 
+          the system architecture, its functions and operational environment, 
+          and the security features it embodies. An independent entity, such as 
+          an accredited testing laboratory, could then perform an on-site evaluation 
+          of the system against the ST, providing a report to support a request 
+          for accreditation.</font></p>
+      </BLOCKQUOTE>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>CC Evaluation Programs</B> 
+        <BR>
+        Numerous organizations throughout the world are now implementing the CC, 
+        including all of the CC project partners (listed below), as well as other 
+        European Union nations, Australia, New Zealand, Japan, Korea, and parts 
+        of the former Soviet Union. It is expected that this number will grow 
+        significantly as soon as the CC is formally published as International 
+        Standard 15408 in early 1999.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> In the U.S., NIST and NSA 
+        jointly operate the National Information Assurance Partnership (NIAP). 
+        NIAP is a broadly based program that operates principally as the CC-based 
+        evaluation authority for the federal government. NIAP is dedicated to 
+        demonstrating the value of independent testing and validation as a measure 
+        of security and trust in IT products. Through its efforts, NIAP fosters 
+        the establishment and accreditation of commercial IT product security 
+        testing laboratories in the U.S.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>The Goal of Mutual Recognition</B> 
+        <BR>
+        On October 5, 1998, six of the seven CC project partners officially signed 
+        a Mutual Recognition Arrangement (MRA). The purpose of the MRA is to bring 
+        about an international situation in which IT products and PPs that earn 
+        a CC certificate can be procured and used in different jurisdictions without 
+        the need for them to be evaluated and certified/validated more than once. 
+        By recognizing the results of each other's evaluations, products evaluated 
+        in one MRA member nation can be accepted in the other member nations. 
+        It is anticipated that, as other nations develop high quality IT product 
+        security evaluation programs, they too may seek to join the MRA. This 
+        path is open to other evaluation authorities upon demonstration that they 
+        can fulfill the stringent technical and procedural conditions for mutual 
+        recognition laid down in the MRA.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> As product evaluations can 
+        be costly and time-consuming, both manufacturers and users have welcomed 
+        the MRA breakthrough. The anticipated outcome is a "level playing field" 
+        for multi-national IT product manufacturers, leading to a much wider availability 
+        of useful IT security products to secure the global information infrastructure.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"> These two factors have been 
+        the major goal of the CC project from its inception and have been the 
+        driving force and vision that empowered the ISO criteria activity as well. 
+        The joint development of the CC has created an environment of mutual respect 
+        among the partners, and the CC itself has formed the technical basis for 
+        mutual recognition, both of which were necessary for the inception of 
+        the MRA.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Glossary</B><BR>
+        The following key terms used in this bulletin are adapted from CC definitions.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Assurance</B> - grounds 
+        for confidence that an IT product or system meets its security objectives.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Evaluation</B> - assessment 
+        of an IT product or system against defined security functional and assurance 
+        criteria, performed by a combination of testing and analytic techniques.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Evaluation Assurance Level 
+        (EAL)</B> - one of seven increasingly rigorous packages of assurance requirements 
+        from CC Part 3. Each numbered package represents a point on the CCs predefined 
+        assurance scale. An EAL can be considered a level of confidence in the 
+        security functions of an IT product or system.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Package</B> - a reusable 
+        set of either functional or assurance components (e.g., an EAL), combined 
+        together to satisfy a set of identified security objectives.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Product</B> - IT software, 
+        firmware and/or hardware, providing functions designed for use or incorporation 
+        within a multiplicity of systems.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Protection Profile (PP)</B> 
+        - an implementation-independent set of security functional and assurance 
+        requirements for a category of IT products that meet specific consumer 
+        needs.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Security Functional Requirements</B> 
+        - requirements, preferably from CC Part 2, that when taken together specify 
+        the security behavior of an IT product or system.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Security Objective</B> 
+        - A statement of intent to counter specified threats and/or satisfy specified 
+        organizational security policies and assumptions.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Security Target (ST)</B> 
+        - a set of security functional and assurance requirements and specifications 
+        to be used as the basis for evaluation of an identified product or system.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>System</B> - a specific 
+        IT installation, with a particular purpose and operational environment.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Target of Evaluation (TOE)</B> 
+        - another name for an IT product or system described in a PP or ST. The 
+        TOE is the entity that is subject to security evaluation.</font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>For More Information</B></font></p>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>References:</B><br>
+        </font>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> NIST CSL Bulletin, April 
+          1996 </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Common Criteria for IT 
+          Security v.2.0 * ISO FDIS 15408, Parts 1-2-3 </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Common Criteria Mutual 
+          Recognition Arrangement, October 1998 </font>
+      </UL>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>Web sites:</B><BR>
+        </font>
+      <UL TYPE="DISC">
+        <LI><font face="Arial, Helvetica, sans-serif"> Common Criteria Project: 
+          <A HREF="http://csrc.nist.gov/cc">http://csrc.nist.gov/cc</A> </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> NIAP: <A HREF="http://niap.nist.gov">http://niap.nist.gov</A> 
+          </font>
+      </UL>
+      <p> <font face="Arial, Helvetica, sans-serif"><B>CC Project Organizations:</B><BR>
+        </font>
+      <UL TYPE="DISC">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>CANADA:</B><BR>
+          Communications Security Establishment<BR>
+          E-mail: <A HREF="mailto:criteria@cse-cst.gc.ca">criteria@cse-cst.gc.ca</A><BR>
+          WWW: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cse-cst.gc.ca/cse/english/cc.html&timeout=7">http://www.cse-cst.gc.ca/cse/english/cc.html</A> 
+          </font>
+      </UL>
+      <UL TYPE="DISC">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>FRANCE</B><BR>
+          Service Central de la Sécurité des Systèmes d'Information (SCSSI)<BR>
+          E-mail: <A HREF="mailto:ssi20@calva.net">ssi20@calva.net</A> </font>
+      </UL>
+      <UL TYPE="DISC">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>GERMANY:</B><BR>
+          Bundesamt für Sicherheit in der Informationstechnik (BSI) German Information 
+          Security Agency (GISA)<BR>
+          E-mail: <A HREF="mailto:cc@bsi.de">cc@bsi.de</A><BR>
+          WWW: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.bsi.bund.de&timeout=7">http://www.bsi.bund.de</A> 
+          </font>
+      </UL>
+      <UL TYPE="DISC">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>NETHERLANDS:</B><BR>
+          Netherlands National Communications Security Agency<BR>
+          E-mail: <A HREF="mailto:criteria@nlncsa.minbuza.nl">criteria@nlncsa.minbuza.nl</A><BR>
+          WWW: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.tno.nl/instit/fel/refs/cc.html&timeout=7">http://www.tno.nl/instit/fel/refs/cc.html</A> 
+          </font>
+      </UL>
+      <UL TYPE="DISC">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>UNITED KINGDOM:</B><BR>
+          Communications-Electronics Security Group<BR>
+          E-mail: <A HREF="mailto:criteria@cesg.gov.uk">criteria@cesg.gov.uk</A><BR>
+          WWW: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.cesg.gov.uk/cchtml&timeout=7">http://www.cesg.gov.uk/cchtml</A> 
+          </font>
+      </UL>
+      <UL TYPE="DISC">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>UNITED STATES - NIST:</B><BR>
+          National Institute of Standards and Technology<BR>
+          E-mail: <A HREF="mailto:criteria@nist.gov">criteria@nist.gov</A><BR>
+          WWW: <A HREF="http://csrc.nist.gov/cc">http://csrc.nist.gov/cc</A> </font>
+      </UL>
+      <UL TYPE="DISC">
+        <LI> <font face="Arial, Helvetica, sans-serif"><B>UNITED STATES - NSA:</B><BR>
+          National Security Agency<BR>
+          E-mail: <A HREF="mailto:common_criteria@radium.ncsc.mil">common_criteria@radium.ncsc.mil</A><BR>
+          WW: <A HREF="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.radium.ncsc.mil/tpep/The Internet is opening up&timeout=7">http://www.radium.ncsc.mil/tpep/The 
+          Internet is opening up</A> </font>
+      </UL>
+      
+      <p> 
+        <CENTER>
+          <font face="Arial, Helvetica, sans-serif"><A HREF="#top">To Top</A></font>
+</CENTER>
+
+      </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: <!-- #BeginDate format:Am1 -->February 20, 2003<!-- #EndDate --> <br>
+        Page created: August 26, 2000</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>

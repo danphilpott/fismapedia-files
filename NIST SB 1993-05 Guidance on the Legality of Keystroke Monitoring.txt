@@ -1,0 +1,207 @@
+                     CSL BULLETIN 
+                      March 1993                     
+
+GUIDANCE ON THE LEGALITY OF KEYSTROKE MONITORING 
+At the request of the Department of Justice (DoJ), the National
+Institute of Standards and Technology (NIST) is providing
+information developed by the DoJ regarding the legal liability of
+keystroke monitoring.  This bulletin advises federal system
+administrators that keystroke monitoring during computer sessions
+may be found illegal in certain circumstances and that notice of
+such monitoring should be given to users.
+
+What is Keystroke Monitoring?
+Keystroke monitoring is a process whereby computer system
+administrators view or record both the keystrokes entered by a
+computer user and the computer's response during a user-to-
+computer session.  Examples of keystroke monitoring would include
+viewing characters as they are typed by users, reading users'
+electronic mail, and viewing other recorded information typed by
+users.  Some forms of routine system maintenance record user
+keystrokes; this could constitute keystroke monitoring if the
+keystrokes are preserved along with the user identification such
+that an administrator can determine the keystrokes entered by
+specific users.
+
+Background
+The Department of Justice says that keystroke monitoring is being
+conducted on some agency systems in an effort to protect them
+from intruders who access the systems without authority or in
+excess of their assigned authority.  Intruders pose a serious
+threat to the integrity of systems, in particular because
+intruders can insert backdoors, Trojan horses, or other damaging
+code such as computer viruses into the systems and evade
+detection for long periods of time.  In these circumstances,
+monitoring keystrokes typed by intruders can help administrators
+in assessing and repairing any damage caused by intruders.
+
+The guidance from the DoJ is intended to advise system
+administrators of an ambiguity in U.S. law that makes it unclear
+whether keystroke monitoring is basically the same as an
+unauthorized telephone wiretap.  Current laws were written years
+before concerns such as keystroke monitoring, system intruders,
+or computer viruses became prevalent; consequently the laws do
+not directly address the issue of keystroke monitoring.  In
+addition, no legal precedent has been set to determine whether
+keystroke monitoring is legal.  Therefore, the DoJ advises that
+if system administrators are conducting keystroke monitoring or
+anticipate the need for such monitoring, even if only for the
+purpose of detecting intruders, they should ensure that all
+system users, authorized and unauthorized, are notified that such
+monitoring may be undertaken.
+
+It is important to note that the DoJ is not authorizing keystroke
+monitoring, even implicitly.  If the courts were to determine
+that keystroke monitoring is improper, system administrators
+could potentially be subject to criminal and civil liabilities. 
+The DoJ consequently advises system administrators to protect
+themselves by giving notice to users if session keystroke
+monitoring is being conducted.  The DoJ further advises
+administrators to notify authorized users of monitoring for
+routine system maintenance, such as logging activity for purposes
+of assessing system integrity, if such activity may in some cases
+monitor the keystrokes of authorized users.
+
+Providing Notification of the Keystroke Monitoring Policy
+Simply providing written notice of a keystroke monitoring policy
+to authorized users is not sufficient.  The DoJ recommends that a
+banner notice indicating the keystroke monitoring policy be
+placed on all agency systems that will be conducting keystroke
+monitoring.  Since it is important that unauthorized as well as
+authorized users be given notice, the banner should be boldly
+displayed at sign-on to the system, giving all users ample
+opportunity to read the banner.
+
+Banner Content
+The banner should give clear and unequivocal notice to intruders
+that by signing on and using the system, they are expressly
+consenting to having their keystrokes monitored or recorded
+during their computer session.  The banner should indicate to
+authorized users the possibility that they may be monitored
+during the course of monitoring the intruder (e.g., if an
+intruder is downloading a user's file, keystroke monitoring will
+intercept both the intruder's download command and the authorized
+user's file).  The banner should also indicate that system
+administrators may in some cases monitor authorized users in the
+course of routine system maintenance.  Users can elect to
+continue use of the system, thus expressly consenting to the
+monitoring policy, or to quit the system.
+
+Example Banner
+Following is an example banner provided by the DoJ:
+
+      This system is for the use of authorized users only. 
+      Individuals using this computer system without
+      authority, or in excess of their authority, are subject
+      to having all of their activities on this system
+      monitored and recorded by system personnel.  In the
+      course of monitoring individuals improperly using this
+      system, or in the course of system maintenance, the
+      activities of authorized users may also be monitored. 
+      Anyone using this system expressly consents to such
+      monitoring and is advised that if such monitoring
+      reveals possible evidence of criminal activity, system
+      personnel may provide the evidence of such monitoring
+      to law enforcement officials.
+
+Each agency may wish to tailor the banner to its precise needs
+before distributing to system administrators.  In addition to
+giving notice to users that keystroke monitoring may occur,
+system administrators may find it helpful to include a statement
+explaining the need for such monitoring, e.g., "To protect the
+system from unauthorized use and to ensure that the system is
+functioning properly, system administrators monitor this system."
+
+Which Systems Should Display the Banner?
+All agency systems that currently monitor keystrokes or that
+anticipate the need to monitor keystrokes should display the
+banner.  Examples of such systems could include multi-user
+systems, information retrieval systems, and bulletin board
+systems that can be accessed via networks and telephone lines,
+since these systems are especially at risk to intruders.  Other
+examples might include more restricted systems and personal
+computers that can be accessed only within agencies.  If
+keystrokes from one system may be monitored by a different
+device, such as a network monitor designed to detect intrusion
+attempts, users should still be informed of the monitoring
+policy, perhaps by displaying the banner on all systems whose
+activity is being monitored by the network device.
+
+Long-Term Monitoring
+The DoJ recommends against the long-term monitoring of any
+individuals who are using a system without authority or in excess
+of their authority.  Once a determination has been made as to
+whether and how a system is being abused, the matter should be
+reported promptly to law enforcement officials for consideration
+as to whether court orders authorizing continued monitoring
+should be obtained.
+
+Summary
+Due to ambiguities in current laws, it may be illegal to conduct
+keystroke monitoring of users, even if only for the purpose of
+detecting system intruders.  Therefore, a banner that notifies
+users of the keystroke monitoring should be displayed prominently
+on each system that may or will be conducting keystroke
+monitoring.  Each agency should craft a banner to fulfill its
+specific needs, using the guidance presented in this bulletin and
+by the DoJ.  At a minimum, however, individuals using a computer
+system without authority or in excess of their assigned
+authority, or authorized users who are subject to keystroke
+monitoring, should be told expressly that by using the system,
+they are consenting to such monitoring.
+
+For More Information
+For more information regarding the Department of Justice advice
+on the legality of keystroke monitoring, please contact the U.S.
+Department of Justice, (202) 514-1026.
+
+NIST Guidance
+Users and system administrators should eliminate or reduce risks
+to their systems from attacks by intruders, computer viruses, and
+other related threats.  NIST recommends the following steps:
+
+  o   educating users about malicious software and its risks, how
+      to use control measures and procedures to protect
+      themselves;
+
+  o   use of existing technical controls to increase security and
+      decrease vulnerabilities to unauthorized use;
+
+  o   use of additional tools such as stronger user authentication
+      mechanisms (e.g., smartcards) and vulnerability assessment
+      tools; and
+
+  o   contingency and incident handling procedures for containing
+      and recovering from attacks and other computer security
+      incidents.
+
+NIST develops guidance in all of these areas.  For a copy of
+Computer Security Publications List 91, contact CSL Publications,
+NIST, Technology Building, Room B151, Gaithersburg, MD 20899-
+0001, telephone (301) 975-2821, fax (301) 948-1784.
+
+Retrieving Information Electronically
+NIST maintains a bulletin board system (BBS) and Internet-
+accessible site for computer security information open to the
+public at all times.  These resources present information on
+computer security publications, CSL Bulletins, alert notices,
+information about viruses and anti-virus tools, a security events
+calendar, and sources for more information.
+
+To access the BBS, you need a computer with serial communications
+capability and a modem.  For modems at 2400 bits per second (BPS)
+or less, dial (301) 948-5717.  For 9600 BPS, dial (301) 948-5140. 
+Modem settings for all speeds are 8 data bits, no parity, 1 stop
+bit.
+
+Internet users with telnet or ftp capability may telnet to the
+BBS at cs-bbs.nist.gov (129.6.54.30).  To download files, users
+need to use ftp as follows:  ftp to csrc.nist.gov (129.6.54.11),
+log in to account anonymous, use your Internet address as the
+password, and locate files in directory pub; an index of all
+files is available for download.  For users with Internet-
+accessible e-mail capability, send e-mail to
+docserver@csrc.nist.gov with the following message:  send
+filename, where filename is the name of the file you wish to
+retrieve.  send index will return an index of available files.
+

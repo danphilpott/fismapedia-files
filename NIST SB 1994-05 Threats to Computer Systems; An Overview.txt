@@ -1,0 +1,303 @@
+
+REDUCING THE RISKS OF INTERNET CONNECTION AND USE
+
+Note: The identification of specific commercial software products and
+companies in this bulletin does not imply recommendation or
+endorsement by the National Institute of Standards and Technology.
+
+The Internet is an international network of networks interconnecting
+corporate and private enterprises, universities, government agencies,
+and individuals.  Many see the Internet as a prototype for the
+National Information Infrastructure (NII).  There are many benefits
+from connecting to the Internet as evidenced by the fact that 100,000
+new users are currently being added to the Internet each month.
+
+Connection to the Internet provides users and organizations quick and
+easy access to information, data, software, and discussion groups on
+every subject imaginable.  Access to information on the Internet has
+become easier and more efficient since the appearance of the mosaic
+application.  This client application is used to access World Wide Web
+(WWW) servers and gopher servers.  WWW servers and gopher servers are
+rapidly becoming the predominant means for organizations to provide
+multimedia information over the Internet.
+
+In addition, the Internet is becoming an avenue for individuals and
+organizations to engage in commerce.  The CommerceNet Consortium, a
+coalition of organizations based in Silicon Valley, has recently
+created CommerceNet, an Internet-based infrastructure for electronic
+commerce.  The CommerceNet Consortium is a non-profit corporation
+operating under matching funds provided by the Technology Reinvestment
+Program (TRP) sponsored by the Advanced Research Projects Agency
+(ARPA), NIST, the National Science Foundation (NSF), the Department of
+Energy (DoE), and the National Aeronautics and Space Administration
+(NASA).  CommerceNet participants include Intel, Sun Microsystems,
+Pacific Bell, and Apple Computer.  The goal of CommerceNet is to
+create a true electronic marketplace.
+
+Connection to the Internet is accomplished in several different ways.
+A user may obtain an account on a host connected to the Internet and
+access Internet services by means of that host.  Through a commercial
+service or an organization, a user may connect a personal computer
+(PC) or a workstation directly to the Internet, that PC or workstation
+becoming an Internet host with its own Internet address.  Finally, an
+organization may connect its own network to the Internet and become a
+network on the Internet referred to as an Internet subnet.
+
+Internet users have different roles as a result of their type of
+connection. End users are those users who have an account on an
+Internet host.  Host administrators are those users who have PCs or
+workstations which are Internet hosts. Internet hosts are one of two
+types:
+
+     o   client hosts, generally a DOS/Windows PC, which only access
+         services on the Internet provided by other hosts; or
+
+     o   server hosts, generally Unix PCs or workstations, which provide
+         service on the Internet to other hosts but may also access
+         services from other hosts.
+
+Network administrators are those users who manage an Internet subnet.
+Network administrators are often also host administrators, and both
+network administrators and host administrators are end users as well.
+
+While connection to the Internet provides many benefits for both
+individuals and organizations, several security problems can occur
+with Internet connection and use.  Fortunately, solutions are
+available to make these security problems manageable.  This bulletin
+cites some NIST solutions using cryptography, authentication
+techniques, and incident response activities.
+
+Forged E-mail
+
+ At the top of an Internet e-mail message is a header which identifies
+the sender of the message, the host from which the message was sent,
+and the list of mail forwarding hosts through which the message
+traveled from the sending host to the receiving host.  With normal
+Internet mail, the information identifying the sender of the message
+is easily forged.  The identification of the sending host and the path
+that the message traveled through Internet e-mail forwarding hosts is
+not so easily forged.  Nevertheless, this information may also be
+unreliable.
+
+An Internet e-mail message should always be checked at least to verify
+that the sending host is the one from which mail from that sender
+usually originates.  If not, the message should be considered suspect.
+The only sure way to avoid the problem of forged e-mail on the
+Internet is to use a digital signature such as Federal Information
+Processing Standard (FIPS) 186, Digital Signature Standard (DSS).
+
+Eavesdropping and Modification of Traffic
+
+Whenever information is transmitted from one host to another on the
+Internet, it usually passes through several, perhaps many, routers.
+In addition, during its trip through the Internet, information may
+pass through Internet subnets other than the ones on which the sending
+and receiving hosts are located.  It is instructive to actually see
+this.  From a user's host, the commands:
+
+         ping -slRv <remote-host> or traceroute <remote-host> 
+
+reveal the names and/or the Internet addresses of the routers through
+which a message passes between the user's host and a remote host.
+These routers may be routing the information over intermediate
+subnets.  Usually these intermediate routers and subnets are not under
+the control of either the sender of a message, the receiver of a
+message, or the organization(s) to which the sender or receiver
+belongs.
+
+It is relatively easy for anyone with access to these intermediate
+routers or subnets to eavesdrop and/or modify the passing information,
+in particular, e-mail.  Consequently, when the transmission of
+information requires confidentiality and/or integrity, it should be
+protected when sent over the Internet.  FIPS 46-2, Data Encryption
+Standard (DES), can be used to ensure the confidentiality of
+information sent over the Internet.  FIPS 180, Secure Hash Standard,
+can be used to ensure the integrity of information sent over the
+Internet, i.e, to ensure that information sent arrives intact and
+unmodified at its destination.
+
+User Impersonation
+
+The identification and authentication method most commonly used on the
+Internet is a username/password mechanism.  When users log into an
+Internet host providing login or file transfer service, they are
+prompted for a username and a password.  If this username and password
+is passed over the Internet (e.g., as in a telnet or an ftp), then it
+is subject to eavesdropping.  Both the username and password are
+transmitted in plaintext.  Intercepted usernames and passwords can be
+used to impersonate the user on the login or file transfer server host
+that the user was accessing.  Obtaining passwords by eavesdropping on
+the Internet for the purpose of user impersonation is a frequent
+occurrence.
+
+While it is helpful to choose "good" passwords (see FIPS 112, Password
+Usage, and FIPS 181, Automated Password Generator [APG]) and change
+them often, within the Internet environment it is safer to use strong
+user authentication techniques.  With one such technique, the user
+typically carries a small (often credit card size) calculator.  After
+providing a username to the login host, the user is presented with a
+number which is entered into the calculator.  The calculator responds
+with another number which is given to the login host.  As a result of
+this exchange, the user is authenticated.  Systems based on this type
+of authentication mechanism are available commercially.  The NIST
+Advanced Smartcard Access Control System (NIST Smartcard) is an
+example of this type of authentication mechanism.  The NIST Smartcard
+system includes the capability of having a Smartcard reader/writer
+permanently attached to a PC or a workstation so that the
+challenge/response exchange takes place automatically.
+
+Another strong authentication technique makes use of an ordered
+sequence of passwords.  Each password is valid for only a single
+login.  For each login, the host generates the next password in
+sequence.  Users either make use of a small calculator or software on
+their PC or workstation in order to obtain the next password.  When an
+automated means of generating the next one-time password is
+unavailable ( e.g., a user is away from the office), a list on paper
+containing the next several one-time passwords may be carried.
+Naturally, the user's username and name of the host are not contained
+on the list.  One implementation of this mechanism is Secure Key
+(S/Key) which may be adapted to different environments.  NIST is
+adapting the S/Key method to use the Secure Hash Standard (FIPS 180).
+
+The majority of hosts on the Internet are Unix hosts.  Many of these
+hosts store the list of authorized users and the user's one-way
+encrypted password in a file.  Unrestricted access to this file allows
+for the possibility of user passwords being discovered which can lead
+to user impersonation.  Host administrators should ensure that
+encrypted passwords are not available to users of the host on which
+the file is located or to other Internet users by using "shadow"
+password files.
+
+Unauthorized Host Access
+
+Unauthorized host access refers to unauthorized access to a host's
+resources including its processing capability and/or its files.
+Unauthorized access almost always occurs on a server host which is
+providing some service on the Internet regardless of the nature of the
+service.  Unauthorized access to a host's files can result in
+disclosure, modification, and/or destruction of data.  Often, access
+to a host's files can lead to user impersonation. Unauthorized access
+of a host's processing capability (i.e., the unauthorized initiation
+of a process on the host) can lead to access of a host's files,
+impairment of the host's processing ability, and unauthorized access
+of other hosts.
+
+While the number of ways unauthorized host access can be accomplished
+is virtually endless (user impersonation is one example), several
+steps can be taken to reduce the possibility. Among these are:
+
+Deactivate unnecessary host services - If a server host is connected
+to the Internet, the host administrator should activate only those
+services designated to be provided on that host.  All others should be
+deactivated.  In particular, if a client host is connected to the
+Internet, the host administrator should deactivate all services on
+that client host.
+
+Ensure proper server host configuration - For the services to be
+provided by a server host, the host administrator should be thorough
+in understanding and using the configuration options for each service
+in a manner consistent with the desired authorized access to the
+service.
+
+Keep host software current - As a result of the number of security
+incidents on the Internet, a number of groups in the public and
+private sectors have been created to help improve security on the
+Internet.  Most of these groups have joined together to form the Forum
+of Incident Response and Security Teams (FIRST).  NIST serves as the
+secretariat for FIRST.  A number of FIRST teams monitor the security
+problems of software used by Internet hosts and distribute vendor
+updates to software which remove bugs that can create security
+problems.  Host administrators should join Internet mailing lists
+which provide notification of security problems with host
+software. Host administrators should also update their host software
+whenever an update is announced.
+
+Monitor host configuration - Host administrators should at least
+periodically run host configuration checking software on their hosts
+to ensure that a proper host configuration is maintained. Such
+software is available free on many Internet archives.
+
+Perform frequent backups - In the event that unauthorized access to a
+host should occur, host administrators should be able to access recent
+backups of host software and data in order to be able to repair any
+damage.
+
+Use extreme caution in obtaining software over the Internet - One of
+the advantages of an Internet connection is the easy availability of
+free software.  However, such software may contain Trojan horses or
+viruses.  Software should only be obtained from a source who is known
+to ensure that the software they provide is of quality and free from
+tampering.
+
+Restrict traffic access to a subnet - When a network is connected to
+the Internet, the network administrator should make use of a firewall
+in order to restrict traffic to the subnet.  Access into and out of
+the subnet through the firewall should be limited to only that
+required in order to be consistent with services provided.  Strong
+user authentication should usually be required for services provided
+behind the Firewall, except perhaps, in the case of public access to
+information.
+
+Monitor host and network activity - Even the most rigorous prevention
+measures are not guaranteed to protect users, hosts, and subnets from
+harm.  Host administrators and network administrators must actively
+monitor uses of their hosts and networks to be able to detect
+suspicious behavior.
+
+For more information
+
+Publications
+
+Jim Dray and David Balenson, An Overview of the Advanced Smart Card
+Access Control System (ASACS), Workshop on Network and Distributed
+System Security, pages 125-133, February 11-12, 1993.
+
+John W. Verity, "Truck Lanes for the Info Highway," Business Week,
+pages 112-114, April 18, 1994.
+
+Paul Willich, "Wire Pirates," Scientific American, pages 90-101, March
+1994.
+
+
+Copies of all Federal Information Processing Standards (FIPS) are
+available from the National Technical Information Service (NTIS), 5285
+Port Royal Road, Springfield, VA 22161, (703) 487- 4650).
+
+FIPS 112, Password Usage, May 30, 1985.  Order no. FIPSPUB 112.
+
+FIPS 180, Secure Hash Standard (SHS), May 11, 1993.  Order no. FIPSPUB
+180.
+
+FIPS 181, Automated Password Generator (APG), October 5, 1993.  Order
+number FIPSPUB 181.
+
+FIPS 46-2, Data Encryption Standard (DES), December 30, 1993.  Order
+number FIPSPUB 46-2.
+
+FIPS 186, Digital Signature Standard (DSS), May 19 1994.  Order number
+FIPSPUB 186.
+
+
+Electronic access
+
+CommerceNet.
+         World Wide Web URL - http://www.commerce.net/.
+
+FIPS 46-2, FIPS 180, FIPS 181, and FIPS 186 available from:
+         World Wide Web URL -
+         gopher://csrc.ncsl.nist.gov:71/11/nistpubs/fips46-2.txt.
+
+         Last extension of command cites FIPS desired:
+
+         /fips180.txt. or /fips181.txt. or /fips 186.txt
+                                                           
+CSL Bulletin, July 1993, Connecting to the Internet:  Security Considerations
+
+         gopher://csrc.ncsl.nist.gov:71/00/nistbul/csl7-93.txt
+
+Forum of Incident Response and Security Teams FIRST.
+         World Wide Web URL - http://csrc.ncsl.nist.gov/.
+
+Computer Emergency Response Team CERT.
+         World Wide Web URL - ftp://ftp.cert.org/.
+

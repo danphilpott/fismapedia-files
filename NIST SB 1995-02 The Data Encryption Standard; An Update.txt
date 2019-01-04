@@ -1,0 +1,470 @@
+THE DATA ENCRYPTION STANDARD:  AN UPDATE
+This CSL Bulletin provides updated information on the Data
+Encryption Standard (DES) which was revised in 1993 and issued as
+Federal Information Processing Standard (FIPS) 46-2.  
+
+Background
+NIST (formerly the National Bureau of Standards) issued the Data
+Encryption Standard (DES) in 1977 to provide an encryption
+algorithm for use in protecting federal unclassified information
+from unauthorized disclosure or undetected modification during
+transmission or while in storage.  The standard required NIST to
+conduct a review every five years to determine whether the
+cryptographic algorithm specified by the standard should be
+affirmed, revised or withdrawn.  The first review resulted in the
+reaffirmation of the standard in 1983; the standard was again
+reaffirmed in 1988 following a second review; the third review
+was completed in 1993.  
+
+FIPS 46-2, which was issued following the third review, reaffirms
+the DES until 1998.  The DES is based on work of the
+International Business Machines Corporation and has been adopted
+as American National Standard X3.92-1981/R1987.
+
+Technical Overview 
+The DES is a publicly known cryptographic algorithm that converts
+plaintext to ciphertext using a 56-bit key.  The same algorithm
+is used with the same key to convert ciphertext back to
+plaintext, a process called decryption.  The DES consists of 16
+"rounds" of operations that mix the data and key together in a
+prescribed manner using the fundamental operations of permutation
+and substitution.  The goal is to completely scramble the data
+and key so that every bit of the ciphertext depends on every bit
+of the data plus every bit of the key (a 56-bit quantity for
+DES).  
+
+Authorized users of encrypted computer data must have the key
+that was used to encrypt the data in order to decrypt it.  The
+unique key chosen for use in a particular application makes the
+results of encrypting data using the algorithm unique.  Using a
+different key causes different results.  The cryptographic
+security of the data depends on the security provided for the key
+used to encrypt and decrypt the data.  FIPS 171, Key Management
+Using ANSI X9.17, provides approved methods for managing the keys
+used by the DES.
+
+Security Provided by the DES 
+The security provided by a cryptographic system depends on the
+mathematical soundness of the algorithm, length of the keys, key
+management, mode of operation, and implementation.
+ 
+The DES was developed to protect unclassified computer data in
+federal computer systems against a number of passive and active
+attacks in communications and computer systems.  It was assumed
+that a knowledgeable person might seek to compromise the security
+system by employing resources commensurate with the value of the
+protected information.  Agencies determining that cryptographic
+protection is needed based on an analysis of risks and threats
+can use the DES for applications such as electronic funds
+transfer, privacy protection of personal information, personal
+authentication, password protection, and access control.
+ 
+The DES has been evaluated by several organizations and has been
+found to be mathematically sound.  Some individuals have analyzed
+the DES algorithm and have concluded that the algorithm would not
+be secure if a particular change were made (e.g., if fewer
+"rounds" were used).  Modifications of this sort are not in
+accordance with the standard and, therefore, may provide
+significantly less security.
+ 
+NIST believes that DES provides adequate security for its
+intended unclassified applications.  The algorithm is also widely
+used by the private sector.  NIST will continue to evaluate the
+security provided by the DES.  At the next review in 1998, the
+algorithm specified in the standard will be over 20 years old. 
+At that time, NIST will consider alternatives that offer a higher
+level of security for possible replacement of the DES.
+
+Other Cryptographic Standards
+For many years, the DES was the only FIPS available for federal
+encryption requirements.  Changing technology has created new
+requirements for different kinds of protection for special
+applications.  FIPS 46-2 allows for the use of other FIPS-
+approved cryptographic algorithms in addition to, or in lieu of
+the DES, when such algorithms are implemented in accordance with
+FIPS 140-1.  
+
+FIPS 140-1, Security Requirements for Cryptographic Modules, was
+issued in January 1994.  This standard defines levels of security
+for the cryptographic modules which perform cryptographic
+processes.  Cryptographic modules include the hardware, software,
+firmware, or some combination thereof, that implements
+cryptographic logic or processes.  The standard provides for four
+increasing, qualitative levels of security and covers module
+design and documentation, interfaces, authorized roles and
+services, physical security, software security, operating system
+security, key management, and other issues.  FIPS 140-1 replaces
+FIPS 140, General Security Requirements for Equipment Using the
+Data Encryption Standard (formerly Federal Standard 1027).  See
+the Validation section below for a discussion of the acquisition
+of FIPS 140 devices.   
+ 
+In 1994, NIST issued FIPS 185, Escrowed Encryption Standard
+(EES), which is suitable for use in telephone communications that
+are circuit-switched and use a commercial modem to transmit
+digital data.  This standard specifies a technology developed by
+the federal government to provide strong encryption protection
+for unclassified information and also to provide for the
+escrowing of device keys.  The standard provides for lawfully
+authorized access to the keys required to decipher enciphered
+information.  The escrowed encryption technology is to be
+implemented in electronic devices.  The specifications for the
+algorithm (SKIPJACK) and for the Law Enforcement Access Field
+(LEAF) are classified.  FIPS 185 does not mandate the use of
+escrowed encryption devices by federal government agencies, the
+private sector or other levels of government.  Such use is
+totally voluntary when organizations require the key escrow
+features.    
+
+FIPS 186, Digital Signature Standard (DSS), provides
+cryptographic techniques for generating and verifying electronic
+signatures for applications requiring authentication of data
+integrity and the identity of the signer.  FIPS 180, Secure Hash
+Standard, provides the hash function used in generating and
+verifying digital signatures.  
+
+Implementation of the DES
+Early versions of the DES required that the encryption algorithm
+be implemented in electronic hardware and firmware.  FIPS 46-2
+allows for implementation of the cryptographic algorithm in
+software, firmware, hardware, or any combination thereof to
+enable more flexible, cost-effective implementations.  
+
+Applicability
+The DES is for use by federal department and agencies when agency
+officials determine that cryptographic protection of information
+is required and the data is not classified according to the
+National Security Act of 1947, as amended, or the Atomic Energy
+Act of 1954, as amended.  Federal organizations that use
+cryptographic devices for protecting classified data can also use
+those devices for protecting unclassified data instead of the
+DES.  
+
+The National Security Agency (NSA) of the U.S. Department of
+Defense develops and promulgates requirements for
+telecommunications and automated information systems operated by
+the U.S. government, its contractors, or agents, that contain
+classified information or, as delineated in 10 U.S.C. Section
+2315, the function, operation, or use of which:
+
+   - involves intelligence activities;
+   - involves cryptologic activities related to national
+     security;
+   - involves the direct command and control of military forces;
+   - involves equipment which is an integral part of a weapon or
+     weapon systems; or
+   - is critical to the direct fulfillment of a military or
+     intelligence mission.
+
+The term unclassified information as used in this bulletin
+excludes information covered by 10 U.S.C. 2315.  
+
+Waivers for the Mandatory Use of the DES
+The head of a federal department or agency may waive the use of
+the DES for the protection of unclassified information in
+accordance with the provisions of FIPS 46-2.  A waiver is
+necessary if cryptographic modules performing an algorithm other
+than the DES or another FIPS-approved algorithm are to be used by
+a federal agency.  No waiver is necessary if communications
+security equipment approved for the protection of classified
+information is to be used.  
+
+DES Cryptographic Keys
+U.S. government users of DES products which NSA had previously
+endorsed for compliance with Federal Standard 1027 may obtain DES
+cryptographic keys for these products from NSA upon request at no
+cost.  NSA is no longer endorsing products under Federal Standard
+1027.  Contact your responsible Communications Security (COMSEC)
+officer for further information.   
+
+Alternatively, users of DES, including federal organizations, may
+generate their own cryptographic keys.  DES keys must be properly
+generated and managed in order to assure a high level of
+protection to computer data.  Key Management includes generation,
+distribution, storage, and destruction of the cryptographic keys
+used in the encryption and decryption processes.  Information on
+this subject is included in FIPS 74, FIPS 140-1, and FIPS 171. 
+See the reference list.  
+
+Exportability of DES Devices and Software Products
+Hardware- and software-based implementations of DES are subject
+to federal export controls as specified in Title 22, Code of
+Federal Regulations (CFR), Parts 120-130, the International
+Traffic in Arms Regulations (ITAR).  Specific information
+regarding export applications, application procedures, types of
+licenses, and necessary forms may be found in the CFR. 
+Responsibility for granting export licenses (except for those DES
+implementations noted below) rests with:
+
+     Office of Defense Trade Controls
+     Bureau of Political-Military Affairs
+     U.S. Department of State
+     Washington, DC 20522-0602
+     Telephone (703) 875-6650
+
+The Office of Defense Trade Controls, U.S. Department of State,
+issues either individual or distribution licenses.  Under a
+distribution license, annual reports must be submitted by the
+distributor describing to whom the licensed products have been
+sold.  License requests for products to be shipped to certain
+prohibited countries (see Section 126.1 of the ITAR) are denied
+for foreign policy reasons by the Department of State.  Licenses
+are normally granted if the end users are either financial
+institutions or American subsidiaries abroad.    
+
+Specific Cryptographic Implementations under Jurisdiction of the
+Department of Commerce
+The Bureau of Export Administration, U.S. Department of Commerce,
+is responsible for the granting of export licenses for the
+following categories of cryptographic products (including DES):
+
+   o Authentication.  Software or hardware which calculates a
+     Message Authentication Code (MAC) or similar result to
+     assure no alteration of text has taken place, or to
+     authenticate users, but does not allow for encryption of
+     data, text, or other media other than that needed for the
+     authentication.
+
+   o Access Control.  Software or hardware which protects
+     passwords or Personal Identification Numbers (PINs) or
+     similar data to prevent unauthorized access to computing
+     facilities, but does not allow for encryption of files or
+     text, except as directly related to password or PIN
+     protection.
+
+   o Proprietary Software Protection.  Decryption-only routines
+     for encrypted proprietary software, fonts, or other
+     computer-related proprietary information for the purpose of
+     maintaining vendor control over said information when such
+     decryption routines are not accessible to users of said
+     software, font, or other information, and cannot be used for
+     any other purpose.
+
+   o Automatic Teller Devices.  Devices limited to the issuance
+     of cash or traveler's checks, acceptance of deposits, or
+     account balance reporting. 
+
+Vendors of products in the above four categories should contact
+the following for a product classification determination:
+
+     Bureau of Export Administration
+     U.S. Department of Commerce
+     P.O. Box 273
+     Washington, DC 20044
+     Telephone (202) 482-4811
+
+Following this determination, the vendor will be informed whether
+an export license from the U.S. Department of Commerce is
+necessary.  The Bureau of Export Administration will provide
+vendors with license procedures and further information as
+appropriate.  
+
+Please note that vendors whose products do not fall clearly into
+the above categories should follow procedures set forth in the
+ITAR, 22 CFR 120-130.
+
+FIPS 140-1 places additional requirements on cryptographic
+modules that implement the DES.  NIST is establishing a
+validation system for FIPS 140-1 products.  Until the validation
+system is in operation, agencies may purchase equipment with FIPS
+140-1 modules that have been affirmed in writing by the
+manufacturer as complying with the standard.  A copy of the
+written affirmation should be sent to the Director, Computer
+Systems Laboratory, NIST, B154 Technology, Gaithersburg, MD 
+20899-0001.
+
+Additionally, until June 1997, federal agencies may purchase FIPS
+140 (former Federal Standard 1027) products that had been
+validated under the endorsement program that NSA previously
+operated.  Also agencies may buy FIPS 140 products that have not
+been validated by NSA if the vendor submits a written affirmation
+that the products are in conformance with the provisions of FIPS
+140.  A copy of the written affirmation should be sent to the
+Director of the Computer Systems Laboratory, address as above.   
+
+NIST also performs validations of products for compliance with
+FIPS 113 and 171.  For further information about submitting
+products for validation, please contact:
+     
+     Manager, Security Technology Group
+     Computer Security Division
+     National Institute of Standards and Technology
+     Building 225, Room A216
+     Gaithersburg, MD 20899-0001
+     Telephone (301) 975-2920
+
+Information About Validated Products
+NIST validates DES implementations for conformance to FIPS 46-2. 
+When the DES is implemented in software, the processor and
+operating system on which the algorithm runs must be specified as
+part of the validation process.  Validated implementations are
+listed in the Validated Products List (VPL) which is updated and
+issued quarterly by NIST.  Copies of the VPL may be obtained
+from: 
+
+     National Technical Information Service 
+     U.S. Department of Commerce 
+     5285 Port Royal Road 
+     Springfield, VA 22151  
+     Subscriptions (703) 487-4630
+     Individual Copies (703) 487-4650
+     Ordering Number PB95-937301
+
+The entries in the printed VPL are contained in WordPerfect
+Version 5.1 files and may be accessed on the Internet using the
+instructions listed below.  
+
+Type:  ftp speckle.ncsl.nist.gov (Internet address is 129.6.59.2)
+Login as user ftp
+Type your e-mail address preceded by a dash (-) as the password
+Type:  cd vpl
+Type:  binary
+Type:  get and the name of the file you want, e.g., language
+
+For a list of FIPS 140 and FIPS 140-1 products that have been
+affirmed by the manufacturer, contact the Manager, Security
+Technology Group, Computer Security Division, Building 225, Room
+A216, National Institute of Standards and Technology,
+Gaithersburg, MD 20899-0001, telephone (301) 975-2920.
+
+Reference Documents
+
+     NIST Publication List 91, Computer Security Publications,
+     describes CSL's publications, bulletins, and electronic
+     resources for computer security information.  Call (301)
+     975-2821 or e-mail dward@enh.nist.gov for a complimentary
+     copy.
+
+The following FIPS and other publications are available for sale
+by the:  
+
+     National Technical Information Service
+     U.S. Department of Commerce
+     5285 Port Royal Road
+     Springfield, VA  22161
+     Telephone (703) 487-4650; rush service (800) 553-6847
+     Fax (703) 321-8547 or (703) 321-9038
+
+FIPS 46-2, Data Encryption Standard
+
+This standard provides the technical specifications for the Data
+Encryption Algorithm.  
+
+FIPS 74, Guidelines for Implementing and Using the NBS Data
+Encryption Standard
+
+This guideline on DES discusses how and when data encryption
+should be used, various encryption methods, the reduction of
+security threats, implementation of DES, and key management.
+
+FIPS 81, DES Modes of Operation
+
+FIPS 81 defines four modes of operation for DES which may be used
+in a wide variety of applications.  The modes specify how data
+will be encrypted and decrypted.  The four modes are:  (1)
+Electronic Codebook (ECB), (2) Cipher Block Chaining (CBC), (3)
+Cipher Feedback (CFB), and (4) Output Feedback (OFB).  
+
+FIPS 113, Computer Data Authentication
+
+This standard specifies a Data Authentication Algorithm, based
+upon DES, which may be used to detect unauthorized modifications,
+both intentional and accidental, to data.  The Message
+Authentication Code as specified in ANSI X9.9 is computed in the
+same manner as the Data Authentication Code as specified in this
+standard.  
+
+FIPS 139, Interoperability and Security Requirements for Use of
+the Data Encryption Standard in the Physical Layer of Data
+Communications
+
+This standard specifies interoperability and security-related
+requirements for using encryption at the Physical Layer of the
+ISO Open Systems Interconnection (OSI) Reference Model in
+telecommunications systems conveying digital information.  FIPS
+139 was previously issued by the General Services Administration
+as Federal Standard 1026.
+
+FIPS 140-1, Security Requirements for Cryptographic Modules 
+
+This standard specifies the security requirements that are to be
+satisfied by a cryptographic module utilized within a security
+system protecting unclassified information within computer and
+telecommunication systems.  
+
+FIPS 141, Interoperability and Security Requirements for Use of
+the Data Encryption Standard With CCITT Group 3 Facsimile
+Equipment
+
+This document specifies interoperability and security-related
+requirements for use of encryption with the International
+Telegraph and Telephone Consultative Committee (CCITT), Group 3-
+type facsimile equipment.  
+
+FIPS 171, Key Management Using ANSI X9.17
+
+This standard specifies a selection of options for the automated
+distribution of keying material by the federal government when
+using the protocols and ANSI X9.17. 
+
+FIPS 180, Secure Hash Standard
+
+This standard specifies a Secure Hash Algorithm (SHA) which can
+be used to generate a condensed representation of a message
+called a message digest.  The SHA is required for use with the
+Digital Signature Algorithm (DSA) as specified in the Digital
+Signature Standard and whenever a SHA is required for federal
+applications.  This standard is being revised to correct a minor
+technical flaw and will be issued as FIPS 180-1 in 1995.
+
+FIPS 185, Escrowed Encryption Standard (EES)
+
+This standard specifies a technology developed by the federal
+government to provide strong encryption protection for
+unclassified information and to provide for lawful authorized
+access to the keys required to decipher enciphered information.
+
+FIPS 186, Digital Signature Standard (DSS)
+
+This standard specifies a Digital Signature Algorithm (DSA)
+appropriate for applications requiring a digital rather than a
+written signature.  The DSA provides the capability to generate
+and verify signatures.
+
+NBS Special Publication 500-156, Message Authentication Code
+(MAC) Validation System:  Requirements and Procedures
+
+This special publication describes a Message Authentication Code
+(MAC) Validation System (MVS) to test message authentication
+devices for conformance to two data authentication standards: 
+FIPS 113 and ANSI X9.9-1986, Financial Institution Message
+Authentication (Wholesale).  The MVS is designed to perform
+automated testing on message authentication devices which are
+remote to NIST.  
+
+NIST Special Publication 800-2, Public-Key Cryptography
+
+This publication surveys public-key cryptography, discussing the
+theory and examining examples of public-key cryptosystems.  The
+related topics of digital signatures, hash functions, and zero-
+knowledge protocols are also covered.
+
+DES has been incorporated into voluntary industry standards.  For
+information, contact the American Bankers Association, X9
+Secretariat, 1120 Connecticut Avenue, NW, Washington, DC 20036
+and the American National Standards Institute, 11 West 42nd
+Street, New York, NY 10036.  To order copies of voluntary
+industry standards, contact the Washington Publishing Company,
+P.O. Box 203, Chardon, OH 44024-0203, telephone (800) 334-4912.
+
+NIST's Computer Security Program
+For further information regarding other aspects of NIST's
+computer security program, please contact:
+
+     Computer Security Division
+     National Institute of Standards and Technology
+     Building 225, Room A216
+     Gaithersburg, MD 20899-0001
+     Telephone (301) 975-2934
+     Fax (301) 948-1233
+

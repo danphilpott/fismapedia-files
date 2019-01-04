@@ -1,0 +1,654 @@
+ <HTML>
+ 
+ <HEAD>
+ <TITLE>ITL Security Bulletin: April 1999</TITLE>
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+ <meta name="keywords" content="April 1999, April 1999 ITL Bulletin, ITL Security Bulletin, NIST Security Bulletin, ITL Bulletin, Computer Security Bulletin, Guide for Developing security">
+ <meta name="description" content="This is the April 1999 ITL Security Bulletin called Guide for Developing Security Plans for Information Technology Systems.">
+ 
+ <STYLE TYPE ="text/css">
+ 
+ BODY{ background: white url(/template/divsubpg_right.jpg); background-repeat: no-repeat}
+ 
+ </STYLE>
+ 
+ </HEAD>
+ 
+ <BODY BGCOLOR="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+ 
+ <TABLE BORDER="0" width="742" CELLPADDING="0" CELLSPACING="0">
+ 
+   <TR>
+ 
+     
+    <TD valign="top" align="left"> <IMG Src="/template/subheader_csrc1.jpg" Width=742 Height=90 usemap="#sample navigation bar" vspace="0" hspace="0" border="0" alt="header image with links"> 
+    </TD>
+ 	<map name="sample navigation bar"> 
+      <area shape="rect" coords="598,7,734,53" href="http://www.nist.gov/" 
+ 		target="_self" alt="go to NIST home page" title="go to NIST home page"> 
+       
+      <area shape="rect" coords="5,5,317,26" href="http://csrc.nist.gov/"
+  		target="_self" alt="go to CSRC home page" title="go to Division/CSRC home page"> 
+       <area shape="rect" coords="3,59,156,87" href="http://csrc.nist.gov/focus_areas.html"
+ 		target="_self" alt="go to Focus Areas page" title="go to Focus Areas page"> 
+       <area shape="rect" coords="156,60,311,88" href="http://csrc.nist.gov/publications/index.html"
+ 		target="_self" alt="go to Publications page" title="go to Publications page"> 
+       <area shape="rect" coords="311,60,467,88" href="http://nvd.nist.gov"
+ 		target="_self" alt="go to Advisories page" title="go to Advisories page"> 
+       <area shape="rect" coords="467,60,624,88" href="http://csrc.nist.gov/events/index.html"
+ 		target="_self" alt="go to Events page" title="go to Events page"> <area shape="rect" coords="624,60,742,88" href="http://csrc.nist.gov/csrc/sitemap.html"
+ 		target="_self" alt="go to Site Map page" title="go to Site Map page"> 
+       
+      <area shape="rect" coords="454,3,583,54" href="http://www.itl.nist.gov/" target="_self" alt="go to ITL home page" title="go to ITL home page">
+      <area shape="rect" coords="22,29,424,54" href="http://csrc.nist.gov/" target="_self" alt="CSRC home page link" title="CSRC home page link">
+    </map> 
+   </TR>
+ 
+ </table>
+ 
+ <br clear="all">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td width="2%"></td>
+  <td valign="top" nowrap align="left" width="18%"> 
+    <!--INSERT LINKS HERE-->
+    
+  <p>&nbsp;<b><a href="/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">CSRC 
+    Homepage</font></a> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    &nbsp;<br>
+    &nbsp;<a href="/csrc/sitemap.html">CSRC Site Map</a></font></b></p>
+	
+	
+  <div align="left"><b><font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;<i><font color="#660000">Search 
+    CSRC:</font></i></font></b></div>
+    <form action="http://externalsearch.nist.gov/search" method="GET" name="gs"> 
+<input type="text" name="q" size="20" maxlength="150" value=""><br>
+<input value="Google Search" name="btnG" type="submit"> 
+<input value="itl_csrc_collection" name="site" type="hidden"> 
+<input value="xml_no_dtd" name="output" type="hidden"> 
+<input value="default_frontend" name="client" type="hidden"> 
+<input value="date:D:L:d1" name="sort" type="hidden"> 
+<input value="default_frontend" name="proxystylesheet" type="hidden"> 
+<input value="UTF-8" name="oe" type="hidden"> 
+</form>
+	
+	
+  <p>&nbsp;<b><a href="/publications/index.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">CSD 
+    Publications:</font></a></b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/drafts.html">Draft Publications</a><br>
+	&nbsp;&nbsp;&nbsp;- <a href="/publications/nistpubs/index.html">Special 
+    Publications</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/fips/index.html">FIPS Pubs</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistbul/index.html">ITL Security 
+    Bulletins</a><br>
+    &nbsp;&nbsp;&nbsp;- <a href="/publications/nistir/index.html">NIST IRs</a></font> 
+  </p>
+  <p>&nbsp;<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000"><a href="/focus_areas.html">CSD 
+    Focus Areas:</a></font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+    <i>&nbsp;&nbsp;&nbsp;-&nbsp;<a 
+href="/focus_areas.html#csa">Cryptographic Standards</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+href="/focus_areas.html#csa">&amp; Application</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#st">Security Testing</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#sret">Security Research 
+    /</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#sret">Emerging 
+    Technologies</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/focus_areas.html#smag">Security Management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/focus_areas.html#smag">&amp; 
+    Assistance</a></i></font></p>
+
+	
+  <p><b>&nbsp;<font color="#660000" face="Verdana, Arial, Helvetica, sans-serif" size="2">General 
+    Information:</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/sitemap.html">Site 
+    Map</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/acroymn.html">List of Acronyms<br>
+    </a> &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/archived-projects.html">Archived Projects</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archived-projects.html">&amp; 
+    Conferences</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/virus/">Virus Information</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://nvd.nist.gov">National Vulnerability</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nvd.nist.gov">Database</a></font><br>
+  </p>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;News 
+      &amp; Events&nbsp;&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/news.html">Federal 
+    News</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/events/index.html">Security Events</a></font><br>
+      <br>
+    </div>
+    <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#660000" size="2">&nbsp;Services 
+      For the:&nbsp;</font></b><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/federal_community.html">Federal 
+    Community</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/vendor.html">Vendor</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/user.html">User</a><br>
+    &nbsp;&nbsp;&nbsp;-&nbsp;<a href="http://sbc.nist.gov/">Small/Medium</a><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://sbc.nist.gov/">Businesses</a> 
+    </font><br>
+      <br>
+    </div>
+	
+    
+  <div align="left"> 
+    <p><b>&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">Links 
+      &amp; Organizations</font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/academic.html">Academic</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/government.html">Government</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/professional.html">Professional</a><br>
+      &nbsp;&nbsp;&nbsp;-&nbsp;<a href="/csrc/links.html">Additional Links</a></font></p>
+		
+    </div>
+    
+    
+  <div align="left"><b>&nbsp;<i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#660000">NIST's 
+    National<br>
+    &nbsp;Vulnerability&nbsp;Database:</font></i></b></div>
+    <FORM ID="searchform" NAME="searchform" METHOD="POST"
+
+ACTION="http://nvd.nist.gov/nvd.cfm?startrow=1" target="_blank">
+
+<b>Search for Vulnerabilities</b><br>
+
+<font color="black" size=1 face="Arial">
+
+Enter vendor, software, or keyword</font><br>
+
+<input type=text name="textsearch" size=16>
+
+<input type=SUBMIT name="Go" value="Go">
+
+</form>
+  </td>
+  <td width="2%"></td>
+  <td width="78%" valign="top"> 
+    <!--INSERT BODY HERE-->
+    <p> <img src="/images/headers/itlbulletins_head.gif" width="400" height="60" alt="ITL Security Bulletins header image"> 
+      &nbsp;<br>
+      <A NAME="top"></A> 
+      <CENTER>
+        <FONT FACE="Tahoma" SIZE="+3" COLOR="#000099"><B>APRIL 1999</b></font> 
+      </CENTER>
+      <BR>
+    <table width="77%" border="1" cellspacing="1" cellpadding="2" align="center">
+        <tr> 
+          <td bgcolor="#DDFFFD">
+            <div align="center"><FONT FACE="Tahoma" SIZE="+1"><B>Guide For Developing 
+              Security Plans For Information Technology Systems</B></FONT></div>
+          </td>
+      </tr>
+    </table>
+    <p> <font face="Arial, Helvetica, sans-serif">Today’s rapidly changing technical 
+      environment requires federal agencies to adopt a minimum set of management 
+      controls to protect vital information technology (IT) resources. These management 
+      controls are directed at individual IT users in order to reflect the distributed 
+      nature of today’s technology. Technical and operational controls support 
+      management controls. To be effective, all of these controls must interrelate.</font></p>
+    <p> <font face="Arial, Helvetica, sans-serif">The Information Technology Laboratory 
+      (ITL) at the National Institute of Standards and Technology recently published 
+      Special Publication 800-18, <I><A HREF="http://csrc.nist.gov/publications/nistpubs/800-18/Planguide.PDF">Guide 
+      for Developing Security Plans for Information Technology Systems</A></I>. 
+      Developed by Marianne Swanson and a working group of the Federal Computer 
+      Security Program Managers’ Forum, the publication addresses the development 
+      of security plans that document the management, technical, and operational 
+      controls for federal automated information systems. The publication provides 
+      guidance for individuals responsible for IT security at the system level 
+      and at the organization level. It is written specifically for individuals 
+      with little or no computer security expertise. The document can also be 
+      used as an auditing tool by auditors, managers, and IT security officers. 
+      The concepts presented are generic and can be applied to organizations in 
+      private and public sectors. This <I>ITL Bulletin</I> summarizes the purpose, 
+      responsibilities, format, and development of an effective security plan 
+      (the guide provides detailed information).</font></p>
+    <p><B><font face="Arial, Helvetica, sans-serif">Background</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+      The completion of system security plans is a requirement of the Office of 
+      Management and Budget (OMB) Circular A-130, "Management of Federal Information 
+      Resources," Appendix III, "Security of Federal Automated Information Resources," 
+      updated in 1996, and of Public Law 100-235, "Computer Security Act of 1987." 
+      OMB Circular A-130, Appendix III, does not distinguish between sensitive 
+      and non-sensitive systems. Rather, consistent with the Computer Security 
+      Act of 1987, the Circular recognizes that federal automated information 
+      systems have varied sensitivity and criticality. All federal systems have 
+      some level of sensitivity and require protection as part of good management 
+      practice. OMB Bulletin 90-08, dated July 9, 1990, which provided initial 
+      security planning guidance, is superseded by the issuance of Special Publication 
+      800-18. The generic term "system" is used in the document to mean either 
+      a <I>major application</I> or a <I>general support system</I>.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif"><b>Major Application or General 
+      Support System Plans</B><BR>
+      All applications and systems must be covered by system security plans if 
+      they are categorized as a "major application" or "general support system". 
+      Specific security plans for other applications are not required because 
+      the security controls for those applications or systems would be provided 
+      by the general support systems in which they operate. For example, a department-wide 
+      Financial Management System would be a major application requiring its own 
+      security plan. A local program designed to track expenditures against an 
+      office budget might not be considered a major application and would be covered 
+      by a general support system security plan for an office automation system 
+      or a local area network (LAN). Standard commercial off-the-shelf software 
+      (such as word processing software, electronic mail software, utility software, 
+      or other general- purpose software) would not typically be considered a 
+      major application and would be covered by the plans for the general support 
+      system on which they are installed.</font></p>
+    <p><B><font face="Arial, Helvetica, sans-serif">Purposes of System Security 
+      Plans</font></B></p>
+    <UL TYPE="SQUARE">
+      <LI> <font face="Arial, Helvetica, sans-serif">Provide an overview of the 
+        security requirements of the system and describe the controls in place 
+        or planned for meeting those requirements; and <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Delineate responsibilities 
+        and expected behavior of all individuals who access the system.</font></li>
+    </UL>
+    <p><b><font face="Arial, Helvetica, sans-serif">Security Plan Responsibilities</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+      The system owner is responsible for ensuring that the security plan is prepared 
+      and for implementing the plan and monitoring its effectiveness. Security 
+      plans should reflect input from various individuals with responsibilities 
+      concerning the system, including functional "end users," information owners, 
+      the system administrator, and the system security manager.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif">Agencies may require contractor 
+      compliance with the guide as a contract requirement. A security plan in 
+      the format specified in the document or in another agreed-upon format is 
+      suggested in those cases where vendors are operating a system under contract 
+      to the federal government. In those instances where a contractor or other 
+      entity (e.g., state or local government) operates a system that supports 
+      a federal function, a security plan is required.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif">OMB Circular A-130 requires a 
+      summary of the security plan to be incorporated into the strategic IRM plan 
+      required by the Paperwork Reduction Act (44 U.S.C. Chapter 35).</font></p>
+    <p><font face="Arial, Helvetica, sans-serif">Agencies should develop policy 
+      on the security planning process. Security plans are living documents that 
+      require periodic reviews, modifications, and milestone or completion dates 
+      for planned controls. Procedures should be in place outlining who reviews 
+      the plans and follows up on planned controls. In addition, procedures are 
+      needed describing how security plans will be used in the authorization for 
+      processing process.</font> </p>
+    <p><B><font face="Arial, Helvetica, sans-serif">Recommended Format</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+      While the format in Special Publication 800-18 is recommended, it is recognized 
+      that some agencies have developed plans using other formats that meet A-130 
+      requirements. The document is intended as guidance only and should not be 
+      construed as the only format allowed. A standardized approach, however, 
+      not only makes the development of the plan easier by providing examples, 
+      but also provides a baseline to review plans. The level of detail included 
+      within the plan should be consistent with the criticality and value of the 
+      system to the organization’s mission (i.e., a more detailed plan is required 
+      for systems critical to the organization’s mission). The security plan should 
+      fully identify and describe the controls currently in place or planned for 
+      the system and should include a list of <I>rules of behavior</I> (see Appendices 
+      A and B of the document).</font></p>
+    <p><B><font face="Arial, Helvetica, sans-serif">System Analysis</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+      Once completed, a security plan will contain technical information about 
+      the system, its security requirements, and the controls implemented to provide 
+      protection against its risks and vulnerabilities. Before the plan can be 
+      developed, a determination must be made as to which type of plan is required 
+      for a system. An analysis of the system determines the boundaries of the 
+      system and the type of system.</font></p>
+    <p><I><B><font face="Arial, Helvetica, sans-serif">System Boundaries</font></B></I><font face="Arial, Helvetica, sans-serif">	
+      Defining what constitutes a "system" for the purposes of the guideline requires 
+      an analysis of system boundaries and organizational responsibilities. Constructing 
+      logical boundaries around a set of processes, communications, storage, and 
+      related resources, as defined by the guideline, identifies a system. The 
+      elements within these boundaries constitute a single system requiring a 
+      security plan. Each element of the system must:</font></p>
+    <UL TYPE="SQUARE">
+      <LI> <font face="Arial, Helvetica, sans-serif">Be under the <I><B>same</B></I> 
+        direct management control;<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Have the <I><B>same</B></I> 
+        function or mission objective;<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Have essentially the <I><B>same</B></I> 
+        operating characteristics and security needs; and<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Reside in the <I><B>same</B></I> 
+        general operating environment.</font></li>
+    </UL>
+    <p><font face="Arial, Helvetica, sans-serif">All components of a system need 
+      not be physically connected (e.g., a group of stand-alone personal computers 
+      (PCs) in an office; a group of PCs placed in employees’ homes under defined 
+      telecommuting program rules; a group of portable PCs provided to employees 
+      who require mobile computing capability for their jobs; and a system with 
+      multiple identical configurations that are installed in locations with the 
+      same environmental and physical safeguards).</font></p>
+    <p> <i><b><font face="Arial, Helvetica, sans-serif">Multiple Similar Systems</font></B></I><font face="Arial, Helvetica, sans-serif"> 
+      An organization may have systems that differ only in the responsible organization 
+      or the physical environment in which they are located (e.g., air traffic 
+      control systems). In such instances, it is appropriate and recommended to 
+      use plans that are identical except for those areas of difference. This 
+      approach provides consistent levels of protection for similar systems. </font></p>
+    <p><I><B><font face="Arial, Helvetica, sans-serif">System Category</font></B></I><font face="Arial, Helvetica, sans-serif"><BR>
+      The next step is to categorize each system as either a "<I>major application</I>" 
+      or as a "general support system." All applications should be covered by 
+      a security plan. The applications will either be covered individually if 
+      they have been designated as a major application or within the security 
+      plan of a general support system. A system may be designated as a major 
+      application even though it is also supported by a system that has been designated 
+      as a general support system. For example, a LAN may be designated a general 
+      support system and have a security plan. The organization’s accounting system 
+      may be designated as a major application even though the computing and communication 
+      resources of the LAN support it. In this example, the major application 
+      requires additional security requirements due to the sensitivity of the 
+      information the application processes. When a security plan is required 
+      for a major application that is supported by a general support system, coordination 
+      of both plans is required.</font></p>
+    <p><I><B><font face="Arial, Helvetica, sans-serif">Major Applications</font></B></I><font face="Arial, Helvetica, sans-serif"><BR>
+      All federal applications have value and require some level of protection. 
+      Certain applications, because of the information they contain, process, 
+      or transmit or because of their criticality to the organization’s missions, 
+      require special management oversight. These applications are major applications.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif">Agencies are expected to exercise 
+      management judgment in determining which of their applications is a major 
+      application and to ensure that the security requirements of non-major applications 
+      are discussed as part of the security plan for the applicable general support 
+      systems.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif">Major applications are systems 
+      that perform clearly defined functions for which there are readily identifiable 
+      security considerations and needs (e.g., an electronic funds transfer system). 
+      A major application might comprise many individual programs and hardware, 
+      software, and telecommunications components. These components can be a single 
+      software application or a combination of hardware/software focused on supporting 
+      a specific mission-related function. A major application may also consist 
+      of multiple individual applications if all are related to a single mission 
+      function (e.g., payroll or personnel). If a system is defined as a major 
+      application and the application is run on another organization's general 
+      support system:</font></p>
+    <UL TYPE="SQUARE">
+      <LI> <font face="Arial, Helvetica, sans-serif">Notify the system owner that 
+        the application is critical or contains <I>sensitive information</I> and 
+        provide specific security requirements; <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Provide a copy of the major 
+        application’s security plan to the operator of the general support system;<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Request a copy of the system 
+        security plan of the general support system and ensure it provides adequate 
+        protection for the application and information; and<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Include a reference to the 
+        general support system security plan, including the unique name/identifier 
+        information. </font></li>
+    </UL>
+    <p><I><B><font face="Arial, Helvetica, sans-serif">General Support System 
+      </font></B></I><font face="Arial, Helvetica, sans-serif"><BR>
+      A general support system is interconnected information resources under the 
+      same direct management control that shares common functionality. A general 
+      support system normally includes hardware, software, information, data, 
+      applications, communications, facilities, and people and provides support 
+      for a variety of users and/or applications. A general support system, for 
+      example, can be a:</font></p>
+    <UL TYPE ="SQUARE">
+      <LI> <font face="Arial, Helvetica, sans-serif">LAN including smart terminals 
+        that supports a branch office;<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Backbone (e.g., agency-wide); 
+        <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Communications network; <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Departmental data processing 
+        center including its operating system and utilities; <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Tactical radio network; or 
+        <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Shared information processing 
+        service organization.</font></li>
+    </UL>
+    <p> <font face="Arial, Helvetica, sans-serif">A major application can run 
+      on a general support system. The general support system plan should reference 
+      the major application plan(s).</font></p>
+    <p> <B><font face="Arial, Helvetica, sans-serif">Plan Development for All 
+      Systems</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+      All security plans, at a minimum, should be marked, handled, and controlled 
+      to the level of sensitivity determined by organizational policy. In addition, 
+      all security plans should be dated for ease of tracking modifications and 
+      approvals. Dating each page of a security plan may be appropriate if updates 
+      are to be made through change pages. Both types of plans must contain general 
+      descriptive information regarding who is responsible for the system, the 
+      purpose of the system, and the sensitivity level of the system. </font></p>
+    <p> <I><B><font face="Arial, Helvetica, sans-serif">System Identification</font></B></I><font face="Arial, Helvetica, sans-serif"><BR>
+      <I>System Name/Title</I><BR>
+      The plan begins with listing the name and title of the system/application. 
+      Each system/application should be assigned a unique name/identifier. Assigning 
+      a unique identifier to each system helps to ensure that appropriate security 
+      requirements are met based on the unique requirements for the system, and 
+      that allocated resources are appropriately applied. Further, the use of 
+      unique system identifiers is integral to the IT system investment models 
+      and analyses established under the requirements of the Information Technology 
+      Management Reform Act of 1996 (also known as the Clinger-Cohen Act). The 
+      identifier could be a combination of alphabetic and numeric characters and 
+      can be used in combination with the system/application name. The unique 
+      name/identifier should remain the same throughout the life of the system 
+      to allow the organization to track completion of security requirements over 
+      time.</font> </p>
+    <p><I><font face="Arial, Helvetica, sans-serif">Responsible Organization </font></I><font face="Arial, Helvetica, sans-serif"><BR>
+      List the federal organizational sub-component responsible for the system. 
+      If a state or local government or contractor performs the function, identify 
+      both the federal and other organization and describe the relationship. Be 
+      specific about the organization and do not abbreviate. Include physical 
+      locations and addresses.</font></p>
+    <p><I><font face="Arial, Helvetica, sans-serif">Information Contact(s)</font></I><font face="Arial, Helvetica, sans-serif"><BR>
+      List the name, title, organization, and telephone number of one or more 
+      persons designated to be the point(s) of contact for this system. One of 
+      the contacts given should be identified as the system owner. The designated 
+      persons should have sufficient knowledge of the system to be able to provide 
+      additional information or points of contact, as needed.</font></p>
+    <p><I><font face="Arial, Helvetica, sans-serif">Assignment of Security Responsibility</font></I> 
+      <font face="Arial, Helvetica, sans-serif"><BR>
+      An individual must be assigned responsibility in writing to ensure that 
+      the application or general support system has adequate security. To be effective, 
+      this individual must be knowledgeable of the management, operational, and 
+      technical controls used to protect the system. Include the name, title, 
+      and telephone number of the individual who has been assigned responsibility 
+      for the security of the system.</font></p>
+    <p><I><B><font face="Arial, Helvetica, sans-serif">System Operational Status 
+      </font></B></I><font face="Arial, Helvetica, sans-serif"><BR>
+      Indicate one or more of the following for the system’s operational status. 
+      If more than one status is selected, list which part of the system is covered 
+      under each status.</font></p>
+    <UL TYPE="SQUARE">
+      <LI> <I><font face="Arial, Helvetica, sans-serif">Operational</font></I><font face="Arial, Helvetica, sans-serif"> 
+        the system is operating.<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"><I>Under development </I> 
+        the system is being designed, developed, or implemented.<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"><I>Undergoing a major modification</I> 
+        the system is undergoing a major conversion or transition. </font> 
+    </UL>
+    <p><font face="Arial, Helvetica, sans-serif">If the system is under development 
+      or undergoing a major modification, provide information about the methods 
+      used to assure that up-front security requirements are included. Include 
+      specific controls in the appropriate sections of the plan depending on where 
+      the system is in the security life cycle.</font></p>
+    <p> <I><B><font face="Arial, Helvetica, sans-serif">General Description/Purpose</font></B></I><font face="Arial, Helvetica, sans-serif"><BR>
+      Present a brief description (one-three paragraphs) of the function and purpose 
+      of the system (e.g., economic indicator, network support for an organization, 
+      business census data analysis, crop-reporting support).</font> </p>
+    <p> <font face="Arial, Helvetica, sans-serif">If the system is a general support 
+      system, list all applications supported by the general support system. Specify 
+      if the application is or is not a major application and include unique name/identifiers, 
+      where applicable. Describe each application's function and the information 
+      processed. Include a list of user organizations, whether they are internal 
+      or external to the system owner’s organization, and a general description 
+      of the type of information and processing provided. Request information 
+      from the application owners (and a copy of the security plans for major 
+      applications) to ensure their requirements are met.</font> </p>
+    <p> <I><B><font face="Arial, Helvetica, sans-serif">System Environment</font></B></I> 
+      <font face="Arial, Helvetica, sans-serif"><BR>
+      Provide a brief (one-three paragraphs) general description of the technical 
+      system. Include any environmental or technical factors that raise special 
+      security concerns, such as:</font> </p>
+    <UL TYPE="SQUARE">
+      <LI> <font face="Arial, Helvetica, sans-serif">The system is connected to 
+        the Internet; <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif">It is located in a harsh or 
+        overseas environment; <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> Software is rapidly implemented; 
+        <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif"> The software resides on an 
+        open network used by the general public or with overseas access;<BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif">The application is processed 
+        at a facility outside of the organization's control; or <BR>
+        </font> 
+      <LI><font face="Arial, Helvetica, sans-serif">The general support mainframe 
+        has dial-up lines.</font></li>
+    </UL>
+    <p><font face="Arial, Helvetica, sans-serif">Describe the primary computing 
+      platform(s) used (e.g., mainframe, desk top, LAN or Wide Area Network (WAN). 
+      Include a general description of the principal system components, including 
+      hardware, software, and communications resources. Discuss the type of communications 
+      included (e.g., dedicated circuits, dial circuits, public data/voice networks, 
+      Internet). Describe controls used to protect communication lines in the 
+      appropriate sections of the security plan.</font> </p>
+    <p><font face="Arial, Helvetica, sans-serif">Include any security software 
+      protecting the system and information. Describe in general terms the type 
+      of security protection provided (e.g., access control to the computing platform 
+      and stored files at the operating system level or access to data records 
+      within an application). Include only controls that have been implemented 
+      or are planned, rather than listing the controls that are available in the 
+      software. Controls that are available, but not implemented, provide no protection.</font> 
+    </p>
+    <p><I><B><font face="Arial, Helvetica, sans-serif">System Interconnection/Information 
+      Sharing</font></B></I> </p>
+    <p><font face="Arial, Helvetica, sans-serif">System interconnection is the 
+      direct connection of systems for the purpose of sharing information resources. 
+      System interconnection, if not appropriately protected, may result in a 
+      compromise of all connected systems and the data they store, process, or 
+      transmit. It is important that system operators, information owners, and 
+      management obtain as much information as possible about the vulnerabilities 
+      associated with system interconnection and information sharing and the increased 
+      controls required to mitigate those vulnerabilities. The security plan for 
+      the systems often serves as a mechanism to effect this security information 
+      exchange and allows management to make informed decisions regarding risk 
+      reduction and acceptance.</font></p>
+    <p> <font face="Arial, Helvetica, sans-serif">OMB Circular A-130 requires 
+      that written management authorization (often in the form of a Memorandum 
+      of Understanding or Agreement) be obtained prior to connecting with other 
+      systems and/or sharing sensitive data/information. The written authorization 
+      shall detail the rules of behavior and controls that must be maintained 
+      by the interconnecting systems. A description of the rules for interconnecting 
+      systems and for protecting shared data must be included with this security 
+      plan.</font> </p>
+      <p><font face="Arial, Helvetica, sans-serif">In this section, provide the 
+        following information concerning the authorization for the connection 
+        to other systems or the sharing of information:</font></p>
+		
+		<UL TYPE="SQUARE">
+            
+        <LI><font face="Arial, Helvetica, sans-serif"> List of interconnected 
+          systems (including Internet);<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Unique system identifiers, 
+          if appropriate;<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Name of system(s);<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Organization owning the 
+          other system(s);<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Type of interconnection 
+          (TCP/IP, Dial, SNA, etc.);<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Short discussion of major 
+          concerns or considerations in determining interconnection;<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Name and title of authorizing 
+          management official(s);<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Date of authorization;<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> System of Record, if applicable 
+          (Privacy Act data);<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Sensitivity level of each 
+          system;<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Interaction among systems; 
+          and<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Security concerns and Rules 
+          of Behavior (see Appendices A and B of the guide) of the other systems 
+          that need to be considered in the protection of this system.</font></li>
+          </UL>
+      <p><I><B><font face="Arial, Helvetica, sans-serif">Sensitivity of Information 
+        Handled</font></B></I> <font face="Arial, Helvetica, sans-serif"><BR>
+        This section provides a description of the types of information handled 
+        by the system and an analysis of the criticality of the information. The 
+        sensitivity and criticality of the information stored within, processed 
+        by, or transmitted by a system provides a basis for the value of the system 
+        and is one of the major factors in risk management. The description will 
+        provide information to a variety of users, including:</font></p>
+		
+		<UL TYPE="SQUARE">
+            
+        <LI> <font face="Arial, Helvetica, sans-serif">Analysts/programmers who 
+          will use it to help design appropriate security controls;<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Internal and external auditors 
+          evaluating system security measures; and<BR>
+          </font>
+        <LI><font face="Arial, Helvetica, sans-serif"> Managers making decisions 
+          about the reasonableness of security countermeasures.</font></li>
+          </UL>
+		  
+      <p><font face="Arial, Helvetica, sans-serif">The nature of the information 
+        sensitivity and criticality must be described in this section. The description 
+        must contain information on applicable laws, regulations, and policies 
+        affecting the system and a general description of sensitivity.</font></p>
+		  
+		  
+      <p><font face="Arial, Helvetica, sans-serif">The remainder of the guidance 
+        document details the management, operational, and technical controls, 
+        discussed for both major applications and general support systems. Appendices 
+        include Rules of Behavior, templates for security plans, a glossary, references, 
+        and an index.</font></p>
+		  
+		  
+      <p><B><font face="Arial, Helvetica, sans-serif">For more information</font></B><font face="Arial, Helvetica, sans-serif"><BR>
+        The <A HREF="http://csrc.nist.gov/nistpubs/">planning guideline</A> is 
+        available for download in Microsoft Word ‘97 (.doc) and Adobe Acrobat 
+        (.pdf) formats. Paper copies can be ordered from the Government Printing 
+        Office at (202) 512-1800; the order number is SN003-003-03590-4 and the 
+        price is $14.00. Paper copies are also available from the National Technical 
+        Information Service (NTIS) at (703) 605-6000; order number is PB99-105116.</font></p>
+		  
+		  <p></p>
+		  
+    
+    <BR>
+    <CENTER>
+        <A HREF="#top"><B><font face="Arial, Helvetica, sans-serif">To Top</font></B></A> 
+      </CENTER>
+  </td>
+</table>
+<table width="100%">
+  <tr> 
+    <td width="20%" align="center">&nbsp:<br>
+    </td>
+    <td width="80%"> 
+      <div align="center"> 
+        <hr width="400" align="center" size="1">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><i>Last 
+        updated: <!-- #BeginDate format:Am1 -->February 21, 2003<!-- #EndDate --> -> <br>
+        Page created: April 29, 1999</i><br>
+        <a href="http://www.nist.gov/public_affairs/disclaim.htm"><font color="#000000">Disclaimer 
+        Notice</font></a> & <a href="http://www.nist.gov/public_affairs/privacy.htm"><font color="#000000">Privacy 
+        Statement / Security Notice</font></a> <br>
+        Send comments or suggestions to <a href="mailto:webmaster-csrc@nist.gov"><font color="#000000">webmaster-csrc@nist.gov</font></a> 
+        <br>
+        <a href="http://www.nist.gov"><font color="#000000">NIST</font></a> is 
+        an Agency of the <a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.doc.gov"><font color="#000000">U.S. 
+        Commerce Department's</font></a> </font><a href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.ta.doc.gov/"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000"><font color="#000000">Technology 
+        Administration</font></font></a></div>
+    </td>
+  </tr>
+</table>
+ 
+ </HTML>

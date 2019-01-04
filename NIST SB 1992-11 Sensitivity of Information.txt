@@ -1,0 +1,202 @@
+                               CSL BULLETIN
+               Advising users on computer systems technology
+                               November 1992
+
+SENSITIVITY OF INFORMATION
+
+This CSL Bulletin discusses issues related to sensitive
+information and clarifies the meaning of "sensitivity" as applied
+to agency information systems.  It draws upon several years of
+NIST's experience in assisting federal agencies to implement the
+Computer Security Act of 1987 and the visits to senior agency
+officials by personnel from NIST, the National Security Agency,
+and the Office of Management and Budget.  
+
+NIST believes that it is more important to provide appropriate
+protection to agency information technology (IT) systems than to
+determine whether or not a "sensitive" label should be applied to
+particular information or IT systems.       
+
+Sensitivity and the Computer Security Act of 1987
+The Computer Security Act of 1987 (P.L. 100-235) was enacted to
+create "a means for establishing minimum acceptable security
+practices" for federal unclassified computer systems.  The Act
+also emphasizes that federal information requires protection
+against unauthorized modification or destruction, as well as
+unauthorized disclosure.  An improved level of security is
+obtained by the determination of protection requirements and the
+selection of cost-effective security controls to meet those
+requirements. 
+
+To distinguish systems covered by P.L. 100-235 from those used to
+process national security information, the law uses the term
+"sensitive."  Confusion over this term may have led some agencies
+to focus their limited computer security resources on determining
+which systems would be labelled "sensitive."   
+
+NIST believes that the Computer Security Act did not intend to
+create two governmentwide categories of information: "sensitive"
+and "non-sensitive."  Likewise, we believe the Act did not create
+a category of "non-sensitive systems" that could be operated
+without regard for security.  All systems must include security
+controls that reflect the true importance of the information
+processed on the system and/or the government investment embodied
+in the components of the information system.    
+
+Definition
+Many people think that sensitive information only requires
+protection from unauthorized disclosure.  However, the Computer
+Security Act provides a much broader definition of the term
+"sensitive" information: 
+
+     any information, the loss, misuse, or unauthorized access to
+     or modification of which could adversely affect the national
+     interest or the conduct of federal programs, or the privacy
+     to which individuals are entitled under section 552a of
+     title 5, United States Code (the Privacy Act), but which has
+     not been specifically authorized under criteria established
+     by an Executive Order or an Act of Congress to be kept
+     secret in the interest of national defense or foreign
+     policy.  
+
+The above definition can be contrasted with the long-standing
+confidentiality-based information classification system for
+national security information (i.e., CONFIDENTIAL, SECRET, and
+TOP SECRET).  This system is based only upon the need to protect
+classified information from unauthorized disclosure;  the U.S.
+Government does not have a similar governmentwide system for
+unclassified information.  No governmentwide schemes exist which
+are based on the need to protect the integrity or availability of
+information. 
+
+The Computer Security Act did not alter the Freedom of
+Information Act (FOIA); therefore, an agency's determination of
+sensitivity under this definition does not change the status of
+releasability under the FOIA.
+
+Agency Determination of "Sensitive"
+Interpretation of the Computer Security Act's definition of
+sensitive is, ultimately, an agency responsibility.  Typically,
+protecting sensitive information means providing for one or more
+of the following:
+ 
+     Confidentiality  - Disclosure of the information must be
+     restricted to designated parties.
+
+     Integrity - The information must be protected from errors or
+     unauthorized modification.
+
+     Availability - The information must be available within some
+     given timeframe (i.e., protected against destruction).  
+
+Many in the computer security community, including NIST, argue
+that all non-trivial agency information requires some level of
+protection along at least one of these dimensions
+(confidentiality, integrity, and availability).  
+
+Agencies should determine what protection is required for each
+agency IT system and how such protection can best be realized in
+a cost-effective manner.  Information "owners," not system
+operators, should determine what protection their information
+requires.  The type and amount of protection needed depends on
+the nature of the information and the environment in which it is
+processed.  The controls to be used will depend on the risk and
+magnitude of the harm resulting from the loss, misuse, or
+unauthorized access to or modification of the information
+contained in the system.
+
+In determining appropriate protection measures, it is important
+to bear in mind that requirements for the protection of a 
+particular type of information are often provided by statute or
+agency determination.  Information required to be protected under
+statute includes, for example, privacy information (protected
+under the Privacy Act), financial information (protected under
+the Federal Manager's Financial Integrity Act), taxpayer
+information, and individual census data.  In other cases, an
+agency may determine protection requirements for a specific type
+of information.  For example, some individual agencies have
+created internal "Limited Official Use" or "For Official Use
+Only" designations for certain types of unclassified information
+having confidentiality requirements.  In either case, however,
+the selection of specific security controls is usually left to
+the agency's or the individual user's discretion.    
+
+Risk-Based Selection of Security Controls and Minimum Protective
+Measures
+Information owners should use a risk-based approach to determine
+what harm may result if a system is inadequately protected.  The
+potential for harm as well as consideration of the cost of
+protective measures must be analyzed together.  It makes no sense
+to spend more on protective measures than the potential for harm
+if integrity, confidentiality, or availability requirements are
+not achieved.  This approach should provide appropriate
+protection that is cost-effective for agencies.
+
+As appropriate, the selection of security measures may also be
+undertaken across-the-board at an agency.  This begins by
+examining the agency's operating environment and the typical
+minimum protection requirements of the information processed by
+its IT systems.  In many cases, it may then be possible to
+justify the establishment of minimal security controls for the
+majority of agency systems.  Such an approach can often prove
+cost-effective and result in basic controls being built into
+systems as a matter of routine.  Procurements may also be
+simplified as a result, since the same controls are being
+specified for each purchase.
+
+Perceptions of Protection Requirements
+Perceptions of the need to protect particular information can
+vary markedly.  It is important for the owners of information to
+inform others who may access or process information on their
+behalf as to necessary protection requirements for the
+information.  For example, if agency elements use a central
+system for running large applications, the perception of the need
+to protect the data may vary widely between the application
+manager and the system operator.  However, while individual
+perceptions may vary, ultimately the risk and the magnitude of
+potential harm to the organization remain unchanged.  This
+highlights the need for application managers and other "owners"
+of data to set data protection requirements for those processing
+or accessing the information.  "Owners" requirements to protect
+information can be more effectively met when complemented by the
+presence of the agency's computer security policy and computer
+security training and awareness program.  Informing employees of
+the many ways and needs to protect information can lead to a
+higher degree of cooperation in meeting protection requirements. 
+
+Summary
+The intent of the Computer Security Act is to assure adequate
+protection of federal IT systems.  NIST believes that all non-
+trivial agency information requires some degree of protection to
+provide confidentiality, integrity, or availability.  Therefore,
+agencies must determine the protection requirements for all their
+information and apply an appropriate level of protection. 
+Agencies should be selecting and implementing appropriate cost-
+effective security controls for all their systems.  
+
+References
+
+Office of Management and Budget, Appendix III, "Security of
+Federal Automated Information Systems," to Office of Management
+and Budget Circular A-130, "Management of Federal Information
+Resources," December 12, 1985.
+
+National Bureau of Standards, Federal Information Processing
+Standard Publication 65, Guideline for Automatic Data Processing
+Risk Analysis, August 1979.  Available from the National
+Technical Information Service (NTIS), 5285 Port Royal Road,
+Springfield, VA 22161, order number FIPSPUB 65.
+
+NIST Special Publication 500-170, Management Guide to the
+Protection of Information, October 1989.  Available from the
+Government Printing Office (GPO), Washington, DC 20402, order
+number SN003-003-02968-8.
+
+NIST Special Publication 500-174, Guide for Selecting Automated
+Risk Analysis Tools, October 1989.  Available from NTIS, 5285
+Port Royal Road, Springfield, VA 22161, order number PB90-148784.
+
+NIST Publication List 91, Computer Security Publications,
+available from CSL Publications, NIST, Technology Building, Room
+B151, Gaithersburg, MD 20899.
+

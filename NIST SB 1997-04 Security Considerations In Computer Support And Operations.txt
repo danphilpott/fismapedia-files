@@ -1,0 +1,364 @@
+     SECURITY CONSIDERATIONS IN COMPUTER SUPPORT AND OPERATIONS
+Computer support and operations refers to everything done to run a computer
+system.  This includes both system administration and tasks external to the
+system that support its operation (e.g., maintaining documentation).  It
+does not include system planning or design.  Support and operations are
+routine activities that enable computer systems to function correctly.
+These include fixing software or hardware problems, loading and maintaining
+software, and helping users resolve problems. 
+
+The support and operation of any computer system, from a three-person local
+area network to a worldwide application serving thousands of users, is
+critical to maintaining the security of a system.  This bulletin discusses
+security issues in computer support and operations activities.
+
+The failure to consider security as part of the support and operations of
+computer systems is, for many organizations, their Achilles heel.  Computer
+security system literature includes many examples of how organizations
+undermined their often expensive security measures because of poor
+documentation, old user accounts, conflicting software, or poor control of
+maintenance accounts.  Also, an organization's policies and procedures
+often fail to address many of these important issues.  The important
+security considerations within some of the major categories of support and
+operations are:
+
+	 	user support, 
+	 	software support,
+	 	configuration management,
+	 	backups,
+	 	media controls,
+	 	documentation, and
+	 	maintenance. 
+
+Some special considerations are noted for larger or smaller systems.  In
+general, larger systems include mainframes, large minicomputers, and WANs.
+Smaller systems include PCs and LANs.  
+
+USER SUPPORT
+In many organizations, user support takes place through a Help Desk.  Help
+Desks can support an entire organization, a subunit, a specific system, or
+a combination of these.  For smaller systems, the system administrator
+normally provides direct user support.  Experienced users provide informal
+user support on most systems.  User support should be closely linked to the
+organization's incident handling capability.  In many cases, the same
+personnel perform these functions.
+
+An important security consideration for user support personnel is being
+able to recognize which problems (brought to their attention by users) are
+security- related.  For example, users' inability to log onto a computer
+system may result from the disabling of their accounts due to too many
+failed access attempts.  This could indicate the presence of hackers trying
+to guess users' passwords.  
+
+In general, system support and operations staff need to be able to identify
+security problems, respond appropriately, and inform appropriate
+individuals.  A wide range of possible security problems exist.  Some will
+be internal to custom applications, while others apply to off-the-shelf
+products.  Additionally, problems can be software- or hardware-based.
+Small systems are especially susceptible to viruses, while networks are
+particularly susceptible to hacker attacks, which can be targeted at
+multiple systems.  System support personnel should be able to recognize
+attacks and know how to respond.
+
+The more responsive and knowledgeable system support and operation staff
+personnel are, the less user support will be provided informally.  The
+support other users provide is important, but they may not be aware of the
+"whole picture."
+
+SOFTWARE SUPPORT
+Software is the heart of an organization's computer operations, whatever
+the size and complexity of the system.  Therefore, it is essential that
+software function correctly and be protected from corruption.  There are
+many elements of software support.
+
+One is controlling what software is used on a system.  If users or systems
+personnel can load and execute any software on a system, the system is more
+vulnerable to viruses, to unexpected software interactions, and to software
+that may subvert or bypass security controls.  One method of controlling
+software is to inspect or test software before it is loaded (e.g., to
+determine compatibility with custom applications or identify other
+unforeseen interactions).  This can apply to new software packages, to
+upgrades, to off-the-shelf products, or to custom software, as deemed
+appropriate.  In addition to controlling the loading and execution of new
+software, organizations should also give care to the configuration and use
+of powerful system utilities.  System utilities can compromise the
+integrity of operating systems and logical access controls.
+
+Viruses take advantage of the weak software controls in personal computers.
+ Also, there are powerful utilities available for PCs that can restore
+deleted files, find hidden files, and interface directly with PC hardware,
+bypassing the operating system.  Some organizations use personal computers
+without floppy drives in order to have better control over the system.
+There are several widely available utilities that look for security
+problems in both networks and the systems attached to them.  Some utilities
+look for and try to exploit security vulnerabilities.
+
+A second element in software support can be to ensure that software has not
+been modified without proper authorization.  This involves the protection
+of software and backup copies.  This can be done with a combination of
+logical and physical access controls.  
+
+Many organizations also include a program to ensure that software is
+properly licensed, as required.  For example, an organization may audit
+systems for illegal copies of copyrighted software.  This problem is
+primarily associated with PCs and LANs, but can apply to any type of system.
+
+CONFIGURATION MANAGEMENT
+Closely related to software support is configuration management -- the
+process of keeping track of changes to the system and, if needed, approving
+them.  Configuration management normally addresses hardware, software,
+networking, and other changes; it can be formal or informal.  The primary
+security goal of configuration management is ensuring that changes to the
+system do not unintentionally or unknowingly diminish security.  Some of
+the methods discussed under software support, such as inspecting and
+testing software changes, can be used.
+
+For networked systems, configuration management should include external
+connections.  Is the computer system connected?  To what other systems?  In
+turn, to what systems are these systems and organizations connected?   Note
+that the security goal is to know what changes occur, not to prevent
+security from being changed.  There may be circumstances when security will
+be reduced.  However, the decrease in security should be the result of a
+decision based on all appropriate factors.
+
+A second security goal of configuration management is ensuring that changes
+to the system are reflected in other documentation, such as the contingency
+plan.  If the change is major, it may be necessary to reanalyze some or all
+of the security of the system. 
+
+BACKUPS
+Support and operations personnel and sometimes users back up software and
+data.  This function is critical to contingency planning.  Frequency of
+backups will depend upon how often data changes and how important those
+changes are.  Program managers should be consulted to determine what backup
+schedule is appropriate.  Also, as a safety measure, it is useful to test
+that backup copies are actually usable.  Finally, backups should be stored
+securely, as appropriate. 
+
+Users of smaller systems are often responsible for their own backups.
+However, in reality, they do not always perform backups regularly.  Some
+organizations, therefore, task support personnel with making backups
+periodically for smaller systems, either automatically (through server
+software) or manually (by visiting each machine).
+
+MEDIA CONTROLS 
+Media controls include a variety of measures to provide physical and
+environmental protection and accountability for tapes, diskettes,
+printouts, and other media.  From a security perspective, media controls
+should be designed to prevent the loss of confidentiality, integrity, or
+availability of information, including data or software, when stored
+outside the system.  This can include storage of information before it is
+input to the system and after it is output.
+
+The extent of media control depends upon many factors, including the type
+of data, the quantity of media, and the nature of the user environment.
+Physical and environmental protection is used to prevent unauthorized
+individuals from accessing the media.  It also protects against such
+factors as heat, cold, or harmful magnetic fields.  When necessary, logging
+the use of individual media (e.g., a tape cartridge) provides detailed
+accountability -- to hold authorized people responsible for their actions.  
+
+Marking
+Controlling media may require some form of physical labeling.  The labels
+can be used to identify media with special handling instructions, to locate
+needed information, or to log media (e.g., with serial/control numbers or
+bar codes) to support accountability.  Identification is often by colored
+labels on diskettes or tapes or banner pages on printouts.  
+
+If labeling is used for special handling instructions, it is critical that
+people be appropriately trained.  The marking of PC input and output is
+generally the responsibility of the user, not the system support staff.
+Marking backup diskettes can help prevent them from being accidentally
+overwritten.
+
+Logging
+The logging of media is used to support accountability.  Logs can include
+control numbers (or other tracking data), the times and dates of transfers,
+names and signatures of individuals involved, and other relevant
+information.  Periodic spot checks or audits may be conducted to determine
+that no controlled items have been lost and that all are in the custody of
+individuals named in control logs.  Automated media tracking systems may be
+helpful for maintaining inventories of tape and disk libraries. 
+
+Integrity Verification
+When electronically stored information is read into a computer system, it
+may be necessary to determine whether it has been read correctly or subject
+to any modification.  The integrity of electronic information can be
+verified using error detection and correction or, if intentional
+modifications are a threat, cryptographic-based technologies.
+
+Physical Access Protection
+Media can be stolen, destroyed, replaced with a look-alike copy, or lost.
+Physical access controls which can limit these problems include locked
+doors, desks, file cabinets, or safes.  If the media requires protection at
+all times, it may be necessary to actually output data to the media in a
+secure location (e.g., printing to a printer in a locked room instead of to
+a general-purpose printer in a common area).
+
+Physical protection of media should be extended to backup copies stored
+offsite.  They generally should be accorded an equivalent level of
+protection to media containing the same information stored onsite.
+(Equivalent protection does not mean that the security measures need to be
+exactly the same.  The controls at the off-site location are quite likely
+to be different from the controls at the regular site.)
+
+Environmental Protection
+Magnetic media, such as diskettes or magnetic tape, require environmental
+protection, since they are sensitive to temperature, liquids, magnetism,
+smoke, and dust.  Other media (e.g., paper and optical storage) may have
+different sensitivities to environmental factors. 
+
+Transmittal
+Media control may be transferred both within the organization and to
+outside elements.  Possibilities for securing such transmittal include
+sealed and marked envelopes, authorized messenger or courier, or U.S.
+certified or registered mail.
+
+Disposition
+When media is disposed of, it may be important to ensure that information
+is not improperly disclosed.  This applies both to media that is external
+to a computer system (such as a diskette) and to media inside a computer
+system, such as a hard disk.  The process of removing information from
+media is called sanitization.  (See the CSL Bulletin of October 1992,
+Disposition of Sensitive Automated Information.)
+
+Three techniques are commonly used for media sanitization: overwriting,
+degaussing, and destruction.  Overwriting is an effective method for
+clearing data from magnetic media.  As the name implies, overwriting uses a
+program to write (1s, 0s, or a combination) onto the media.  Common
+practice is to overwrite the media three times.  Overwriting should not be
+confused with merely deleting the pointer to a file (which typically
+happens when a delete command is used).  Overwriting requires that the
+media be in working order.  Degaussing is a method to magnetically erase
+data from magnetic media.  Two types of degausser exist: strong permanent
+magnets and electric degaussers.  The final method of sanitization is
+destruction of the media by shredding or burning.
+
+Many people throw away old diskettes, believing that erasing the files on
+the diskette has made the data unretrievable.  In reality, however, erasing
+a file simply removes the pointer to that file.  The pointer tells the
+computer where the file is physically stored.  Without this pointer, the
+files will not appear on a directory listing.  This does not mean that the
+file was removed.  Commonly available utility programs can often retrieve
+information that is presumed deleted.
+
+DOCUMENTATION
+Documentation of all aspects of computer support and operations is
+important to ensure continuity and consistency.  Formalizing operational
+practices and procedures with sufficient detail helps to eliminate security
+lapses and oversights, gives new personnel sufficiently detailed
+instructions, and provides a quality assurance function to help ensure that
+operations will be performed correctly and efficiently.  
+
+The security of a system also needs to be documented.  This includes many
+types of documentation, such as security plans, contingency plans, risk
+analyses, and security policies and procedures.  Much of this information,
+particularly risk and threat analyses, has to be protected against
+unauthorized disclosure.  Security documentation also needs to be both
+current and accessible.  Accessibility should take special factors into
+account (such as the need to find the contingency plan during a disaster).
+
+Security documentation should be designed to fulfill the needs of the
+different types of people who use it.  For this reason, many organizations
+separate documentation into policy and procedures.  A security procedures
+manual should be written to inform various system users how to do their
+jobs securely.  A security procedures manual for systems operations and
+support staff may address a wide variety of technical and operational
+concerns in considerable detail.  
+
+MAINTENANCE 
+System maintenance requires either physical or logical access to the
+system.  Support and operations staff, hardware or software vendors, or
+third-party service providers may maintain a system.  Maintenance may be
+performed on site, or it may be necessary to move equipment to a repair
+site.  Maintenance may also be performed remotely via communications
+connections.  If someone who does not normally have access to the system
+performs maintenance, then a security vulnerability is introduced.  
+
+In some circumstances, it may be necessary to take additional precautions,
+such as conducting background investigations of service personnel.
+Supervision of maintenance personnel may prevent some problems, such as
+"snooping around" the physical area.  However, once someone has access to
+the system, it is very difficult for supervision to prevent damage done
+through the maintenance process.
+
+Many computer systems provide maintenance accounts.  These special log-in
+accounts are normally preconfigured at the factory with pre-set, widely
+known passwords.  One of the most common methods hackers use to break into
+systems is through maintenance accounts that still have factory-set or
+easily guessed passwords.  It is critical to change these passwords or
+otherwise disable the accounts until they are needed.  Procedures should be
+developed to ensure that only authorized maintenance personnel can use
+these accounts.  If the account is to be used remotely, authentication of
+the maintenance provider can be performed using call-back confirmation.
+This helps ensure that remote diagnostic activities actually originate from
+an established telephone number at the vendor's site.  Other techniques can
+also help, including encryption and decryption of diagnostic
+communications; strong identification and authentication techniques, such
+as tokens; and remote disconnect verification.
+
+Larger systems may have diagnostic ports.  In addition, manufacturers of
+larger systems and third-party providers may offer more diagnostic and
+support services.  It is critical to ensure that these ports are only used
+by authorized personnel and cannot be accessed by hackers.
+
+INTERDEPENDENCIES
+Support and operations components coexist in most computer security controls.
+
+Personnel.  Most support and operations staff have special access to the
+system.  Some organizations conduct background checks on individuals
+filling these positions to screen out possibly untrustworthy individuals.  
+
+Incident Handling.  Support and operations may include an organization's
+incident handling staff.  Even if they are separate organizations, they
+need to work together to recognize and respond to incidents.
+
+Contingency Planning.  Support and operations normally provides technical
+input to contingency planning and carries out the activities of making
+backups, updating documentation, and practicing responding to contingencies.
+
+Security Awareness, Training, and Education.  Support and operations staff
+should be trained in security procedures and should be aware of the
+importance of security.  In addition, they provide technical expertise
+needed to teach users how to secure their systems.
+
+Physical and Environmental.  Support and operations staff often control the
+immediate physical area around the computer system.  
+
+Technical Controls.  The technical controls are installed, maintained, and
+used by support and operations staff.  They create the user accounts, add
+users to access control lists, review audit logs for unusual activity,
+control bulk encryption over telecommunications links, and perform the
+countless operational tasks needed to use technical controls effectively.
+In addition, support and operations staff provide needed input to the
+selection of controls based on their knowledge of system capabilities and
+operational constraints.
+
+Assurance.  Support and operations staff ensure that changes to a system do
+not introduce security vulnerabilities by using assurance methods to
+evaluate or test the changes and their effect on the system.  Operational
+assurance is normally performed by support and operations staff.
+
+COST CONSIDERATIONS
+The cost of ensuring adequate security in day-to-day support and operations
+is largely dependent upon the size and characteristics of the operating
+environment and the nature of the processing being performed.  If
+sufficient support personnel are already available, it is important that
+they be trained in the security aspects of their assigned jobs; it is
+usually not necessary to hire additional support and operations security
+specialists.  Training, both initial and ongoing, is a cost of successfully
+incorporating security measures into support and operations activities. 
+
+Another cost is that associated with creating and updating documentation to
+ensure that security concerns are appropriately reflected in support and
+operations policies, procedures, and duties.
+
+FOR MORE INFORMATION
+This bulletin summarizes a chapter in NIST Special Publication 800-12,
+Introduction to Computer Security: The NIST Handbook.  The handbook is
+available electronically at: http://csrc.nist.gov/nistpubs/800-12 in
+WordPerfect 6.1, MS Word,  and PostScript formats.  You can also order the
+handbook from the Government Printing Office at (202) 512-1800, stock
+number  SN003-003-03374- 0, price $18.00.
+
+

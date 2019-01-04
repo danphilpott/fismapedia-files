@@ -1,0 +1,379 @@
+
+FIPS 140-1:  A FRAMEWORK FOR CRYPTOGRAPHIC STANDARDS
+On July 17, 1995, the National Institute of Standard and
+Technology (NIST), Computer Systems Laboratory (CSL), established
+the Cryptographic Module Validation (CMV) Program which validates
+cryptographic modules to Federal Information Processing Standard
+(FIPS) 140-1, Security Requirements for Cryptographic Modules. 
+Under this program, vendors of cryptographic modules use
+independent, accredited testing laboratories to have their
+modules tested.  The program was jointly developed by NIST and
+the Communications Security Establishment of the government of
+Canada.  Products validated as conforming to FIPS 140-1 will be
+accepted for use by the federal agencies of both countries for
+the protection of sensitive, unclassified information.  The goal
+of the CMV Program is to provide federal agencies with a security
+metric to use in procuring equipment containing cryptographic
+modules.  The results of the independent testing, by accredited
+laboratories, provide this metric.  Federal agencies can choose
+products from the FIPS 140-1 Validated Products List and know
+that their FIPS 140-1 requirements have been met.
+
+This bulletin discusses when and how FIPS 140-1 should be used
+and examines the benefits that agencies can derive in using the
+standard.  While the bulletin highlights several critical issues
+that federal agencies need to consider, agencies should rely on
+FIPS 140-1 for precise applicability statements, requirements,
+and policy for use.
+
+FIPS 140-1 as a Framework Standard
+A cryptographic module is that part of a system or application
+that provides cryptographic services such as encryption,
+authentication or electronic signature generation and
+verification.  A cryptographic module that is designed to meet
+FIPS 140-1 incorporates cryptographic algorithms and functions
+specified in related FIPS and other security features that are
+necessary for the security of the module.  The standard is
+flexible in that it allows application or program managers to
+choose the robustness of the security features and functionality
+that is needed.  The standard specifies four increasing security
+levels to allow for cost-effective cryptographic solutions that
+are appropriate for different degrees of data sensitivity and
+different application environments.  FIPS 140-1 defines the
+framework for NIST's current and future cryptographic standards. 
+
+Background
+Federal Standard (FS) 1027, General Security Requirements for
+Equipment Using the Data Encryption Standard, was issued by the
+General Services Administration in 1982.  The standard prescribed
+the minimum general security requirements for the implementation
+of the Data Encryption Standard (DES) in telecommunications
+equipment and systems used by the federal government.  The
+responsibility for FS 1027 was transferred to NIST in 1988 and FS
+1027 was redesignated as FIPS 140.
+
+NIST recognized the need to revise FIPS 140 to reflect the
+evolving needs of users and manufacturers, and to incorporate
+current trends and capabilities in technology.  A notice was
+published in the Federal Register in 1988 to solicit the views of
+industry, the public, and federal, state and local governments
+regarding the planned revision of FIPS 140.  NIST received
+numerous comments which encouraged the planned revision and
+offered specific suggestions for changes.
+
+The resulting revised standard, FIPS 140-1, Security Requirements
+for Cryptographic Modules, was developed by a committee of
+government and industry participants which was organized by NIST
+in 1989.  A Federal Register notice in 1991 announced the
+proposed revision of the standard and requested comments from
+government and industry.  Numerous comments and suggestions were
+received, many of which were incorporated into the final version
+of the standard.  On January 11, 1994, NIST issued FIPS 140-1 as
+an approved standard, with an effective date of June 30, 1994.
+
+Applicability
+For all federal agencies, including defense agencies, the use of
+encryption products which conform to FIPS 140-1 is mandatory for
+the protection of sensitive unclassified information when the
+agency determines that cryptographic protection is required. 
+Note that information covered by 10 U.S.C. 2315, commonly
+referred to as the Warner Amendment, is excluded from this
+requirement.  Agencies are required to use the standard in
+designing, acquiring, and implementing cryptographic-based
+security systems within computer and telecommunications systems
+(including voice systems). 
+
+Definition of a Cryptographic Module
+A cryptographic module (cryptomodule) is a set of hardware,
+firmware or software, or some combination thereof, that
+implements cryptographic logic or processes.  Examples include a
+standalone piece of equipment such as a link encryptor, an add-on
+encryption board embedded into a computer system, and a software
+application running on a microprocessor such as a digital
+signature application that services many other applications.  If
+the cryptographic logic is implemented in software, then the
+processor which executes the software is also part of the
+cryptographic module. 
+
+Structure of the Standard
+FIPS 140-1 identifies eleven areas of security requirements over
+the following four security levels:
+
+The Level 1 requirements of the standard specify the basic
+security requirements for a cryptographic module (e.g., the
+encryption algorithm must be FIPS-approved).  No physical
+security mechanisms are required for the module beyond the
+requirement for production-grade equipment.  Level 1 allows the
+use of integrated circuit (IC) cards (i.e., smart cards) and
+software implementations which are utilized in general purpose,
+single-user personal computers (PC).  NIST believes that such
+implementations are often appropriate in low-level security
+applications.  Smart cards enhance the security of most systems. 
+Since the card is kept in the user's possession, additional
+physical security measures are often not necessary.  Many vendors
+use smart cards as a secure medium when distributing
+cryptographic keys.  The implementation of PC cryptographic
+software may be more cost-effective than hardware-based
+mechanisms.  
+
+Level 2 improves on the physical security of a Level 1
+cryptographic module by adding the requirement for tamper
+evidence through the use of tamper-evident coating or seals, or
+pick-resistant locks.  These requirements provide a cost-
+effective means for physical security and avoid the cost of the
+higher level of protection required at Levels 3 and 4.  The basic
+security concept is that the coating or seal placed on the module
+would have to be broken in order to attain physical access to the
+plaintext cryptographic keys and other critical security
+parameters within the cryptographic module.  Level 2 provides
+role-based authentication which allows groups of users to utilize
+the services of the cryptographic module without each user being
+uniquely identified.  For example, a set of security officers may
+all use their own copy of the same physical key that is inserted
+and turned to reset a cryptographic module to an operational
+status.  The cryptographic module can authenticate that the user
+is a security officer; however, the module does not uniquely
+identify which officer.  
+
+Level 2 requirements also allow software cryptography in multi-
+user, multi-tasking systems when used in conjunction with a C2
+or equivalent trusted operating system.  The controls provided by
+a trusted operating system are needed to maintain the security
+necessary for protected information such as private or secret
+keys, authentication information, the algorithm software, and
+other necessary parameters.  
+
+A Level 3 cryptographic module has requirements that help to
+prevent an intruder from gaining access to the cryptographic
+keys, authentication data, and other security parameters held
+within the cryptographic module.  The covers and doors of the
+module contain zeroization circuitry such that an unauthorized
+attempt to open a cover or door will zeroize the keys,
+authentication data, and other security parameters.  The keys,
+authentication data, and other security parameters are input to
+the module through separate ports and trusted paths.  The key
+management requirements at this level specify split-knowledge
+techniques.  A split-knowledge technique ensures that a
+cryptographic key is under the control of two or more users. 
+Each user has a key component which, individually, conveys no
+knowledge of the resultant key.  Level 3 allows software
+cryptography in multi-user, multi-tasking systems when a B1 or
+equivalent trusted operating system is employed.
+
+A Level 4 cryptographic module provides an envelope of protection
+around the cryptographic module.  The intent of Level 4
+protection is to detect a penetration of the device from any
+direction (rather than just attempts at the cover or door covered
+by Level 3 requirements) and respond by destroying critical
+information before it can be acquired.  For example, if one
+attempts to cut through the cover of a cryptographic module, the
+attempt should be detected and all critical security parameters
+should be zeroized.  Level 4 allows software cryptography in
+multi-user, multi-tasking systems when a B2 or equivalent trusted
+operating system is employed.  A B2 operating system provides a
+large number of assurances of the correct operation of the
+security features of the operating system.
+
+The Eleven Security Requirements Areas
+Cryptographic Module Specification requirements ensure that the
+cryptographic module is explicitly defined.  Modules must have
+defined hardware components, software components, and firmware
+components if applicable.  The module must have a stated security
+policy that is reflected in the design and intended use of the
+module.  The module must have every operational and error state
+defined as specified in the Finite State Machine Model
+requirements.  The requirements in these areas help agencies to
+determine exactly what a particular cryptographic product
+consists of, help ensure that vendors use good design techniques
+in building a cryptographic module, and allow NIST to more easily
+determine if the requirements for a particular module have been
+met.
+
+Module Interface requirements help ensure that all information
+flow and physical access to and from the module are well-defined
+and controlled.  At the higher security levels, requirements help
+ensure that critical information such as authentication
+information and cryptographic keys are not compromised when
+entered or output from the module.  
+
+Roles and Services requirements help ensure that the module
+supports defined authorized roles and corresponding services. 
+The module must also provide a mapping of the services to the
+roles.  At Level 2, the module must be able to authenticate that
+an operator of the module can assume a specific role (i.e., role-
+based authentication).  At Levels 3 and 4, the module must be
+able to uniquely authenticate the operator (identity-based
+authentication).
+
+Physical Security requirements help restrict unauthorized
+physical access to the contents of the module and to deter
+unauthorized use or unauthorized modification of the module. 
+Level 1 requires standard protection provided by production-grade
+techniques.  Level 2 requires that modules can show evidence of
+tampering.  Level 3 requires that modules zeroize unprotected
+cryptographic keys, authentication data, and other important
+information when the module detects tampering or an unauthorized
+access attempt through the cover or doors of the module's
+enclosure.  Level 4 requires that modules respond as in Level 3;
+however, the module must detect tampering or attempts anywhere on
+the module's enclosure.
+
+Software Security requirements apply to security-relevant
+software or firmware that may be contained within the module. 
+These requirements help ensure that the software corresponds to
+and has correctly implemented the defined security policy of the
+module.  At Level 4, more vigorous requirements require formal
+proof of this correspondence.
+
+Operating System Security requirements help protect cryptographic
+software implementations in modules where untrusted software will
+also be used.  The Level 1 requirements allow software
+cryptographic functions to be run on a general-purpose PC. 
+Requirements at the higher levels help ensure the security of
+software cryptography in multi-user, time-shared systems by
+requiring a trusted operating system.
+
+Key Management requirements help ensure the security of
+cryptographic keys throughout the cryptographic key life cycle. 
+Requirements in this area relate to key generation, distribution,
+entry, use, storage, destruction, and archiving.  FIPS approved
+methods are required for key generation and distribution. 
+However, until a FIPS approved public key-based key distribution
+technique is established, commercially available public key
+methods may be used (e.g., the Diffie-Hellman public key
+distribution technique).  To prevent the compromise of
+electronically distributed secret or private keys, requirements
+specify that the keys should always be entered into or out of the
+module in encrypted form.  Manually distributed keys, which
+should be protected using safeguards and procedures that are
+beyond the scope of this standard, can be entered or output from
+the module in plaintext form at Levels 1 and 2.  Levels 3 and 4
+requirements provide for applications where dual control of keys
+are needed.  This requires the module to support key entry by
+either entering the key in encrypted form or using split-
+knowledge procedures.  Split-knowledge procedures force the key
+to be entered or output as two key components.  
+
+The Cryptographic Algorithm requirement mandates that the module
+implement a FIPS approved cryptographic algorithm.  The current
+FIPS approved cryptographic algorithms include:  the Data
+Encryption Standard (FIPS 46-2) and the Escrowed Encryption
+Standard (FIPS 185) for encryption; the Computer Data
+Authentication Standard (FIPS 113) and the Digital Signature
+Standard (FIPS 186) for authentication and signature
+generation/verification; and the Secure Hash Standard (FIPS 180-
+1) for use when a secure hash algorithm is required.  Modules
+must meet the requirements within the respective standard of the
+implemented algorithm.  In addition to FIPS approved algorithms,
+products may also contain other algorithms that are not FIPS
+approved.  However, an algorithm that is not FIPS approved may
+not be used in lieu of the FIPS approved algorithm for government
+applications.
+
+Self-Test requirements help ensure that the cryptographic
+processing of the module is operating correctly.  These self-
+tests check the cryptographic algorithm, software, and firmware
+integrity and other vendor-defined critical functions.
+
+Effective Use of FIPS 140-1
+The following steps are recommended when implementing a
+cryptographic system:
+
+   Identify information resources and determine the sensitivity
+to and potential impact of losses.  Determine security
+requirements based on risk assessment and applicable
+organizational security policies.  Look at data sensitivity and
+the environment in which the data is placed.  Consider threats to
+the data or application as a whole, and what level of risk is
+acceptable.  Define this level of risk.
+
+   Determine the acceptable safeguards for the system under
+review.  Determine which cryptographic services provide an
+acceptable safeguard.  Define those security features that are
+desirable for use in a cryptographic environment.  
+
+   Examine FIPS 140-1.  Consider the requirements in each area. 
+Determine those requirements that specify the features that are
+desired.  Determine those requirements (if any) specified in FIPS
+140-1 that were not originally considered.  Specify the
+appropriate level in each area of the standard based on the
+acceptable level of risk.
+
+   Obtain or develop cryptographic modules that meet or exceed
+the selected levels.
+
+While the security requirements specified in this standard are
+intended to maintain the security of the cryptographic module,
+conformance to FIPS 140-1 does not guarantee that a particular
+module is secure.  It is the responsibility of the manufacturer
+of a cryptographic module to build the module in a secure manner. 
+Similarly, the use of a cryptographic module that conforms to
+this standard in an overall system does not guarantee the
+security of the overall system.  The responsible authority in
+each agency must assure that an overall system provides an
+acceptable level of security.  
+
+Selecting an Appropriate Level
+An application or program manager need not choose the same level
+for all eleven requirements.  The standard's flexibility allows
+for choosing different levels among the eleven requirement areas. 
+Using this flexibility is encouraged.  As an example, consider an
+organization that will be using a digital signature generation
+and verification software implementation on a multi-tasking,
+multi-user operating system.  The organization determines the
+need to use a trusted operating system to protect the integrity
+and availability of the encryption software for all system users. 
+The organization may require Level 2 Operating System
+requirements.  The organization then determines that solid key
+management, including split-knowledge procedures, is critical in
+this application and requires Level 3 Key Management
+requirements.  However, only Level 1 Physical Security
+requirements for the system are necessary since the controls and
+procedures used to maintain a secure facility and the personnel
+operating the system are adequate in protecting the system
+physically.  As this example shows, a different level of the
+standard can be chosen for the different areas covered by the
+standard.
+
+Determining Conformance to FIPS 140-1
+The CMV Program validates cryptographic modules as conforming to
+FIPS 140-1.  The National Voluntary Laboratory Accreditation
+Program (NVLAP), administered by NIST, accredits independent
+testing laboratories to perform the FIPS 140-1 tests.  Vendors of
+cryptographic modules use these laboratories to have their
+modules tested.  The accredited laboratories send the test
+results to NIST.  
+
+Based on the test results from these laboratories, NIST
+determines the level of conformance to the standard and issues an
+appropriate validation certificate of conformance.  Since the
+initiation date of the CMV Program was July 17, 1995, NIST
+encourages federal agencies to begin specifying FIPS 140-1
+validated products in their procurements.  However, federal
+agencies may accept written affirmation from cryptomodule vendors
+as evidence of conformance to FIPS 140-1 until January 31, 1996. 
+After that date, agencies should procure only those products that
+are either validated or have been submitted to an accredited 
+testing laboratory for testing.  After January 31, 1997, federal
+agencies should procure only products that have been validated by
+NIST under the CMV Program.  The list of validated products is
+available electronically at http://csrc.ncsl.nist.gov.
+
+Products that have been endorsed by the National Security Agency
+as meeting FS 1027, or have been affirmed in writing as meeting
+FIPS 140, can be purchased without NIST validation until June 30,
+1997.  After that date, agencies should purchase products only if
+they have been NIST-validated.  Agencies that purchase equipment
+under the conditions above may continue to use the equipment
+without requiring further affirmation or validation for
+conformance to this standard.  NIST maintains a list of products
+that are available under the FS 1027 and FIPS 140 provisions. 
+
+For More Information
+FIPS 140-1, the validated products list, and a listing of NVLAP
+accredited laboratories are available electronically at
+http://csrc.ncsl.nist.gov.  FIPS 140-1 can also be obtained in
+hard copy from the National Technical Information Service (NTIS)
+at (703) 487-4650.  Questions regarding the CMV Program should be
+directed to Lisa J. Carnahan at (301) 975-3362 or
+lcarnahan@nist.gov.  
